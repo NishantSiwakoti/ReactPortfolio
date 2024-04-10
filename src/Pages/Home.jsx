@@ -2,12 +2,17 @@ import { TypeAnimation } from "react-type-animation";
 import photo from "../assets/images/animation.png";
 import Button from "../Components/Button";
 import profile from "../assets/images/ProfilePic.png";
+import Card from "../Components/Card";
+import react from "../assets/images/react.png";
+import html from "../assets/images/h.png";
+import tailwind from "../assets/images/20.png";
+import php from "../assets/images/php.png";
 
 const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="md:flex items-center ">
+      <section className="md:flex items-center">
         <div className="flex-1 pl-5">
           <h1 className="text-orange-400 text-3xl text-center md:text-left md:ml-[100px] ">
             Hi,
@@ -48,7 +53,7 @@ const Home = () => {
         </div>
       </section>
       {/* About me Section*/}
-      <section>
+      <section className="min-h-[70vh]">
         <h2 className="font-bold text-2xl md:text-4xl text-orange-400 text-center pt-2">
           About Me
         </h2>
@@ -84,7 +89,21 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+      {/* Skills Section */}
+      <section className="min-h-[70vh]">
+        <h1 className="text-orange-400 md:text-4xl font-bold text-center mb-8">
+          Skills
+        </h1>
+        <div className="flex justify-center items-center flex-wrap">
+          <Card img={react} title="React" />
+          <Card img={html} title="HTML,CSS,JS" />
+          <Card img={tailwind} title="Tailwind CSS" />
+          <Card img={php} title="PHP" />
+        </div>
+        <div className="flex justify-center">
+          <Button name="See More" />
+        </div>
+      </section>
     </>
   );
 };
