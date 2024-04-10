@@ -7,6 +7,7 @@ import react from "../assets/images/react.png";
 import html from "../assets/images/h.png";
 import tailwind from "../assets/images/20.png";
 import php from "../assets/images/php.png";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -53,7 +54,7 @@ const Home = () => {
         </div>
       </section>
       {/* About me Section*/}
-      <section className="min-h-[70vh]">
+      <section className="min-h-[60vh]">
         <h2 className="font-bold text-2xl md:text-4xl text-orange-400 text-center pt-2">
           About Me
         </h2>
@@ -91,7 +92,7 @@ const Home = () => {
       </section>
       {/* Skills Section */}
       <section className="min-h-[70vh]">
-        <h1 className="text-orange-400 md:text-4xl font-bold text-center mb-8">
+        <h1 className="text-orange-400 md:text-4xl text-3xl font-bold text-center mb-8">
           Skills
         </h1>
         <div className="flex justify-center items-center flex-wrap">
@@ -101,7 +102,9 @@ const Home = () => {
           <Card img={php} title="PHP" />
         </div>
         <div className="flex justify-center">
-          <Button name="See More" />
+          <NavLink to="/skills">
+            <Button name="See More" />
+          </NavLink>
         </div>
       </section>
     </>
