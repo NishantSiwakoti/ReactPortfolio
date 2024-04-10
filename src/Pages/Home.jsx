@@ -44,7 +44,9 @@ const Home = () => {
                 repeat={Infinity}
               />
               <div>
-                <Button name="Hire Me" />
+                <NavLink to="/contact">
+                  <Button name="Hire Me" />
+                </NavLink>
               </div>
             </div>
           </div>
