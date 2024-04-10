@@ -1,3 +1,7 @@
-export const Skills = () => {
-  return <main>Skills</main>;
+import React from "react";
+
+const Skills = () => {
+  return <div>Skills</div>;
 };
+
+export default Skills;

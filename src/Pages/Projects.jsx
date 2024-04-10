@@ -1,3 +1,7 @@
-export const Projects = () => {
-  return <main>Projects</main>;
+import React from "react";
+
+const Projects = () => {
+  return <div>Peojects</div>;
 };
+
+export default Projects;

@@ -1,9 +1,13 @@
 import { Routes, Route } from "react-router-dom";
-import { Home, About, Skills, Projects, Contact } from "../Pages";
+import Home from "../Pages/Home";
+import About from "../Pages/About";
+import Skills from "../Pages/Skills";
+import Projects from "../Pages/Projects";
+import Contact from "../Pages/Contact";
 
 export const AllRoutes = () => {
   return (
-    <>
+    <div className="dark:bg-slate-800">
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="about" element={<About />}></Route>
@@ -11,6 +15,6 @@ export const AllRoutes = () => {
         <Route path="projects" element={<Projects />}></Route>
         <Route path="contact" element={<Contact />}></Route>
       </Routes>
-    </>
+    </div>
   );
 };
