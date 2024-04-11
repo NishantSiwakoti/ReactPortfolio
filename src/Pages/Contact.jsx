@@ -6,8 +6,14 @@ import {
   faUser,
   faLocation,
 } from "@fortawesome/free-solid-svg-icons";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Contact = () => {
+  useEffect(() => {
+    Aos.init({ duration: 3000 });
+  }, []);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -32,7 +38,7 @@ const Contact = () => {
       <div className="flex flex-wrap justify-between pt-8">
         {/* Contact Info */}
         <div></div>
-        <div className="w-full md:w-1/3 pr-4 ml-10">
+        <div className="w-full md:w-1/3 pr-4 ml-10" data-aos="fade-right">
           <h2 className="text-2xl font-bold mb-5 text-gray-600 dark:text-white">
             Contact Information
           </h2>
@@ -51,7 +57,7 @@ const Contact = () => {
           </p>
         </div>
         {/* Contact Form */}
-        <div className="w-full md:w-1/2 md:pl-4">
+        <div className="w-full md:w-1/2 md:pl-4" data-aos="fade-left">
           <h1 className="text-2xl mb-4 dark:text-white font-bold text-gray-600">
             Get in Touch
           </h1>

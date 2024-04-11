@@ -14,8 +14,14 @@ import {
   faUser,
   faLocation,
 } from "@fortawesome/free-solid-svg-icons";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+    Aos.init({ duration: 3000 });
+  }, []);
   return (
     <>
       {/* Hero Section */}
@@ -55,6 +61,7 @@ const Home = () => {
         <div className="flex-1">
           <img
             className="md:pt-[]"
+            data-aos="fade-right"
             src={photo}
             alt=""
             style={{ maxWidth: "100%", height: "auto" }}
@@ -71,12 +78,16 @@ const Home = () => {
             <img
               src={profile}
               alt="Profile Pic"
+              data-aos="fade-up"
               className="w-full md:ml-[50px] lg:ml-[px] max-w-[200px] md:max-w-[300px]"
               style={{ height: "auto" }}
             />
           </div>
           <div className="flex-1 ">
-            <p className="dark:text-white leading-relaxed m-2 md:ml-[100px] md:mt-[50px] text-center md:text-justify lg:mr-[100px]">
+            <p
+              className="dark:text-white leading-relaxed m-2 md:ml-[100px] md:mt-[50px] text-center md:text-justify lg:mr-[100px]"
+              data-aos="fade-left"
+            >
               Hi, I'm a professional front-end developer with over two years of
               experience. Specializing in creating visually appealing and
               responsive websites using the latest web technologies like{" "}
@@ -92,7 +103,10 @@ const Home = () => {
               to life together Prices are negotiable and totally depend on type
               of work!
             </p>
-            <div className="flex justify-center items-center md:ml-[100px] md:flex md:justify-start">
+            <div
+              className="flex justify-center items-center md:ml-[100px] md:flex md:justify-start"
+              data-aos="fade-left"
+            >
               <Button name="Download CV" />
             </div>
           </div>
@@ -103,7 +117,10 @@ const Home = () => {
         <h1 className="text-orange-400 md:text-4xl text-3xl font-bold text-center mb-8">
           Skills
         </h1>
-        <div className="flex justify-center items-center flex-wrap">
+        <div
+          className="flex justify-center items-center flex-wrap"
+          data-aos="fade-right"
+        >
           <Card img={react} title="React" />
           <Card img={html} title="HTML,CSS,JS" />
           <Card img={tailwind} title="Tailwind CSS" />
@@ -123,7 +140,7 @@ const Home = () => {
         <div className="flex flex-wrap justify-between pt-8">
           {/* Contact Info */}
           <div></div>
-          <div className="w-full md:w-1/3 pr-4 ml-10">
+          <div className="w-full md:w-1/3 pr-4 ml-10" data-aos="fade-right">
             <h2 className="text-2xl font-bold mb-5 text-gray-600 dark:text-white">
               Contact Information
             </h2>
@@ -142,7 +159,7 @@ const Home = () => {
             </p>
           </div>
           {/* Contact Form */}
-          <div className="w-full md:w-1/2 md:pl-4">
+          <div className="w-full md:w-1/2 md:pl-4" data-aos="fade-left">
             <h1 className="text-2xl mb-4 dark:text-white text-center md:text-left font-bold text-gray-600">
               Get in Touch
             </h1>

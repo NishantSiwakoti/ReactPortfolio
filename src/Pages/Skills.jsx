@@ -9,14 +9,23 @@ import django from "../assets/images/django.png";
 import c from "../assets/images/c.png";
 import Button from "../Components/Button";
 import { NavLink } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Skills = () => {
+  useEffect(() => {
+    Aos.init({ duration: 3000 });
+  }, []);
   return (
     <section className="">
       <h1 className="text-center  font-bold text-orange-400 text-4xl p-5">
         Skills
       </h1>
-      <div className="flex justify-center items-center flex-wrap">
+      <div
+        className="flex justify-center items-center flex-wrap"
+        data-aos="fade-in"
+      >
         <Card img={react} title="React" />
         <Card img={html} title="HTML,CSS,JS" />
         <Card img={tailwind} title="Tailwind CSS" />
