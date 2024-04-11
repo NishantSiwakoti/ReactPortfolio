@@ -8,6 +8,7 @@ import python from "../assets/images/python.png";
 import django from "../assets/images/django.png";
 import c from "../assets/images/c.png";
 import Button from "../Components/Button";
+import { NavLink } from "react-router-dom";
 
 const Skills = () => {
   return (
@@ -25,7 +26,9 @@ const Skills = () => {
         <Card img={c} title="C, C++, C#" />
       </div>
       <div className="flex justify-center items-center">
-        <Button name="Contact me" />
+        <NavLink to="/contact">
+          <Button name="Contact me" />
+        </NavLink>
       </div>
     </section>
   );
