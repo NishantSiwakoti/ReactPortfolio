@@ -1,11 +1,10 @@
 import React from "react";
+import Slider from "../Components/Slider";
 
 const Projects = () => {
   return (
     <section>
-      <h1 className="text-orange-400 font-bold text-4xl text-center p-5">
-        Projects
-      </h1>
+      <Slider />
     </section>
   );
 };
