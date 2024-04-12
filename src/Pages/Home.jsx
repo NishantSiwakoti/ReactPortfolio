@@ -132,6 +132,7 @@ const Home = () => {
           </NavLink>
         </div>
       </section>
+
       {/* Contact Section */}
       <section>
         <h1 className="text-orange-400 font-bold text-3xl md:text-4xl text-center mb-5">

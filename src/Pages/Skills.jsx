@@ -24,7 +24,7 @@ const Skills = () => {
       </h1>
       <div
         className="flex justify-center items-center flex-wrap"
-        data-aos="fade-in"
+        data-aos="flip-right"
       >
         <Card img={react} title="React" />
         <Card img={html} title="HTML,CSS,JS" />
