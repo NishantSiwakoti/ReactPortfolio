@@ -7,7 +7,7 @@ import Contact from "../Pages/Contact";
 
 export const AllRoutes = () => {
   return (
-    <div className="dark:bg-slate-800">
+    <div className="dark:bg-slate-800 overflow-hidden">
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="about" element={<About />}></Route>

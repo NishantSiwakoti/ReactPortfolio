@@ -10,6 +10,9 @@ import a from "../assets/images/1.png";
 import b from "../assets/images/2.png";
 import c from "../assets/images/3.png";
 import d from "../assets/images/4.png";
+import e from "../assets/images/5.png";
+import f from "../assets/images/6.png";
+import g from "../assets/images/7.png";
 
 const Slider = () => {
   return (
@@ -33,6 +36,15 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img src={d} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={e} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={f} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={g} />
         </SwiperSlide>
       </Swiper>
     </div>
