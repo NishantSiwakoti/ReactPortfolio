@@ -7,7 +7,7 @@ import php from "../assets/images/php.png";
 import python from "../assets/images/python.png";
 import django from "../assets/images/django.png";
 import c from "../assets/images/c.png";
-import Button from "../Components/Button";
+import Button from "../Components/Button/Button";
 import { NavLink } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";

@@ -1,4 +1,4 @@
-import Button from "../Components/Button";
+import Button from "../Components/Button/Button";
 import profile from "../assets/images/ProfilePic.png";
 import Aos from "aos";
 import "aos/dist/aos.css";

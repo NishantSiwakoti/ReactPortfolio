@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from "../Components/Button";
+import Button from "../Components/Button/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
@@ -36,8 +36,6 @@ const Contact = () => {
         Contact Me
       </h1>
       <div className="flex flex-wrap justify-between pt-8">
-        {/* Contact Info */}
-        <div></div>
         <div className="w-full md:w-1/3 pr-4 ml-10" data-aos="fade-right">
           <h2 className="text-2xl font-bold mb-5 text-gray-600 dark:text-white">
             Contact Information

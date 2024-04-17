@@ -1,6 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
 import photo from "../assets/images/animation.png";
-import Button from "../Components/Button";
+import Button from "../Components/Button/Button";
 import profile from "../assets/images/ProfilePic.png";
 import Card from "../Components/Card";
 import react from "../assets/images/react.png";
