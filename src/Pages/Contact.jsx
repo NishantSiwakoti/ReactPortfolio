@@ -51,7 +51,7 @@ const Contact = () => {
 
           <p className="mb-4 text-md md:text-xl text-orange-600 dark:text-white">
             <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
-            Email: nishantsiwakoti5@gmail.com
+            nishantsiwakoti5@gmail.com
           </p>
         </div>
         {/* Contact Form */}
