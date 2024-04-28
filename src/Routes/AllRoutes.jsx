@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import Home from "../Pages/Home";
 import About from "../Pages/About";
 import Skills from "../Pages/Skills";
@@ -8,13 +8,15 @@ import Contact from "../Pages/Contact";
 export const AllRoutes = () => {
   return (
     <div className="dark:bg-slate-800 overflow-hidden">
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="about" element={<About />}></Route>
-        <Route path="skills" element={<Skills />}></Route>
-        <Route path="projects" element={<Projects />}></Route>
-        <Route path="contact" element={<Contact />}></Route>
-      </Routes>
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="about" element={<About />}></Route>
+          <Route path="skills" element={<Skills />}></Route>
+          <Route path="projects" element={<Projects />}></Route>
+          <Route path="contact" element={<Contact />}></Route>
+        </Routes>
+      </HashRouter>
     </div>
   );
 };
