@@ -69,8 +69,14 @@ const Home = () => {
         </div>
       </section>
       {/* About me Section*/}
-      <section className="min-h-[60vh]">
-        <h2 className="font-bold text-2xl md:text-4xl text-orange-400 text-center pt-2">
+      <section
+        className="min-h-[60vh] relative"
+        style={{ backgroundImage: "url('blob.svg')" }}
+      >
+        <h2
+          data-aos="fade-down"
+          className="font-bold text-2xl md:text-4xl text-orange-400 text-center pt-2"
+        >
           About Me
         </h2>
         <div className="flex flex-col md:flex-row">
@@ -83,9 +89,9 @@ const Home = () => {
               style={{ height: "auto" }}
             />
           </div>
-          <div className="flex-1 ">
+          <div className="flex-1">
             <p
-              className="dark:text-white leading-relaxed m-2 md:ml-[100px] md:mt-[50px] text-center md:text-justify lg:mr-[100px]"
+              className="dark:text-white leading-relaxed m-2 md:ml-[100px] md:mt-[50px] text-center md:text-justify lg:mr-[100px] bg-opacity-75"
               data-aos="fade-left"
             >
               Hi, I'm a professional front-end developer with over two years of
@@ -94,10 +100,11 @@ const Home = () => {
               <span className="text-orange-400 font-bold">HTML</span>,
               <span className="text-orange-400 font-bold"> CSS</span>,
               <span className="text-orange-400 font-bold"> JS</span>,
-              <span className="text-orange-400 font-bold"> React Js</span>,
+              <span className="text-orange-400 font-bold"> React JS</span>,
               <span className="text-orange-400 font-bold"> Tailwind</span>,
-              <span className="text-orange-400 font-bold"> Material UI</span>,
-              <span className="text-orange-400 font-bold"> Ant Design</span>.
+              <span className="text-orange-400 font-bold"> Next JS</span>,
+              <span className="text-orange-400 font-bold"> Git</span>.
+              <span className="text-orange-400 font-bold"> Github</span>.
               Proficient in various front-end development tools. Committed to
               delivering high-quality projects on time Let's bring your project
               to life together Prices are negotiable and totally depend on type
@@ -112,19 +119,31 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       {/* Skills Section */}
       <section className="min-h-[70vh]">
-        <h1 className="text-orange-400 md:text-4xl text-3xl font-bold text-center mb-8">
+        <h1
+          data-aos="fade-down"
+          className="text-orange-400 md:text-4xl text-3xl font-bold text-center mb-8"
+        >
           Skills
         </h1>
-        <div
-          className="flex justify-center items-center flex-wrap"
-          data-aos="fade-right"
-        >
-          <Card img={react} title="React" />
-          <Card img={html} title="HTML,CSS,JS" />
-          <Card img={tailwind} title="Tailwind CSS" />
-          <Card img={php} title="PHP" />
+        <div className="flex justify-center items-center flex-wrap">
+          <div data-aos="fade-up-right">
+            <Card img={react} title="React" />
+          </div>
+          <div data-aos="fade-up-left">
+            {" "}
+            <Card img={html} title="HTML,CSS,JS" />
+          </div>
+          <div data-aos="fade-up-right">
+            {" "}
+            <Card img={tailwind} title="Tailwind CSS" />
+          </div>
+          <div data-aos="fade-up-left">
+            {" "}
+            <Card img={php} title="PHP" />
+          </div>
         </div>
         <div className="flex justify-center">
           <NavLink to="/skills">
@@ -135,7 +154,10 @@ const Home = () => {
 
       {/* Contact Section */}
       <section>
-        <h1 className="text-orange-400 font-bold text-3xl md:text-4xl text-center mb-5">
+        <h1
+          data-aos="zoom-in"
+          className="text-orange-400 font-bold text-3xl md:text-4xl text-center mb-5"
+        >
           Contact Me
         </h1>
         <div className="flex flex-wrap justify-between pt-8">
@@ -156,7 +178,7 @@ const Home = () => {
 
             <p className="mb-4 text-md md:text-xl text-orange-600 dark:text-white">
               <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
-              Email: nishantsiwakoti5@gmail.com
+              nishantsiwakoti5@gmail.com
             </p>
           </div>
           {/* Contact Form */}

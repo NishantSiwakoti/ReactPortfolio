@@ -22,17 +22,35 @@ const Skills = () => {
       <h1 className="text-center font-bold text-orange-400 text-4xl p-5">
         Skills
       </h1>
-      <div
-        className="flex justify-center items-center flex-wrap"
-        data-aos="flip-right"
-      >
-        <Card img={react} title="React" />
-        <Card img={html} title="HTML,CSS,JS" />
-        <Card img={tailwind} title="Tailwind CSS" />
-        <Card img={php} title="PHP" />
-        <Card img={python} title="Python" />
-        <Card img={django} title="Django" />
-        <Card img={c} title="C, C++, C#" />
+      <div className="flex justify-center items-center flex-wrap">
+        <div data-aos="fade-right">
+          {" "}
+          <Card img={react} title="React" />
+        </div>
+        <div data-aos="fade-left">
+          {" "}
+          <Card img={html} title="HTML,CSS,JS" />
+        </div>
+        <div data-aos="fade-right">
+          {" "}
+          <Card img={tailwind} title="Tailwind CSS" />
+        </div>
+        <div data-aos="fade-left">
+          {" "}
+          <Card img={php} title="PHP" />
+        </div>
+        <div data-aos="fade-right">
+          {" "}
+          <Card img={python} title="Python" />
+        </div>
+        <div data-aos="fade-left">
+          {" "}
+          <Card img={django} title="Django" />
+        </div>
+        <div data-aos="fade-right">
+          {" "}
+          <Card img={c} title="C, C++, C#" />
+        </div>
       </div>
       <div className="flex justify-center items-center">
         <NavLink to="/contact">
