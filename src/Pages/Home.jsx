@@ -17,11 +17,14 @@ import {
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import cv from "../assets/images/NishantCV.pdf";
 
 const Home = () => {
   useEffect(() => {
     Aos.init({ duration: 3000 });
   }, []);
+  window.open(YourImage, "_blank");
+
   return (
     <>
       {/* Hero Section */}
@@ -33,16 +36,7 @@ const Home = () => {
           <div className="flex flex-col md:ml-[100px]">
             <div className="mt-2 text-center md:text-left">
               <TypeAnimation
-                sequence={[
-                  "I'm Nishant",
-                  1000,
-                  "I'm Web Dev",
-                  1000,
-                  "I'm Frontend Dev",
-                  1000,
-                  "I'm Backend Dev",
-                  1000,
-                ]}
+                sequence={["I'm Web Dev", 1000, "I'm Frontend Dev", 1000]}
                 className="text-orange-500 font-bold text-[30px] md:text-5xl"
                 wrapper="span"
                 speed={50}
