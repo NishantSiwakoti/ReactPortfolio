@@ -17,13 +17,11 @@ import {
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import cv from "../assets/images/NishantCV.pdf";
 
 const Home = () => {
   useEffect(() => {
     Aos.init({ duration: 3000 });
   }, []);
-  window.open(YourImage, "_blank");
 
   return (
     <>
