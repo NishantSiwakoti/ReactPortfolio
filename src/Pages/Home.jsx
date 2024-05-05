@@ -106,7 +106,12 @@ const Home = () => {
               className="flex justify-center items-center md:ml-[100px] md:flex md:justify-start"
               data-aos="fade-left"
             >
-              <Button name="Download CV" />
+              <NavLink
+                to="https://drive.google.com/file/d/1z553qs8LM79sIgteEa92abknSStABv3T/view?usp=sharing"
+                target="_blank"
+              >
+                <Button name="Download CV" />
+              </NavLink>
             </div>
           </div>
         </div>
