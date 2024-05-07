@@ -20,7 +20,7 @@ import { useEffect } from "react";
 
 const Home = ({ title }) => {
   useEffect(() => {
-    Aos.init({ duration: 3000 });
+    Aos.init({ duration: 1500 });
   }, []);
   useEffect(() => {
     document.title = `${title} | Nishant`;

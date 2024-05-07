@@ -15,7 +15,7 @@ const Contact = ({ title }) => {
     document.title = `${title} | Nishant`;
   });
   useEffect(() => {
-    Aos.init({ duration: 3000 });
+    Aos.init({ duration: 1500 });
   }, []);
   const [formData, setFormData] = useState({
     name: "",
