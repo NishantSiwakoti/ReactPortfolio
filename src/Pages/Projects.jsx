@@ -1,7 +1,11 @@
 import React from "react";
 import Slider from "../Components/Slider";
+import { useEffect } from "react";
 
-const Projects = () => {
+const Projects = ({ title }) => {
+  useEffect(() => {
+    document.title = `${title} | Nishant`;
+  });
   return (
     <section>
       <h1 className="text-2xl md:text-3xl text-orange-400 text-center font-bold mb-5 ">

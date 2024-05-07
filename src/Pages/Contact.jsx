@@ -10,7 +10,10 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-const Contact = () => {
+const Contact = ({ title }) => {
+  useEffect(() => {
+    document.title = `${title} | Nishant`;
+  });
   useEffect(() => {
     Aos.init({ duration: 3000 });
   }, []);

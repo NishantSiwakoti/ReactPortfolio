@@ -9,12 +9,11 @@ export const AllRoutes = () => {
   return (
     <div className="dark:bg-slate-800 overflow-hidden">
       <Routes>
-        <Route path="/PortfolioUsingReact" element={<Home />} />
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="skills" element={<Skills />} />
-        <Route path="projects" element={<Projects />} />
-        <Route path="contact" element={<Contact />} />
+        <Route path="/" element={<Home title="Home" />} />
+        <Route path="about" element={<About title="About " />} />
+        <Route path="skills" element={<Skills title="Skills" />} />
+        <Route path="projects" element={<Projects title="Skills" />} />
+        <Route path="contact" element={<Contact title="Contact" />} />
       </Routes>
     </div>
   );

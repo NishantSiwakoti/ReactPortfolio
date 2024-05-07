@@ -13,10 +13,13 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-const Skills = () => {
+const Skills = ({ title }) => {
   useEffect(() => {
     Aos.init({ duration: 3000 });
   }, []);
+  useEffect(() => {
+    document.title = `${title} | Nishant`;
+  });
   return (
     <section className="">
       <h1 className="text-center font-bold text-orange-400 text-4xl p-5">

@@ -4,7 +4,10 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-const About = () => {
+const About = ({ title }) => {
+  useEffect(() => {
+    document.title = `${title} | Nishant`;
+  });
   useEffect(() => {
     Aos.init({ duration: 3000 });
   }, []);

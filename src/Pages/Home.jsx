@@ -18,10 +18,13 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-const Home = () => {
+const Home = ({ title }) => {
   useEffect(() => {
     Aos.init({ duration: 3000 });
   }, []);
+  useEffect(() => {
+    document.title = `${title} | Nishant`;
+  });
 
   return (
     <>
