@@ -58,7 +58,7 @@ const Home = ({ title }) => {
             className="md:pt-[]"
             data-aos="fade-right"
             src={photo}
-            alt=""
+            alt="Nishant Siwakoti"
             style={{ maxWidth: "100%", height: "auto" }}
           />
         </div>
@@ -78,7 +78,7 @@ const Home = ({ title }) => {
           <div className="flex justify-center items-center mt-5">
             <img
               src={profile}
-              alt="Profile Pic"
+              alt="Nishant Siwakoti"
               data-aos="fade-up"
               className="w-full md:ml-[50px] lg:ml-[px] max-w-[200px] md:max-w-[300px]"
               style={{ height: "auto" }}

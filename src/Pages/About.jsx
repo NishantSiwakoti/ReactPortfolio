@@ -20,7 +20,7 @@ const About = ({ title }) => {
         <div className="flex justify-center items-center mt-5">
           <img
             src={profile}
-            alt="Profile Pic"
+            alt="Nishant Siwakoti"
             data-aos="fade-out"
             className="w-full md:ml-[50px] lg:ml-[px] max-w-[200px] md:max-w-[300px]"
             style={{ height: "auto" }}
