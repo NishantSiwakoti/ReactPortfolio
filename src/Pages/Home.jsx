@@ -4,7 +4,7 @@ import Button from "../Components/Button/Button";
 import profile from "../assets/images/ProfilePic.png";
 import Card from "../Components/Card";
 import react from "../assets/images/react.png";
-import html from "../assets/images/h.png";
+import django from "../assets/images/django.png";
 import tailwind from "../assets/images/20.png";
 import php from "../assets/images/php.png";
 import { NavLink } from "react-router-dom";
@@ -134,7 +134,7 @@ const Home = ({ title }) => {
           </div>
           <div data-aos="fade-up-left">
             {" "}
-            <Card img={html} title="HTML,CSS,JS" />
+            <Card img={django} title="Django" />
           </div>
           <div data-aos="fade-up-right">
             {" "}

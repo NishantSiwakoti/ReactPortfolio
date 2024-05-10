@@ -9,7 +9,7 @@ const Card = (props) => {
             alt=""
             className="rounded-t-lg card-img opacity-100 duration-300"
           />
-          <p className="text-center font-bold text-white card-title opacity-100 hover:opacity-80 transition-opacity duration-300">
+          <p className="text-center mt-0.5 font-bold text-white card-title opacity-100 hover:opacity-80 transition-opacity duration-300">
             {props.title}
           </p>
         </div>
