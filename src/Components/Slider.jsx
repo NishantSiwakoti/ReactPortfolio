@@ -19,7 +19,7 @@ import mc from "../assets/images/mc.png";
 import md from "../assets/images/md.png";
 import me from "../assets/images/me.png";
 
-const Slider = () => {
+const Slider = ({ type }) => {
   return (
     <>
       <div>
@@ -54,37 +54,41 @@ const Slider = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      <div>
-        <h1 className="text-2xl md:text-2xl text-orange-400 text-center mt-5 font-bold mb-5">
-          2. MovieMadHouse
-        </h1>
-      </div>
-      <div>
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={50}
-          slidesPerView={2}
-          navigation
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
-        >
-          <SwiperSlide>
-            <img src={ma} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={mb} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={mc} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={md} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={me} />
-          </SwiperSlide>
-        </Swiper>
-      </div>
+      {type === "projects" && (
+        <div>
+          <div>
+            <h1 className="text-2xl md:text-2xl text-orange-400 text-center mt-5 font-bold mb-5">
+              2. MovieMadHouse
+            </h1>
+          </div>
+          <div>
+            <Swiper
+              modules={[Navigation, Pagination, Scrollbar, A11y]}
+              spaceBetween={50}
+              slidesPerView={2}
+              navigation
+              pagination={{ clickable: true }}
+              scrollbar={{ draggable: true }}
+            >
+              <SwiperSlide>
+                <img src={ma} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={mb} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={mc} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={md} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={me} />
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </div>
+      )}
     </>
   );
 };

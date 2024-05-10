@@ -1,16 +1,15 @@
 import React, { useState } from "react";
-import Button from "../Components/Button/Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEnvelope,
-  faUser,
-  faLocation,
-} from "@fortawesome/free-solid-svg-icons";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-const Contact = ({ title }) => {
+const Contact = ({ title, setProgress }) => {
+  useEffect(() => {
+    setProgress(40);
+    setTimeout(() => {
+      setProgress(100);
+    }, 500);
+  }, []);
   useEffect(() => {
     document.title = `${title} | Nishant`;
   });

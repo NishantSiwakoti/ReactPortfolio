@@ -4,7 +4,13 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-const About = ({ title }) => {
+const About = ({ title, setProgress }) => {
+  useEffect(() => {
+    setProgress(40);
+    setTimeout(() => {
+      setProgress(100);
+    }, 500);
+  }, []);
   useEffect(() => {
     document.title = `${title} | Nishant`;
   });

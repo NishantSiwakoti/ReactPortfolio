@@ -17,8 +17,15 @@ import {
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Slider from "../Components/Slider";
 
-const Home = ({ title }) => {
+const Home = ({ title, setProgress }) => {
+  useEffect(() => {
+    setProgress(40);
+    setTimeout(() => {
+      setProgress(100);
+    }, 500);
+  }, []);
   useEffect(() => {
     Aos.init({ duration: 1500 });
   }, []);
@@ -55,7 +62,7 @@ const Home = ({ title }) => {
 
         <div className="flex-1">
           <img
-            className="md:pt-[]"
+            className=""
             data-aos="fade-right"
             src={photo}
             alt="Nishant Siwakoti"
@@ -95,9 +102,9 @@ const Home = ({ title }) => {
               <span className="text-orange-400 font-bold">HTML</span>,
               <span className="text-orange-400 font-bold"> CSS</span>,
               <span className="text-orange-400 font-bold"> JS</span>,
-              <span className="text-orange-400 font-bold"> React JS</span>,
+              <span className="text-orange-400 font-bold"> React</span>,
               <span className="text-orange-400 font-bold"> Tailwind</span>,
-              <span className="text-orange-400 font-bold"> Next JS</span>,
+              <span className="text-orange-400 font-bold"> Next.js</span>,
               <span className="text-orange-400 font-bold"> Git</span>.
               <span className="text-orange-400 font-bold"> Github</span>.
               Proficient in various front-end development tools. Committed to
@@ -151,7 +158,28 @@ const Home = ({ title }) => {
           </NavLink>
         </div>
       </section>
-
+      {/* Projects Section */}
+      <section>
+        <h1
+          className="text-orange-400 md:text-4xl text-3xl font-bold text-center mb-8"
+          data-aos="fade-left"
+        >
+          Projects
+        </h1>
+        <div data-aos="fade-down">
+          <h1 className="text-2xl md:text-3xl text-orange-400 text-center font-bold mb-5 ">
+            1. Sajilo Yatra - A Vehicle Rental Platform
+          </h1>
+        </div>
+        <div data-aos="fade-left">
+          <Slider type="home" />
+        </div>
+        <div className="flex justify-center" data-aos="fade-left">
+          <NavLink to="/projects">
+            <Button name="See More Projects" />
+          </NavLink>
+        </div>
+      </section>
       {/* Contact Section */}
       <section>
         <h1
