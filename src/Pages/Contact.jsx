@@ -138,10 +138,12 @@ const Contact = ({ title, setProgress }) => {
             </ul>
           </div>
           <div
-            className="bg-gray-200 dark:bg-slate-800 p-6 rounded-lg"
+            className="bg-gray-100 dark:bg-slate-800 p-6 rounded-lg"
             data-aos="fade-left"
           >
-            <p className="text-[#eb7316] text-xl font-bold">Contact Form</p>
+            <p className="text-[#eb7316] text-2xl font-extrabold text-center">
+              Contact Form
+            </p>
             <form className="mt-8 space-y-4">
               <input
                 type="text"
