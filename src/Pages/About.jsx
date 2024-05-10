@@ -40,10 +40,11 @@ const About = ({ title, setProgress }) => {
             <span className="text-orange-400 font-bold">HTML</span>,
             <span className="text-orange-400 font-bold"> CSS</span>,
             <span className="text-orange-400 font-bold"> JS</span>,
-            <span className="text-orange-400 font-bold"> React Js</span>,
+            <span className="text-orange-400 font-bold"> React</span>,
+            <span className="text-orange-400 font-bold"> Next.js</span>,
             <span className="text-orange-400 font-bold"> Tailwind</span>,
-            <span className="text-orange-400 font-bold"> Material UI</span>,
-            <span className="text-orange-400 font-bold"> Ant Design</span>.
+            <span className="text-orange-400 font-bold"> Git</span>,
+            <span className="text-orange-400 font-bold"> Github</span>.
             Proficient in various front-end development tools. Committed to
             delivering high-quality projects on time Let's bring your project to
             life together Prices are negotiable and totally depend on type of

@@ -71,10 +71,7 @@ const Home = ({ title, setProgress }) => {
         </div>
       </section>
       {/* About me Section*/}
-      <section
-        className="min-h-[60vh] relative"
-        style={{ backgroundImage: "url('blob.svg')" }}
-      >
+      <section className="min-h-[60vh] relative">
         <h2
           data-aos="fade-down"
           className="font-bold text-2xl md:text-4xl text-orange-400 text-center pt-2"
@@ -176,7 +173,7 @@ const Home = ({ title, setProgress }) => {
         </div>
         <div className="flex justify-center" data-aos="fade-left">
           <NavLink to="/projects">
-            <Button name="See More Projects" />
+            <Button name="More Projects" />
           </NavLink>
         </div>
       </section>
