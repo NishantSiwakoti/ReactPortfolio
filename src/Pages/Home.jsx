@@ -36,7 +36,7 @@ const Home = ({ title, setProgress }) => {
   return (
     <>
       {/* Hero Section */}
-      <section className="md:flex items-center">
+      <section className="md:flex items-center min-h-[40vh]">
         <div className="flex-1 pl-5">
           <h1 className="text-orange-400 text-3xl text-center md:text-left md:ml-[100px] ">
             Hi,
