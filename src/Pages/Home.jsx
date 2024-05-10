@@ -159,7 +159,7 @@ const Home = ({ title, setProgress }) => {
         </div>
       </section>
       {/* Projects Section */}
-      <section>
+      <section className="min-h-[40vh]">
         <h1
           className="text-orange-400 md:text-4xl text-3xl font-bold text-center mb-8"
           data-aos="fade-left"
