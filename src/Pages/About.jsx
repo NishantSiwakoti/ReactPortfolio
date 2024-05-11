@@ -3,6 +3,7 @@ import profile from "../assets/images/ProfilePic.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 const About = ({ title, setProgress }) => {
   useEffect(() => {
@@ -51,7 +52,12 @@ const About = ({ title, setProgress }) => {
             work!
           </p>
           <div className="flex justify-center items-center md:ml-[100px] md:flex md:justify-start">
-            <Button name="Download CV" />
+            <NavLink
+              to="https://drive.google.com/file/d/1z553qs8LM79sIgteEa92abknSStABv3T/view?usp=sharing"
+              target="_blank"
+            >
+              <Button name="Download CV" />
+            </NavLink>
           </div>
         </div>
       </div>
