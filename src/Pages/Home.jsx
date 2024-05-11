@@ -114,7 +114,7 @@ const Home = ({ title, setProgress }) => {
               data-aos="fade-left"
             >
               <NavLink
-                to="https://drive.google.com/file/d/1z553qs8LM79sIgteEa92abknSStABv3T/view?usp=sharing"
+                to="https://drive.google.com/file/d/1yChxB7aflRTZxZo0Cj26b71WLoYsKa9I/view?usp=sharing"
                 target="_blank"
               >
                 <Button name="Download CV" />

@@ -53,7 +53,7 @@ const About = ({ title, setProgress }) => {
           </p>
           <div className="flex justify-center items-center md:ml-[100px] md:flex md:justify-start">
             <NavLink
-              to="https://drive.google.com/file/d/1z553qs8LM79sIgteEa92abknSStABv3T/view?usp=sharing"
+              to="https://drive.google.com/file/d/1yChxB7aflRTZxZo0Cj26b71WLoYsKa9I/view?usp=sharing"
               target="_blank"
             >
               <Button name="Download CV" />
