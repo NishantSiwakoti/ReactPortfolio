@@ -101,16 +101,16 @@ const Live = ({ setProgress }) => {
         <div className="m-2 flex justify-center">
           <div className="bg-orange-400 p-6 rounded-lg shadow-xl w-full max-w-md text-center">
             <div className="flex items-center justify-center space-x-4">
-              <img src={rr} alt="RR Logo" className="h-14 w-1h-14" />
+              <img src={rr} alt="RR Logo" className="h-12 w-12" />
               <div>
-                <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
-                  RR VS PBKS
-                </p>
                 <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
                   Match 65
                 </p>
+                <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
+                  RR VS PBKS
+                </p>
               </div>
-              <img src={pbks} alt="PBKS Logo" className="h-14 w-1h-14" />
+              <img src={pbks} alt="PBKS Logo" className="h-12 w-12" />
             </div>
           </div>
         </div>

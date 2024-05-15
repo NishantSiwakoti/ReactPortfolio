@@ -1,7 +1,7 @@
 {
   "streams": [
     {
-      "language": "Hindi 480",
+      "language": "Hindi",
       "url": "https://jancdn-b.bunycdn.com/live/480pa.m3u8"
     },
     {
@@ -9,7 +9,7 @@
       "url": "https://jancdn-b.bunycdn.com/live/720pa.m3u8"
     },
     {
-      "language": "Hindi",
+      "language": "Hindi 480",
       "url": "https://jancdn-b.bunycdn.com/live/indexa22.m3u8"
     },
     
