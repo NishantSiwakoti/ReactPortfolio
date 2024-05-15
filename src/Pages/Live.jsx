@@ -1,16 +1,24 @@
 import React, { useEffect, useState } from "react";
 import Hls from "hls.js";
+import kkr from "../assets/KKR.png";
+import rcb from "../assets/RCB.png";
+import mi from "../assets/MI.png";
+import csk from "../assets/CSK.png";
+import gt from "../assets/GT.png";
+import rr from "../assets/RR.png";
+import pbks from "../assets/PBKS.png";
+import srh from "../assets/SRH.png";
+import lsg from "../assets/LSG.png";
+import dc from "../assets/DC.png";
 
-const Live = ({ title, setProgress }) => {
+const Live = ({ setProgress }) => {
   useEffect(() => {
     setProgress(40);
     setTimeout(() => {
       setProgress(100);
     }, 500);
   }, []);
-  useEffect(() => {
-    document.title = `${title} | Nishant`;
-  });
+
   const [streams, setStreams] = useState([]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState("");
   const [isPlaying, setIsPlaying] = useState(false);
@@ -89,12 +97,21 @@ const Live = ({ title, setProgress }) => {
 
   return (
     <>
-      <div className="h-[90vh]">
+      <div className="">
         <div className="m-2 flex justify-center">
           <div className="bg-orange-400 p-6 rounded-lg shadow-xl w-full max-w-md text-center">
-            <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
-              Match 65: RR VS PBKS
-            </p>
+            <div className="flex items-center justify-center space-x-4">
+              <img src={rr} alt="RR Logo" className="h-14 w-1h-14" />
+              <div>
+                <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
+                  RR VS PBKS
+                </p>
+                <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
+                  Match 65
+                </p>
+              </div>
+              <img src={pbks} alt="PBKS Logo" className="h-14 w-1h-14" />
+            </div>
           </div>
         </div>
         <div className="flex justify-center">
