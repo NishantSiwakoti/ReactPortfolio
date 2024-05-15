@@ -1,0 +1,58 @@
+{
+  "streams": [
+    {
+      "language": "Hindi 480",
+      "url": "https://jancdn-b.bunycdn.com/live/480pa.m3u8"
+    },
+    {
+      "language": "English",
+      "url": "https://jancdn-b.bunycdn.com/live/720pa.m3u8"
+    },
+    {
+      "language": "Hindi",
+      "url": "https://jancdn-b.bunycdn.com/live/indexa22.m3u8"
+    },
+    
+    {
+      "language": "Hindi 360",
+      "url": "https://jancdn-b.bunycdn.com/live/360pa.m3u8"
+    },
+    
+    {
+      "language": "Fast NO LAG",
+      "url": "https://1gr5dgmttgha1hcjugezdcca.ourdvsss.com/sports.lvyclv.com/live/m33252847/playlist.m3u8?wsSession=0600d9f20f63575d1d9cffc6-171551515470294&wsIPSercert=7d140df5013b3b6eb5125fda3b67a320&wsiphost=local&wsBindIP=1"
+    },
+    {
+      "language": "Punjabi",
+      "url": "http://prod-sports-north-fa.jiocinema.com/hls/live/2109756/hd_akamai_androidmob_avc_pun_ipl_s1_m1100524/master.m3u8"
+    },
+    {
+      "language": "Bhojpuri",
+      "url": "http://prod-sports-north-gm.jiocinema.com/hls/live/2109762/hd_akamai_androidmob_avc_bhoj_ipl_s1_m1100524/master.m3u8"
+    },
+    {
+      "language": "Bengali",
+      "url": "http://prod-sports-north-gm.jiocinema.com/hls/live/2109774/hd_akamai_androidmob_avc_ben_ipl_s1_m1100524/master.m3u8"
+    },
+    {
+      "language": "Tamil",
+      "url": "http://mag.x-iptv.live/play/live.php?mac=00:1A:79:76:8d:80&stream=155873&extension=m3u8"
+    },
+    {
+      "language": "Telugu",
+      "url": "http://prod-sports-south-fa.jiocinema.com/hls/live/2109718/hd_akamai_androidmob_avc_tel_ipl_s1_m1100524/mmaster.m3u8"
+    },
+    {
+      "language": "Sky Sports",
+      "url": "http://watchindia.net:8880/live/dharm23/qVir1fHdBn/2090.ts"
+    },
+    {
+      "language": "Star Sport 1",
+      "url": "http://watchindia.net:8880/live/dharm23/qVir1fHdBn/2186.ts"
+    },
+    {
+      "language": "Sky Sports 2",
+      "url": "http://watchindia.net:8880/live/dharm23/qVir1fHdBn/2143.ts"
+    }
+  ]
+}

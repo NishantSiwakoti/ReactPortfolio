@@ -18,6 +18,17 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Slider from "../Components/Slider";
+import Divss from "../Components/Divss";
+import kkr from "../assets/KKR.png";
+import dc from "../assets/DC.png";
+import srh from "../assets/SRH.png";
+import mi from "../assets/MI.png";
+import csk from "../assets/CSK.png";
+import gt from "../assets/GT.png";
+import rr from "../assets/RR.png";
+import lsg from "../assets/LSG.png";
+import rcb from "../assets/RCB.png";
+import pbks from "../assets/PBKS.png";
 
 const Home = ({ title, setProgress }) => {
   useEffect(() => {
@@ -32,6 +43,34 @@ const Home = ({ title, setProgress }) => {
   useEffect(() => {
     document.title = `${title} | Nishant`;
   });
+  const formatDate = (dateStr) => {
+    const matchDate = new Date(dateStr);
+    const today = new Date();
+    const yesterday = new Date(today);
+    yesterday.setDate(today.getDate() - 1);
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
+
+    if (matchDate.toDateString() === today.toDateString()) {
+      const currentTime = today.getHours() * 60 + today.getMinutes();
+      const startLiveTime = 19 * 60; // 7:00 PM in minutes
+      const endLiveTime = 24 * 60; // 12:00 AM in minutes
+
+      if (currentTime >= startLiveTime && currentTime < endLiveTime) {
+        return "Live";
+      } else if (currentTime >= endLiveTime || today.getHours() < 7) {
+        return "Ended";
+      } else {
+        return "Today";
+      }
+    } else if (matchDate.toDateString() === tomorrow.toDateString()) {
+      return "Tomorrow";
+    } else if (matchDate.toDateString() === yesterday.toDateString()) {
+      return "Ended";
+    } else {
+      return dateStr;
+    }
+  };
 
   return (
     <>
@@ -63,13 +102,14 @@ const Home = ({ title, setProgress }) => {
         <div className="flex-1">
           <img
             className=""
-            data-aos="fade-right"
+            data-aos=""
             src={photo}
             alt="Nishant Siwakoti"
             style={{ maxWidth: "100%", height: "auto" }}
           />
         </div>
       </section>
+
       {/* About me Section*/}
       <section className="min-h-[60vh] relative">
         <h2
@@ -123,6 +163,45 @@ const Home = ({ title, setProgress }) => {
           </div>
         </div>
       </section>
+      {/* Live Section */}
+      <h2 className="font-bold text-2xl md:text-4xl text-orange-400 text-center pt-2">
+        Live
+      </h2>
+      <Divss
+        photo1={dc}
+        team1="DC"
+        photo2={lsg}
+        team2="LSG"
+        status={formatDate("May 14, 2024")}
+      />
+      <Divss
+        photo1={rr}
+        team1="RR"
+        photo2={pbks}
+        team2="PBKS"
+        status={formatDate("May 15, 2024")}
+      />
+      <Divss
+        photo1={srh}
+        team1="SRH"
+        photo2={gt}
+        team2="GT"
+        status={formatDate("May 16, 2024")}
+      />
+      <Divss
+        photo1={mi}
+        team1="MI"
+        photo2={lsg}
+        team2="LSG"
+        status={formatDate("May 17, 2024")}
+      />
+      <Divss
+        photo1={rcb}
+        team1="RCB"
+        photo2={csk}
+        team2="CSK"
+        status={formatDate("May 18, 2024")}
+      />
 
       {/* Skills Section */}
       <section className="min-h-[70vh]">

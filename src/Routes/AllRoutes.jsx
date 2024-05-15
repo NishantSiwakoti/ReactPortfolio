@@ -6,7 +6,7 @@ import Projects from "../Pages/Projects";
 import Contact from "../Pages/Contact";
 import LoadingBar from "react-top-loading-bar";
 import { useState } from "react";
-
+import Live from "../Pages/Live";
 export const AllRoutes = () => {
   const [progress, setProgress] = useState(0);
 
@@ -38,6 +38,7 @@ export const AllRoutes = () => {
           path="contact"
           element={<Contact title="Contact" setProgress={setProgress} />}
         />
+        <Route path="live" element={<Live setProgress={setProgress} />}></Route>
       </Routes>
     </div>
   );
