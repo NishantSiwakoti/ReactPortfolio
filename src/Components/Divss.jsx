@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Divss = (props) => {
-  const isClickable = props.status === "Today";
+  const isClickable = props.status === "Live";
   const isEnded = props.status === "Ended";
   const isTomorrowOrFuture = !isClickable && !isEnded;
 
