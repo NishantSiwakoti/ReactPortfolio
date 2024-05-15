@@ -11,7 +11,10 @@ import srh from "../assets/SRH.png";
 import lsg from "../assets/LSG.png";
 import dc from "../assets/DC.png";
 
-const Main = ({ setProgress }) => {
+const Main = ({ setProgress, title }) => {
+  useEffect(() => {
+    document.title = `${title} | Nishant`;
+  });
   useEffect(() => {
     setProgress(40);
     setTimeout(() => {
@@ -29,8 +32,8 @@ const Main = ({ setProgress }) => {
 
     if (matchDate.toDateString() === today.toDateString()) {
       const currentTime = today.getHours() * 60 + today.getMinutes();
-      const startLiveTime = 19 * 60; // 7:00 PM in minutes
-      const endLiveTime = 24 * 60; // 12:00 AM in minutes
+      const startLiveTime = 19 * 60;
+      const endLiveTime = 24 * 60;
 
       if (currentTime >= startLiveTime && currentTime < endLiveTime) {
         return "Live";
@@ -51,7 +54,7 @@ const Main = ({ setProgress }) => {
   return (
     <>
       <h2 className="font-bold text-2xl md:text-4xl text-orange-400 text-center pt-2">
-        IPL Live Stream
+        IPL Live Streaming Free
       </h2>
       <Divss
         photo1={dc}

@@ -41,11 +41,11 @@ export const AllRoutes = () => {
         />
         <Route
           path="live"
-          element={<LiveHome title="Live" setProgress={setProgress} />}
+          element={<LiveHome title="Matches" setProgress={setProgress} />}
         />
         <Route
           path="livestream"
-          element={<Live title="Live" setProgress={setProgress} />}
+          element={<Live title="LiveStreaming" setProgress={setProgress} />}
         />
       </Routes>
     </div>

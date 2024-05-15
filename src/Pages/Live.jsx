@@ -89,7 +89,7 @@ const Live = ({ title, setProgress }) => {
 
   return (
     <>
-      <div className="min-h-screen">
+      <div className="h-[90vh]">
         <div className="m-2 flex justify-center">
           <div className="bg-orange-400 p-6 rounded-lg shadow-xl w-full max-w-md text-center">
             <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
