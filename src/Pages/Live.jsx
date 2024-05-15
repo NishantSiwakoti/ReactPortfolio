@@ -98,7 +98,7 @@ const Live = ({ setProgress }) => {
   return (
     <>
       <div className="">
-        <div className="m-2 flex justify-center">
+        <div className="m-2 mt-10 flex justify-center">
           <div className="bg-orange-400 p-6 rounded-lg shadow-xl w-full max-w-md text-center">
             <div className="flex items-center justify-center space-x-4">
               <img src={rr} alt="RR Logo" className="h-12 w-12" />
