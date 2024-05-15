@@ -13,7 +13,7 @@ import dc from "../assets/DC.png";
 
 const Main = ({ setProgress, title }) => {
   useEffect(() => {
-    document.title = `${title} | Nishant`;
+    document.title = `${title}`;
   });
   useEffect(() => {
     setProgress(40);

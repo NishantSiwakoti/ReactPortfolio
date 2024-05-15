@@ -11,13 +11,16 @@ import srh from "../assets/SRH.png";
 import lsg from "../assets/LSG.png";
 import dc from "../assets/DC.png";
 
-const Live = ({ setProgress }) => {
+const Live = ({ setProgress, title }) => {
   useEffect(() => {
     setProgress(40);
     setTimeout(() => {
       setProgress(100);
     }, 500);
   }, []);
+  useEffect(() => {
+    document.title = `${title}`;
+  });
 
   const [streams, setStreams] = useState([]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState("");

@@ -41,7 +41,7 @@ const Home = ({ title, setProgress }) => {
     Aos.init({ duration: 1500 });
   }, []);
   useEffect(() => {
-    document.title = `${title} | Nishant`;
+    document.title = `${title}`;
   });
   const formatDate = (dateStr) => {
     const matchDate = new Date(dateStr);

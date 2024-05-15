@@ -41,7 +41,7 @@ export const AllRoutes = () => {
         />
         <Route
           path="live"
-          element={<LiveHome title="Matches" setProgress={setProgress} />}
+          element={<LiveHome title="Live Matches" setProgress={setProgress} />}
         />
         <Route
           path="livestream"

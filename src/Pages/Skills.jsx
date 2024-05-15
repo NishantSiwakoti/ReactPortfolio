@@ -24,7 +24,7 @@ const Skills = ({ title, setProgress }) => {
     Aos.init({ duration: 1500 });
   }, []);
   useEffect(() => {
-    document.title = `${title} | Nishant`;
+    document.title = `${title}`;
   });
   return (
     <section className="">

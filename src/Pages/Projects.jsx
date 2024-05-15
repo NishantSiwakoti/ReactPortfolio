@@ -11,7 +11,7 @@ const Projects = ({ title, setProgress }) => {
     }, 500);
   }, []);
   useEffect(() => {
-    document.title = `${title} | Nishant`;
+    document.title = `${title} `;
   });
   useEffect(() => {
     Aos.init({ duration: 1000 });

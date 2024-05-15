@@ -13,7 +13,7 @@ const About = ({ title, setProgress }) => {
     }, 500);
   }, []);
   useEffect(() => {
-    document.title = `${title} | Nishant`;
+    document.title = `${title}`;
   });
   useEffect(() => {
     Aos.init({ duration: 3000 });
