@@ -159,6 +159,27 @@ const Live = ({ setProgress }) => {
             ></video>
           </div>
         </div>
+        <div className="flex justify-center">
+          <div className="w-full max-w-3xl p-4 bg-orange-400 rounded-lg shadow-lg m-5">
+            <p className="text-white font-bold text-2xl text-center p-2">
+              About US
+            </p>
+            <p>
+              This website does not host any media content on its own site. Our
+              visitors may utilize external or third-party services to display
+              content, such as embedding media from platforms like Bet365,
+              Dailymotion, Streamable, and others. We hereby inform all
+              copyright owners that the links and media shared by visitors on
+              this site are hosted elsewhere on the web or embedded from various
+              other platforms as mentioned. Should you encounter any legal
+              issues, please reach out to the appropriate media file owners or
+              hosters directly. All trademarks, videos, trade names, service
+              marks, copyrighted work, and logos featured herein belong to their
+              respective owners and companies. Nishant holds no responsibility
+              for content uploaded by others to third-party sites.
+            </p>
+          </div>
+        </div>
       </div>
     </>
   );

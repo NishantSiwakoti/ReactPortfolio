@@ -1,5 +1,5 @@
 import Button from "../Components/Button/Button";
-import profile from "../assets/images/ProfilePic.png";
+import profile from "../assets/images/pic.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -29,7 +29,7 @@ const About = ({ title, setProgress }) => {
             src={profile}
             alt="Nishant Siwakoti"
             data-aos="fade-out"
-            className="w-full md:ml-[50px] lg:ml-[px] max-w-[200px] md:max-w-[300px]"
+            className="w-full rounded-full md:ml-[50px] lg:ml-[px] max-w-[200px] md:max-w-[300px]"
             style={{ height: "auto" }}
           />
         </div>
@@ -52,10 +52,7 @@ const About = ({ title, setProgress }) => {
             work!
           </p>
           <div className="flex justify-center items-center md:ml-[100px] md:flex md:justify-start">
-            <NavLink
-              to="https://drive.google.com/file/d/1yChxB7aflRTZxZo0Cj26b71WLoYsKa9I/view?usp=sharing"
-              target="_blank"
-            >
+            <NavLink to="" target="_blank">
               <Button name="Download CV" />
             </NavLink>
           </div>

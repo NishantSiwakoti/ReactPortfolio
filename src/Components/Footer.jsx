@@ -16,18 +16,12 @@ const Footer = () => {
         </span>
         <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
           <li>
-            <NavLink
-              to="https://www.linkedin.com/in/nishant-siwakoti-470a06231/"
-              className="hover:underline me-4 md:me-6"
-            >
+            <NavLink to="" className="hover:underline me-4 md:me-6">
               LinkedIn
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="https://github.com/NishantSiwakoti"
-              className="hover:underline me-4 md:me-6"
-            >
+            <NavLink to="" className="hover:underline me-4 md:me-6">
               Github
             </NavLink>
           </li>
@@ -37,10 +31,7 @@ const Footer = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="https://www.instagram.com/nishant.siwakotii/"
-              className="hover:underline"
-            >
+            <NavLink to="" className="hover:underline">
               Instagram
             </NavLink>
           </li>

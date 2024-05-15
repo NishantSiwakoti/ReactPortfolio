@@ -61,7 +61,7 @@ const Contact = ({ title, setProgress }) => {
                   href="javascript:void(0)"
                   className="dark:text-white text-sm ml-3"
                 >
-                  <p>nishantsiwakoti5@gmail.com</p>
+                  <p>nishant5@gmail.com</p>
                 </a>
               </li>
               <li className="flex items-center">
