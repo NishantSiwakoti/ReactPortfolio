@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Hls from "hls.js";
 
-const Live = ({ setProgress }) => {
+const Live = ({ title, setProgress }) => {
   useEffect(() => {
     setProgress(40);
     setTimeout(() => {
       setProgress(100);
     }, 500);
   }, []);
+  useEffect(() => {
+    document.title = `${title} | Nishant`;
+  });
   const [streams, setStreams] = useState([]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState("");
   const [isPlaying, setIsPlaying] = useState(false);

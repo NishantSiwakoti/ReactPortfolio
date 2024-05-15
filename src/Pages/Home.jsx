@@ -164,44 +164,46 @@ const Home = ({ title, setProgress }) => {
         </div>
       </section>
       {/* Live Section */}
-      <h2 className="font-bold text-2xl md:text-4xl text-orange-400 text-center pt-2">
-        Live
-      </h2>
-      <Divss
-        photo1={dc}
-        team1="DC"
-        photo2={lsg}
-        team2="LSG"
-        status={formatDate("May 14, 2024")}
-      />
-      <Divss
-        photo1={rr}
-        team1="RR"
-        photo2={pbks}
-        team2="PBKS"
-        status={formatDate("May 15, 2024")}
-      />
-      <Divss
-        photo1={srh}
-        team1="SRH"
-        photo2={gt}
-        team2="GT"
-        status={formatDate("May 16, 2024")}
-      />
-      <Divss
-        photo1={mi}
-        team1="MI"
-        photo2={lsg}
-        team2="LSG"
-        status={formatDate("May 17, 2024")}
-      />
-      <Divss
-        photo1={rcb}
-        team1="RCB"
-        photo2={csk}
-        team2="CSK"
-        status={formatDate("May 18, 2024")}
-      />
+      <section className="dark:bg-slate-800">
+        <h2 className="font-bold text-2xl md:text-4xl text-orange-400 text-center pt-2">
+          Live
+        </h2>
+        <Divss
+          photo1={dc}
+          team1="DC"
+          photo2={lsg}
+          team2="LSG"
+          status={formatDate("May 14, 2024")}
+        />
+        <Divss
+          photo1={rr}
+          team1="RR"
+          photo2={pbks}
+          team2="PBKS"
+          status={formatDate("May 15, 2024")}
+        />
+        <Divss
+          photo1={srh}
+          team1="SRH"
+          photo2={gt}
+          team2="GT"
+          status={formatDate("May 16, 2024")}
+        />
+        <Divss
+          photo1={mi}
+          team1="MI"
+          photo2={lsg}
+          team2="LSG"
+          status={formatDate("May 17, 2024")}
+        />
+        <Divss
+          photo1={rcb}
+          team1="RCB"
+          photo2={csk}
+          team2="CSK"
+          status={formatDate("May 18, 2024")}
+        />
+      </section>
 
       {/* Skills Section */}
       <section className="min-h-[70vh]">

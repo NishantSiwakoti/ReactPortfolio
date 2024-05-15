@@ -38,7 +38,10 @@ export const AllRoutes = () => {
           path="contact"
           element={<Contact title="Contact" setProgress={setProgress} />}
         />
-        <Route path="live" element={<Live setProgress={setProgress} />}></Route>
+        <Route
+          path="live"
+          element={<Live title="Live" setProgress={setProgress} />}
+        ></Route>
       </Routes>
     </div>
   );

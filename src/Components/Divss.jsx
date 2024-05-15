@@ -7,7 +7,7 @@ const Divss = (props) => {
   const isTomorrowOrFuture = !isClickable && !isEnded;
 
   return (
-    <body className="bg-white flex items-center justify-center">
+    <body className="bg-white dark:bg-slate-800 flex items-center justify-center">
       <div className="bg-orange-400 p-6 m-5 rounded-lg shadow-2xl w-full max-w-xl">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center space-x-2">
