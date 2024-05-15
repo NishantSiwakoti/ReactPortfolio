@@ -6,7 +6,7 @@ import { useEffect } from "react";
 const Contact = ({ title, setProgress }) => {
   useEffect(() => {
     setProgress(40);
-    setTimeout(() => {
+    setTimeout(() => {  
       setProgress(100);
     }, 500);
   }, []);
