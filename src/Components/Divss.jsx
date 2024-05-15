@@ -27,7 +27,7 @@ const Divss = (props) => {
               </span>
             </div>
             {isClickable ? (
-              <NavLink to="/live">
+              <NavLink to="/livestream">
                 <button className="mt-2 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-700 text-sm md:text-base">
                   {props.status}
                 </button>

@@ -50,6 +50,9 @@ const Main = ({ setProgress }) => {
 
   return (
     <>
+      <h2 className="font-bold text-2xl md:text-4xl text-orange-400 text-center pt-2">
+        IPL Live Stream
+      </h2>
       <Divss
         photo1={dc}
         team1="DC"
