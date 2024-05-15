@@ -162,9 +162,9 @@ const Live = ({ setProgress }) => {
         <div className="flex justify-center">
           <div className="w-full max-w-3xl p-4 bg-orange-400 rounded-lg shadow-lg m-5">
             <p className="text-white font-bold text-2xl text-center p-2">
-              About US
+              Digital Millennium Copyright Act(DMCA)
             </p>
-            <p>
+            <p className="text-gray-800 font-medium">
               This website does not host any media content on its own site. Our
               visitors may utilize external or third-party services to display
               content, such as embedding media from platforms like Bet365,
