@@ -166,7 +166,7 @@ const Home = ({ title, setProgress }) => {
       {/* Live Section */}
       <section className="dark:bg-slate-800">
         <h2 className="font-bold text-2xl md:text-4xl text-orange-400 text-center pt-2">
-          Live
+          Matches
         </h2>
         <Divss
           photo1={dc}

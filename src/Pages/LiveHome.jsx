@@ -91,6 +91,13 @@ const Main = ({ setProgress, title }) => {
         team2="CSK"
         status={formatDate("May 18, 2024")}
       />
+      <Divss
+        photo1={srh}
+        team1="SRH"
+        photo2={pbks}
+        team2="PBKS"
+        status={formatDate("May 19, 2024")}
+      />
     </>
   );
 };
