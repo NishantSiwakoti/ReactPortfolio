@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Divss from "../Components/Divss";
 import kkr from "../assets/KKR.png";
 import rcb from "../assets/RCB.png";
@@ -11,10 +11,13 @@ import srh from "../assets/SRH.png";
 import lsg from "../assets/LSG.png";
 import dc from "../assets/DC.png";
 
-const Main = ({ setProgress, title }) => {
+const LiveHome = ({ setProgress, title }) => {
+  const [endedMatches, setEndedMatches] = useState([]);
+
   useEffect(() => {
     document.title = `${title}`;
   });
+
   useEffect(() => {
     setProgress(40);
     setTimeout(() => {
@@ -44,11 +47,21 @@ const Main = ({ setProgress, title }) => {
       }
     } else if (matchDate.toDateString() === tomorrow.toDateString()) {
       return "Tomorrow";
+    } else if (matchDate < today) {
+      return "Ended";
     } else if (matchDate.toDateString() === yesterday.toDateString()) {
       return "Ended";
     } else {
       return dateStr;
     }
+  };
+
+  const handleMatchStatus = (dateStr) => {
+    const status = formatDate(dateStr);
+    if (status === "Ended" && endedMatches.length < 2) {
+      setEndedMatches([...endedMatches, dateStr]);
+    }
+    return status;
   };
 
   return (
@@ -61,45 +74,45 @@ const Main = ({ setProgress, title }) => {
         team1="DC"
         photo2={lsg}
         team2="LSG"
-        status={formatDate("May 14, 2024")}
+        status={handleMatchStatus("May 14, 2024")}
       />
       <Divss
         photo1={rr}
         team1="RR"
         photo2={pbks}
         team2="PBKS"
-        status={formatDate("May 15, 2024")}
+        status={handleMatchStatus("May 15, 2024")}
       />
       <Divss
         photo1={srh}
         team1="SRH"
         photo2={gt}
         team2="GT"
-        status={formatDate("May 16, 2024")}
+        status={handleMatchStatus("May 16, 2024")}
       />
       <Divss
         photo1={mi}
         team1="MI"
         photo2={lsg}
         team2="LSG"
-        status={formatDate("May 17, 2024")}
+        status={handleMatchStatus("May 17, 2024")}
       />
       <Divss
         photo1={rcb}
         team1="RCB"
         photo2={csk}
         team2="CSK"
-        status={formatDate("May 18, 2024")}
+        status={handleMatchStatus("May 18, 2024")}
       />
       <Divss
         photo1={srh}
         team1="SRH"
         photo2={pbks}
         team2="PBKS"
-        status={formatDate("May 19, 2024")}
+        status={handleMatchStatus("May 19, 2024")}
       />
     </>
   );
 };
 
-export default Main;
+export default LiveHome;

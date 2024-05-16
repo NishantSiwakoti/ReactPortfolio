@@ -10,6 +10,7 @@ import pbks from "../assets/PBKS.png";
 import srh from "../assets/SRH.png";
 import lsg from "../assets/LSG.png";
 import dc from "../assets/DC.png";
+import LiveDiv from "../Components/LiveDiv";
 
 const Live = ({ setProgress, title }) => {
   useEffect(() => {
@@ -101,24 +102,9 @@ const Live = ({ setProgress, title }) => {
   return (
     <>
       <div className="">
-        <div className="m-2  flex justify-center">
-          <div className="bg-orange-400 p-6 rounded-lg shadow-xl w-full max-w-md text-center">
-            <div className="flex items-center justify-center space-x-4">
-              <img src={rr} alt="RR Logo" className="h-12 w-12" />
-              <div>
-                <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
-                  Match 65
-                </p>
-                <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
-                  RR VS PBKS
-                </p>
-              </div>
-              <img src={pbks} alt="PBKS Logo" className="h-12 w-12" />
-            </div>
-          </div>
-        </div>
+        <LiveDiv team1="SRH" team2="GT" photo1={gt} photo2={srh} />
         <div className="flex justify-center">
-          <div className="w-full max-w-3xl p-4 bg-orange-400 rounded-lg shadow-lg">
+          <div className="w-full mb-10 max-w-3xl p-4 bg-orange-400 rounded-lg shadow-lg">
             <div className="flex justify-center mb-4">
               <select
                 id="language-select"
@@ -164,10 +150,10 @@ const Live = ({ setProgress, title }) => {
         </div>
         <div className="flex justify-center">
           <div className="w-full max-w-3xl p-4 bg-orange-400 rounded-lg shadow-lg m-5">
-            <p className="text-white font-bold text-2xl text-center p-2">
+            <p className="text-white font-bold text-base text-center p-2">
               Digital Millennium Copyright Act(DMCA)
             </p>
-            <p className="text-gray-800 font-medium">
+            <p className="text-gray-800 text-sm font-medium">
               This website does not host any media content on its own site. Our
               visitors may utilize external or third-party services to display
               content, such as embedding media from platforms like Bet365,
