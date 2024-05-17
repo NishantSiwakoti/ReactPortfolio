@@ -71,9 +71,7 @@ const Divss = (props) => {
                 </button>
                 {isToday && (
                   <div className="marquee mt-2  px-0.5 py-2 bg-blue-500 text-white rounded-md text-sm md:text-base">
-                    <div>
-                      Live stream will start from 6:00pm | Stay Connected.
-                    </div>
+                    <div>Live stream will start from 6:00pm.</div>
                   </div>
                 )}
               </div>
