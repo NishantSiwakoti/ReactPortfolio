@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 import Hls from "hls.js";
+import kkr from "../assets/KKR.png";
+import rcb from "../assets/RCB.png";
+import mi from "../assets/MI.png";
+import csk from "../assets/CSK.png";
+import gt from "../assets/GT.png";
+import rr from "../assets/RR.png";
+import pbks from "../assets/PBKS.png";
+import srh from "../assets/SRH.png";
+import lsg from "../assets/LSG.png";
+import dc from "../assets/DC.png";
+import LiveDiv from "../Components/LiveDiv";
 
 const Live = ({ setProgress, title }) => {
-  const location = useLocation();
-  const match = location.state?.match;
-
   useEffect(() => {
     setProgress(40);
     setTimeout(() => {
       setProgress(100);
     }, 500);
   }, []);
-
   useEffect(() => {
     document.title = `${title}`;
   });
@@ -99,22 +105,17 @@ const Live = ({ setProgress, title }) => {
         <div className="m-2  flex justify-center">
           <div className="bg-orange-400 p-6 rounded-lg shadow-xl w-full max-w-md text-center">
             <div className="m-2  flex justify-center">
-              <div className="bg-orange-400 p-6 rounded-lg shadow-xl w-full max-w-md text-center">
-                <div className="flex items-center justify-center space-x-4">
-                  <img src={match?.photo1} alt="Logo" className="h-12 w-12" />
-                  <div>
-                    <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
-                      {match?.team1}
-                    </p>
-                    <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
-                      VS
-                    </p>
-                    <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
-                      {match?.team2}
-                    </p>
-                  </div>
-                  <img src={match?.photo2} alt="Logo" className="h-12 w-12" />
+              <div className="flex items-center justify-center space-x-4">
+                <img src={mi} alt="Logo" className="h-12 w-12" />
+                <div>
+                  <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
+                    Match
+                  </p>
+                  <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
+                    MI VS LSG
+                  </p>
                 </div>
+                <img src={lsg} alt="Logo" className="h-12 w-12" />
               </div>
             </div>
           </div>

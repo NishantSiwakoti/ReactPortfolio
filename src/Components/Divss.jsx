@@ -23,7 +23,7 @@ const Divss = (props) => {
           }
           @keyframes marquee {
             0% {
-              transform: translateX(80%);
+              transform: translateX(40%);
             }
             100% {
               transform: translateX(-100%);
