@@ -35,14 +35,14 @@ const LiveHome = ({ setProgress, title }) => {
     const tomorrow = new Date(today);
     tomorrow.setDate(today.getDate() + 1);
 
-    if (matchDate.toDateString() === today.toDateString()) {
-      const currentTime = today.getHours() * 60 + today.getMinutes();
-      const startLiveTime = 18 * 60;
-      const endLiveTime = 24 * 60;
+    const startLiveTime = 18 * 60;
+    const endLiveTime = 26 * 60;
+    const currentTime = today.getHours() * 60 + today.getMinutes();
 
+    if (matchDate.toDateString() === today.toDateString()) {
       if (currentTime >= startLiveTime && currentTime < endLiveTime) {
         return "Live";
-      } else if (currentTime >= endLiveTime || today.getHours() < 7) {
+      } else if (currentTime >= endLiveTime) {
         return "Ended";
       } else {
         return "Today";
@@ -76,21 +76,6 @@ const LiveHome = ({ setProgress, title }) => {
         IPL Live Streaming Free
       </h2>
 
-      <Divss
-        photo1={srh}
-        team1="SRH"
-        photo2={gt}
-        team2="GT"
-        status={handleMatchStatus("May 16, 2024")}
-        onClick={() =>
-          handleLiveClick({
-            team1: "SRH",
-            photo1: srh,
-            team2: "GT",
-            photo2: gt,
-          })
-        }
-      />
       <Divss
         photo1={mi}
         team1="MI"
