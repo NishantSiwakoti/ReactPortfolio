@@ -69,20 +69,7 @@ const LiveHome = ({ setProgress, title }) => {
       <h2 className="font-bold text-2xl md:text-4xl text-orange-400 text-center pt-2">
         IPL Live Streaming Free
       </h2>
-      <Divss
-        photo1={dc}
-        team1="DC"
-        photo2={lsg}
-        team2="LSG"
-        status={handleMatchStatus("May 14, 2024")}
-      />
-      <Divss
-        photo1={rr}
-        team1="RR"
-        photo2={pbks}
-        team2="PBKS"
-        status={handleMatchStatus("May 15, 2024")}
-      />
+
       <Divss
         photo1={srh}
         team1="SRH"
@@ -109,6 +96,13 @@ const LiveHome = ({ setProgress, title }) => {
         team1="SRH"
         photo2={pbks}
         team2="PBKS"
+        status={handleMatchStatus("May 19, 2024")}
+      />
+      <Divss
+        photo1={rr}
+        team1="RR"
+        photo2={kkr}
+        team2="KKR"
         status={handleMatchStatus("May 19, 2024")}
       />
     </>
