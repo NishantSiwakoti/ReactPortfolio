@@ -5,9 +5,10 @@ const Divss = (props) => {
   const isClickable = props.status === "Live";
   const isEnded = props.status === "Ended";
   const isTomorrowOrFuture = !isClickable && !isEnded;
+  const isToday = props.status === "Today";
 
   return (
-    <body className="bg-white dark:bg-slate-800 flex items-center justify-center">
+    <div className="bg-white dark:bg-slate-800 flex items-center justify-center">
       <div className="bg-orange-400 p-6 m-5 rounded-lg shadow-2xl w-full max-w-xl">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center space-x-2">
@@ -33,18 +34,25 @@ const Divss = (props) => {
                 </button>
               </NavLink>
             ) : (
-              <button
-                className={`mt-2 px-4 py-2 ${
-                  isEnded
-                    ? "bg-gray-500"
-                    : isTomorrowOrFuture
-                    ? "bg-green-500"
-                    : ""
-                } text-white rounded-md cursor-not-allowed text-sm md:text-base`}
-                disabled
-              >
-                {props.status}
-              </button>
+              <div>
+                <button
+                  className={`mt-2 px-4 py-2 ${
+                    isEnded
+                      ? "bg-gray-500"
+                      : isTomorrowOrFuture
+                      ? "bg-green-500"
+                      : "bg-yellow-500"
+                  } text-white rounded-md cursor-not-allowed text-sm md:text-base`}
+                  disabled
+                >
+                  {props.status}
+                </button>
+                {isToday && (
+                  <p className="text-sm md:text-base text-white mt-2">
+                    Live stream will start from 6:00 pm
+                  </p>
+                )}
+              </div>
             )}
           </div>
 
@@ -60,7 +68,7 @@ const Divss = (props) => {
           </div>
         </div>
       </div>
-    </body>
+    </div>
   );
 };
 
