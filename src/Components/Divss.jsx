@@ -18,7 +18,7 @@ const Divss = (props) => {
           }
           .marquee div {
             display: inline-block;
-            padding-left: 50%;
+            padding-left: 40%;
             animation: marquee 6s linear infinite;
           }
           @keyframes marquee {
@@ -70,7 +70,7 @@ const Divss = (props) => {
                   {props.status}
                 </button>
                 {isToday && (
-                  <div className="marquee mt-2 px-4 py-2 bg-blue-500 text-white rounded-md text-sm md:text-base">
+                  <div className="marquee mt-2  px-0.5 py-2 bg-blue-500 text-white rounded-md text-sm md:text-base">
                     <div>
                       Live stream will start from 6:00pm | Stay Connected.
                     </div>

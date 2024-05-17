@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Divss from "../Components/Divss";
 import kkr from "../assets/KKR.png";
 import rcb from "../assets/RCB.png";
@@ -13,6 +14,7 @@ import dc from "../assets/DC.png";
 
 const LiveHome = ({ setProgress, title }) => {
   const [endedMatches, setEndedMatches] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     document.title = `${title}`;
@@ -64,6 +66,10 @@ const LiveHome = ({ setProgress, title }) => {
     return status;
   };
 
+  const handleLiveClick = (match) => {
+    navigate("/live", { state: { match } });
+  };
+
   return (
     <>
       <h2 className="font-bold text-2xl md:text-4xl text-orange-400 text-center pt-2">
@@ -76,6 +82,14 @@ const LiveHome = ({ setProgress, title }) => {
         photo2={gt}
         team2="GT"
         status={handleMatchStatus("May 16, 2024")}
+        onClick={() =>
+          handleLiveClick({
+            team1: "SRH",
+            photo1: srh,
+            team2: "GT",
+            photo2: gt,
+          })
+        }
       />
       <Divss
         photo1={mi}
@@ -83,6 +97,14 @@ const LiveHome = ({ setProgress, title }) => {
         photo2={lsg}
         team2="LSG"
         status={handleMatchStatus("May 17, 2024")}
+        onClick={() =>
+          handleLiveClick({
+            team1: "MI",
+            photo1: mi,
+            team2: "LSG",
+            photo2: lsg,
+          })
+        }
       />
       <Divss
         photo1={rcb}
@@ -90,6 +112,14 @@ const LiveHome = ({ setProgress, title }) => {
         photo2={csk}
         team2="CSK"
         status={handleMatchStatus("May 18, 2024")}
+        onClick={() =>
+          handleLiveClick({
+            team1: "RCB",
+            photo1: rcb,
+            team2: "CSK",
+            photo2: csk,
+          })
+        }
       />
       <Divss
         photo1={srh}
@@ -97,6 +127,14 @@ const LiveHome = ({ setProgress, title }) => {
         photo2={pbks}
         team2="PBKS"
         status={handleMatchStatus("May 19, 2024")}
+        onClick={() =>
+          handleLiveClick({
+            team1: "SRH",
+            photo1: srh,
+            team2: "PBKS",
+            photo2: pbks,
+          })
+        }
       />
       <Divss
         photo1={rr}
@@ -104,6 +142,14 @@ const LiveHome = ({ setProgress, title }) => {
         photo2={kkr}
         team2="KKR"
         status={handleMatchStatus("May 19, 2024")}
+        onClick={() =>
+          handleLiveClick({
+            team1: "RR",
+            photo1: rr,
+            team2: "KKR",
+            photo2: kkr,
+          })
+        }
       />
     </>
   );
