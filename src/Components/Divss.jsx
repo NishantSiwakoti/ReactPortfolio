@@ -9,6 +9,28 @@ const Divss = (props) => {
 
   return (
     <div className="bg-white dark:bg-slate-800 flex items-center justify-center">
+      <style>
+        {`
+          .marquee {
+            overflow: hidden;
+            position: relative;
+            white-space: nowrap;
+          }
+          .marquee div {
+            display: inline-block;
+            padding-left: 50%;
+            animation: marquee 6s linear infinite;
+          }
+          @keyframes marquee {
+            0% {
+              transform: translateX(80%);
+            }
+            100% {
+              transform: translateX(-100%);
+            }
+          }
+        `}
+      </style>
       <div className="bg-orange-400 p-6 m-5 rounded-lg shadow-2xl w-full max-w-xl">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center space-x-2">
@@ -48,9 +70,11 @@ const Divss = (props) => {
                   {props.status}
                 </button>
                 {isToday && (
-                  <p className="text-sm md:text-base text-white mt-2">
-                    Live stream will start from 6:00 pm
-                  </p>
+                  <div className="marquee mt-2 px-4 py-2 bg-blue-500 text-white rounded-md text-sm md:text-base">
+                    <div>
+                      Live stream will start from 6:00pm | Stay Connected.
+                    </div>
+                  </div>
                 )}
               </div>
             )}
