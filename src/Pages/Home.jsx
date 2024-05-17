@@ -29,8 +29,11 @@ import rr from "../assets/RR.png";
 import lsg from "../assets/LSG.png";
 import rcb from "../assets/RCB.png";
 import pbks from "../assets/PBKS.png";
+import { useState } from "react";
 
 const Home = ({ title, setProgress }) => {
+  const [endedMatches, setEndedMatches] = useState([]);
+
   useEffect(() => {
     setProgress(40);
     setTimeout(() => {
@@ -65,11 +68,21 @@ const Home = ({ title, setProgress }) => {
       }
     } else if (matchDate.toDateString() === tomorrow.toDateString()) {
       return "Tomorrow";
+    } else if (matchDate < today) {
+      return "Ended";
     } else if (matchDate.toDateString() === yesterday.toDateString()) {
       return "Ended";
     } else {
       return dateStr;
     }
+  };
+
+  const handleMatchStatus = (dateStr) => {
+    const status = formatDate(dateStr);
+    if (status === "Ended" && endedMatches.length < 2) {
+      setEndedMatches([...endedMatches, dateStr]);
+    }
+    return status;
   };
 
   return (
@@ -166,39 +179,39 @@ const Home = ({ title, setProgress }) => {
           Matches
         </h2>
         <Divss
-          photo1={dc}
-          team1="DC"
-          photo2={lsg}
-          team2="LSG"
-          status={formatDate("May 14, 2024")}
-        />
-        <Divss
-          photo1={rr}
-          team1="RR"
-          photo2={pbks}
-          team2="PBKS"
-          status={formatDate("May 15, 2024")}
-        />
-        <Divss
           photo1={srh}
           team1="SRH"
           photo2={gt}
           team2="GT"
-          status={formatDate("May 16, 2024")}
+          status={handleMatchStatus("May 16, 2024")}
         />
         <Divss
           photo1={mi}
           team1="MI"
           photo2={lsg}
           team2="LSG"
-          status={formatDate("May 17, 2024")}
+          status={handleMatchStatus("May 17, 2024")}
         />
         <Divss
           photo1={rcb}
           team1="RCB"
           photo2={csk}
           team2="CSK"
-          status={formatDate("May 18, 2024")}
+          status={handleMatchStatus("May 18, 2024")}
+        />
+        <Divss
+          photo1={srh}
+          team1="SRH"
+          photo2={pbks}
+          team2="PBKS"
+          status={handleMatchStatus("May 19, 2024")}
+        />
+        <Divss
+          photo1={rr}
+          team1="RR"
+          photo2={kkr}
+          team2="KKR"
+          status={handleMatchStatus("May 19, 2024")}
         />
       </section>
 
