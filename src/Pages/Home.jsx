@@ -178,20 +178,7 @@ const Home = ({ title, setProgress }) => {
         <h2 className="font-bold text-2xl md:text-4xl text-orange-400 text-center pt-2">
           Matches
         </h2>
-        <Divss
-          photo1={srh}
-          team1="SRH"
-          photo2={gt}
-          team2="GT"
-          status={handleMatchStatus("May 16, 2024")}
-        />
-        <Divss
-          photo1={mi}
-          team1="MI"
-          photo2={lsg}
-          team2="LSG"
-          status={handleMatchStatus("May 17, 2024")}
-        />
+
         <Divss
           photo1={rcb}
           team1="RCB"

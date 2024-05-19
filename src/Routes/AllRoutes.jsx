@@ -8,6 +8,7 @@ import LoadingBar from "react-top-loading-bar";
 import { useState } from "react";
 import LiveHome from "../Pages/LiveHome";
 import Live from "../Pages/Live";
+import TwoMatch from "../Pages/TwoMatch";
 export const AllRoutes = () => {
   const [progress, setProgress] = useState(0);
 
@@ -41,7 +42,7 @@ export const AllRoutes = () => {
         />
         <Route
           path="live"
-          element={<LiveHome title="Live Matches" setProgress={setProgress} />}
+          element={<TwoMatch title="Live Matches" setProgress={setProgress} />}
         />
         <Route
           path="livestream"
