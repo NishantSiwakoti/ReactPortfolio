@@ -96,7 +96,7 @@ const LiveHome = ({ setProgress, title }) => {
         team1="SRH"
         photo2={pbks}
         team2="PBKS"
-        status={handleMatchStatus("May 19, 2024")}
+        status={handleMatchStatus("May 18, 2024")}
         onClick={() =>
           handleLiveClick({
             team1: "SRH",
@@ -106,7 +106,7 @@ const LiveHome = ({ setProgress, title }) => {
           })
         }
       />
-      {/* <Divss
+      <Divss
         photo1={rr}
         team1="RR"
         photo2={kkr}
@@ -120,7 +120,7 @@ const LiveHome = ({ setProgress, title }) => {
             photo2: kkr,
           })
         }
-      /> */}
+      />
     </>
   );
 };
