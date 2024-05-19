@@ -35,7 +35,7 @@ const LiveHome = ({ setProgress, title }) => {
     const tomorrow = new Date(today);
     tomorrow.setDate(today.getDate() + 1);
 
-    const startLiveTime = 18 * 60;
+    const startLiveTime = 14 * 60;
     const endLiveTime = 26 * 60;
     const currentTime = today.getHours() * 60 + today.getMinutes();
 
@@ -77,21 +77,6 @@ const LiveHome = ({ setProgress, title }) => {
       </h2>
 
       <Divss
-        photo1={mi}
-        team1="MI"
-        photo2={lsg}
-        team2="LSG"
-        status={handleMatchStatus("May 17, 2024")}
-        onClick={() =>
-          handleLiveClick({
-            team1: "MI",
-            photo1: mi,
-            team2: "LSG",
-            photo2: lsg,
-          })
-        }
-      />
-      <Divss
         photo1={rcb}
         team1="RCB"
         photo2={csk}
@@ -121,7 +106,7 @@ const LiveHome = ({ setProgress, title }) => {
           })
         }
       />
-      <Divss
+      {/* <Divss
         photo1={rr}
         team1="RR"
         photo2={kkr}
@@ -135,7 +120,7 @@ const LiveHome = ({ setProgress, title }) => {
             photo2: kkr,
           })
         }
-      />
+      /> */}
     </>
   );
 };
