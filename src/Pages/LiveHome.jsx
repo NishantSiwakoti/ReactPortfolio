@@ -71,57 +71,42 @@ const LiveHome = ({ setProgress, title }) => {
   };
 
   return (
-    <>
+    <section className="min-h-screen">
       <h2 className="font-bold text-2xl md:text-4xl text-orange-400 text-center pt-2">
         IPL Live Streaming Free
       </h2>
 
       <Divss
+        photo1={kkr}
+        team1="KKR"
+        photo2={srh}
+        team2="SRH"
+        status={handleMatchStatus("May 21, 2024")}
+        onClick={() =>
+          handleLiveClick({
+            team1: "KKR",
+            photo1: kkr,
+            team2: "SRH",
+            photo2: srh,
+          })
+        }
+      />
+      <Divss
         photo1={rcb}
         team1="RCB"
-        photo2={csk}
-        team2="CSK"
-        status={handleMatchStatus("May 18, 2024")}
+        photo2={rr}
+        team2="RR"
+        status={handleMatchStatus("May 22, 2024")}
         onClick={() =>
           handleLiveClick({
             team1: "RCB",
             photo1: rcb,
-            team2: "CSK",
-            photo2: csk,
+            team2: "RR",
+            photo2: rr,
           })
         }
       />
-      <Divss
-        photo1={srh}
-        team1="SRH"
-        photo2={pbks}
-        team2="PBKS"
-        status={handleMatchStatus("May 18, 2024")}
-        onClick={() =>
-          handleLiveClick({
-            team1: "SRH",
-            photo1: srh,
-            team2: "PBKS",
-            photo2: pbks,
-          })
-        }
-      />
-      <Divss
-        photo1={rr}
-        team1="RR"
-        photo2={kkr}
-        team2="KKR"
-        status={handleMatchStatus("May 19, 2024")}
-        onClick={() =>
-          handleLiveClick({
-            team1: "RR",
-            photo1: rr,
-            team2: "KKR",
-            photo2: kkr,
-          })
-        }
-      />
-    </>
+    </section>
   );
 };
 

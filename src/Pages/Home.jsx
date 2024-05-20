@@ -180,25 +180,18 @@ const Home = ({ title, setProgress }) => {
         </h2>
 
         <Divss
+          photo1={kkr}
+          team1="KKR"
+          photo2={srh}
+          team2="SRH"
+          status={handleMatchStatus("May 21, 2024")}
+        />
+        <Divss
           photo1={rcb}
           team1="RCB"
-          photo2={csk}
-          team2="CSK"
-          status={handleMatchStatus("May 18, 2024")}
-        />
-        <Divss
-          photo1={srh}
-          team1="SRH"
-          photo2={pbks}
-          team2="PBKS"
-          status={handleMatchStatus("May 18, 2024")}
-        />
-        <Divss
-          photo1={rr}
-          team1="RR"
-          photo2={kkr}
-          team2="KKR"
-          status={handleMatchStatus("May 19, 2024")}
+          photo2={rr}
+          team2="RR"
+          status={handleMatchStatus("May 22, 2024")}
         />
       </section>
 
