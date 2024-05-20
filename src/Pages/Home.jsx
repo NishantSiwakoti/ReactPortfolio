@@ -283,7 +283,11 @@ const Home = ({ title, setProgress }) => {
             <h1 className="text-2xl mb-4 dark:text-white text-center md:text-left font-bold text-gray-600">
               Get in Touch
             </h1>
-            <form className="bg-orange-300 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <form
+              action="https://formspree.io/f/mdobdqev"
+              method="POST"
+              className="bg-orange-300 shadow-md rounded px-8 pt-6 pb-8 mb-4"
+            >
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
