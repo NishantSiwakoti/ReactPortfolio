@@ -2,6 +2,7 @@ import { TypeAnimation } from "react-type-animation";
 import photo from "../assets/images/animation.png";
 import Button from "../Components/Button/Button";
 import profile from "../assets/images/pic.png";
+import profile1 from "../assets/images/ps.png";
 import Card from "../Components/Card";
 import react from "../assets/images/react.png";
 import django from "../assets/images/django.png";
@@ -116,7 +117,7 @@ const Home = ({ title, setProgress }) => {
           <img
             className=""
             data-aos=""
-            src={photo}
+            src={profile1}
             alt="Profile"
             style={{ maxWidth: "100%", height: "auto" }}
           />
