@@ -18,11 +18,11 @@ const LiveHome = ({ setProgress, title }) => {
 
   useEffect(() => {
     document.title = `${title}`;
-  });
+  }, [title]);
 
   useEffect(() => {
     const matchStartTime = new Date();
-    matchStartTime.setHours(18, 0, 0);
+    matchStartTime.setHours(18, 0, 0); // Match starts at 6 PM
     const currentTime = new Date();
     const timeDiff = matchStartTime - currentTime;
 
@@ -90,7 +90,7 @@ const LiveHome = ({ setProgress, title }) => {
         photo2={srh}
         team2="SRH"
         match="Qualifier 1"
-        status={handleMatchStatus("May 21, 2024")}
+        status={handleMatchStatus()}
         onClick={() =>
           handleLiveClick({
             team1: "KKR",

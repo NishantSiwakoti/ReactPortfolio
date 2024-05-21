@@ -57,7 +57,7 @@ const Home = ({ title, setProgress }) => {
 
     if (matchDate.toDateString() === today.toDateString()) {
       const currentTime = today.getHours() * 60 + today.getMinutes();
-      const startLiveTime = 14 * 60;
+      const startLiveTime = 18 * 60;
       const endLiveTime = 24 * 60;
 
       if (currentTime >= startLiveTime && currentTime < endLiveTime) {
