@@ -13,12 +13,36 @@ import lsg from "../assets/LSG.png";
 import dc from "../assets/DC.png";
 
 const LiveHome = ({ setProgress, title }) => {
-  const [endedMatches, setEndedMatches] = useState([]);
+  const [remainingTime, setRemainingTime] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
     document.title = `${title}`;
   });
+
+  useEffect(() => {
+    const matchStartTime = new Date();
+    matchStartTime.setHours(18, 0, 0);
+    const currentTime = new Date();
+    const timeDiff = matchStartTime - currentTime;
+
+    if (timeDiff > 0) {
+      const timer = setInterval(() => {
+        const currentTime = new Date();
+        const timeDiff = matchStartTime - currentTime;
+        if (timeDiff <= 0) {
+          clearInterval(timer);
+          setRemainingTime(0);
+        } else {
+          setRemainingTime(timeDiff);
+        }
+      }, 1000);
+
+      return () => clearInterval(timer);
+    } else {
+      setRemainingTime(0);
+    }
+  }, []);
 
   useEffect(() => {
     setProgress(40);
@@ -27,47 +51,31 @@ const LiveHome = ({ setProgress, title }) => {
     }, 500);
   }, [setProgress]);
 
-  const formatDate = (dateStr) => {
-    const matchDate = new Date(dateStr);
-    const today = new Date();
-    const yesterday = new Date(today);
-    yesterday.setDate(today.getDate() - 1);
-    const tomorrow = new Date(today);
-    tomorrow.setDate(today.getDate() + 1);
+  const formatTime = (time) => {
+    const hours = Math.floor(time / (1000 * 60 * 60));
+    const minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((time % (1000 * 60)) / 1000);
+    return `${hours < 10 ? "0" + hours : hours}:${
+      minutes < 10 ? "0" + minutes : minutes
+    }:${seconds < 10 ? "0" + seconds : seconds}`;
+  };
 
-    const startLiveTime = 14 * 60;
-    const endLiveTime = 26 * 60;
-    const currentTime = today.getHours() * 60 + today.getMinutes();
-
-    if (matchDate.toDateString() === today.toDateString()) {
-      if (currentTime >= startLiveTime && currentTime < endLiveTime) {
-        return "Live";
-      } else if (currentTime >= endLiveTime) {
-        return "Ended";
-      } else {
-        return "Today";
-      }
-    } else if (matchDate.toDateString() === tomorrow.toDateString()) {
-      return "Tomorrow";
-    } else if (matchDate < today) {
-      return "Ended";
-    } else if (matchDate.toDateString() === yesterday.toDateString()) {
-      return "Ended";
+  const handleMatchStatus = () => {
+    if (remainingTime === null) {
+      return "Loading...";
+    } else if (remainingTime === 0) {
+      return "Live";
     } else {
-      return dateStr;
+      return formatTime(remainingTime);
     }
   };
 
-  const handleMatchStatus = (dateStr) => {
-    const status = formatDate(dateStr);
-    if (status === "Ended" && endedMatches.length < 2) {
-      setEndedMatches([...endedMatches, dateStr]);
-    }
-    return status;
-  };
-
-  const handleLiveClick = (match) => {
-    navigate("/live", { state: { match } });
+  const handleLiveClick = () => {
+    navigate("/live", {
+      state: {
+        match: { team1: "KKR", photo1: kkr, team2: "SRH", photo2: srh },
+      },
+    });
   };
 
   return (
@@ -92,7 +100,7 @@ const LiveHome = ({ setProgress, title }) => {
           })
         }
       />
-      <Divss
+      {/* <Divss
         photo1={rcb}
         team1="RCB"
         photo2={rr}
@@ -107,7 +115,7 @@ const LiveHome = ({ setProgress, title }) => {
             photo2: rr,
           })
         }
-      />
+      /> */}
     </section>
   );
 };
