@@ -81,6 +81,7 @@ const LiveHome = ({ setProgress, title }) => {
         team1="KKR"
         photo2={srh}
         team2="SRH"
+        match="Qualifier 1"
         status={handleMatchStatus("May 21, 2024")}
         onClick={() =>
           handleLiveClick({
@@ -96,6 +97,7 @@ const LiveHome = ({ setProgress, title }) => {
         team1="RCB"
         photo2={rr}
         team2="RR"
+        match="Qualifier 2"
         status={handleMatchStatus("May 22, 2024")}
         onClick={() =>
           handleLiveClick({

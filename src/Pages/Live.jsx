@@ -109,7 +109,7 @@ const Live = ({ setProgress, title }) => {
                 <img src={kkr} alt="Logo" className="h-12 w-12" />
                 <div>
                   <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
-                    Match
+                    Qualifier 1
                   </p>
                   <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
                     KKR VS SRH

@@ -46,7 +46,7 @@ const Divss = (props) => {
           <div className="text-center mt-4 md:mt-0">
             <div>
               <span className="text-xl md:text-2xl font-bold text-white">
-                VS
+                <h1>{props.match}</h1>
               </span>
             </div>
             {isClickable ? (
