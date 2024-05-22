@@ -85,11 +85,11 @@ const LiveHome = ({ setProgress, title }) => {
       </h2>
 
       <Divss
-        photo1={kkr}
-        team1="KKR"
-        photo2={srh}
-        team2="SRH"
-        match="Qualifier 1"
+        photo1={rcb}
+        team1="RCB"
+        photo2={rr}
+        team2="RR"
+        match="Qualifier 2"
         status={handleMatchStatus()}
         onClick={() =>
           handleLiveClick({
