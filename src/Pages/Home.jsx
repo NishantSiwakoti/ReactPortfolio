@@ -181,18 +181,11 @@ const Home = ({ title, setProgress }) => {
         </h2>
 
         <Divss
-          photo1={kkr}
-          team1="KKR"
-          photo2={srh}
-          team2="SRH"
-          status={handleMatchStatus("May 21, 2024")}
-        />
-        <Divss
-          photo1={rcb}
-          team1="RCB"
+          photo1={srh}
+          team1="SRH"
           photo2={rr}
           team2="RR"
-          status={handleMatchStatus("May 22, 2024")}
+          status={handleMatchStatus("May 24, 2024")}
         />
       </section>
 
