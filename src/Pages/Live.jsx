@@ -106,13 +106,13 @@ const Live = ({ setProgress, title }) => {
           <div className="bg-orange-400 p-6 rounded-lg shadow-xl w-full max-w-md text-center">
             <div className="m-2  flex justify-center">
               <div className="flex items-center justify-center space-x-4">
-                <img src={rcb} alt="Logo" className="h-12 w-12" />
+                <img src={srh} alt="Logo" className="h-12 w-12" />
                 <div>
                   <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
-                    Qualifier 2
+                    Playoff
                   </p>
                   <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
-                    RCB VS RR
+                    SRH VS RR
                   </p>
                 </div>
                 <img src={rr} alt="Logo" className="h-12 w-12" />

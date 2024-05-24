@@ -85,8 +85,8 @@ const LiveHome = ({ setProgress, title }) => {
       </h2>
 
       <Divss
-        photo1={rcb}
-        team1="RCB"
+        photo1={srh}
+        team1="SRH"
         photo2={rr}
         team2="RR"
         match="Qualifier 2"
