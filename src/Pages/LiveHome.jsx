@@ -22,6 +22,8 @@ const LiveHome = ({ setProgress, title }) => {
 
   useEffect(() => {
     const matchStartTime = new Date();
+    matchStartTime.setDate(matchStartTime.getDate() + 1); // Set to tomorrow
+
     matchStartTime.setHours(18, 0, 0); // Match starts at 6 PM
     const currentTime = new Date();
     const timeDiff = matchStartTime - currentTime;
@@ -88,8 +90,8 @@ const LiveHome = ({ setProgress, title }) => {
         photo1={srh}
         team1="SRH"
         photo2={rr}
-        team2="RR"
-        match="Qualifier 2"
+        team2="KKR"
+        match="Final"
         status={handleMatchStatus()}
         onClick={() =>
           handleLiveClick({
@@ -100,22 +102,6 @@ const LiveHome = ({ setProgress, title }) => {
           })
         }
       />
-      {/* <Divss
-        photo1={rcb}
-        team1="RCB"
-        photo2={rr}
-        team2="RR"
-        match="Qualifier 2"
-        status={handleMatchStatus("May 22, 2024")}
-        onClick={() =>
-          handleLiveClick({
-            team1: "RCB",
-            photo1: rcb,
-            team2: "RR",
-            photo2: rr,
-          })
-        }
-      /> */}
     </section>
   );
 };
