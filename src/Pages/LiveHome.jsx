@@ -22,7 +22,7 @@ const LiveHome = ({ setProgress, title }) => {
 
   useEffect(() => {
     const matchStartTime = new Date();
-    matchStartTime.setDate(matchStartTime.getDate() + 1); // Set to tomorrow
+    matchStartTime.setDate(matchStartTime.getDate()); // Set to tomorrow
 
     matchStartTime.setHours(18, 0, 0); // Match starts at 6 PM
     const currentTime = new Date();
