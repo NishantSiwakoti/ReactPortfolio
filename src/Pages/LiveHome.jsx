@@ -83,10 +83,11 @@ const LiveHome = ({ setProgress, title }) => {
   return (
     <section className="min-h-screen">
       <h2 className="font-bold text-2xl md:text-4xl text-orange-400 text-center pt-2">
-        IPL Live Streaming Free
+        WorldCup Live Coming Soon.......
       </h2>
+      <h1></h1>
 
-      <Divss
+      {/* <Divss
         photo1={srh}
         team1="SRH"
         photo2={kkr}
@@ -101,7 +102,7 @@ const LiveHome = ({ setProgress, title }) => {
             photo2: srh,
           })
         }
-      />
+      /> */}
     </section>
   );
 };
