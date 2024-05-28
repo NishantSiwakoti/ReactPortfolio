@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Hls from "hls.js";
+import nep from "../assets/images/countries/nep.png";
+import ned from "../assets/images/countries/ned.png";
 
 const Live = ({ setProgress, title }) => {
   useEffect(() => {
@@ -92,25 +94,23 @@ const Live = ({ setProgress, title }) => {
     <>
       <div className="">
         <div className="m-2  flex justify-center">
-          <div className="bg-orange-400 p-6 rounded-lg shadow-xl w-full max-w-md text-center">
+          <div className="bg-[#0A6847] p-6 rounded-lg shadow-xl w-full max-w-md text-center">
             <div className="m-2  flex justify-center">
               <div className="flex items-center justify-center space-x-4">
-                <img src={srh} alt="Logo" className="h-12 w-12" />
+                <img src={nep} alt="Logo" className="h-12 w-12 rounded-full" />
                 <div>
+                  <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white"></p>
                   <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
-                    Final
-                  </p>
-                  <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
-                    SRH VS KKR
+                    Nepal VS Netherlands
                   </p>
                 </div>
-                <img src={kkr} alt="Logo" className="h-12 w-12" />
+                <img src={ned} alt="Logo" className="h-12 w-12 rounded-full" />
               </div>
             </div>
           </div>
         </div>
         <div className="flex justify-center">
-          <div className="w-full mb-10 max-w-3xl p-4 bg-orange-400 rounded-lg shadow-lg">
+          <div className="w-full mb-10 max-w-3xl p-4 bg-[#0A6847] rounded-lg shadow-lg">
             <div className="flex justify-center mb-4">
               <select
                 id="language-select"
@@ -155,23 +155,15 @@ const Live = ({ setProgress, title }) => {
           </div>
         </div>
         <div className="flex justify-center">
-          <div className="w-full max-w-3xl p-4 bg-orange-400 rounded-lg shadow-lg m-5">
+          <div className="w-full max-w-3xl p-4 bg-[#0A6847] rounded-lg shadow-lg m-5">
             <p className="text-white font-bold text-base text-center p-2">
               Digital Millennium Copyright Act(DMCA)
             </p>
-            <p className="text-gray-800 text-sm font-medium">
-              This website does not host any media content on its own site. Our
-              visitors may utilize external or third-party services to display
-              content, such as embedding media from platforms like Bet365,
-              Dailymotion, Streamable, and others. We hereby inform all
-              copyright owners that the links and media shared by visitors on
-              this site are hosted elsewhere on the web or embedded from various
-              other platforms as mentioned. Should you encounter any legal
-              issues, please reach out to the appropriate media file owners or
-              hosters directly. All trademarks, videos, trade names, service
-              marks, copyrighted work, and logos featured herein belong to their
-              respective owners and companies. Nishant holds no responsibility
-              for content uploaded by others to third-party sites.
+            <p className="text-white text-sm font-normal italic">
+              This website does not host any media content on its own site.This
+              website does not create or host or share any video. All video
+              streams are embed here from external websites that are available
+              freely online.
             </p>
           </div>
         </div>
