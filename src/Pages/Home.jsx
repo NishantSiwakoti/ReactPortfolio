@@ -11,6 +11,7 @@ import php from "../assets/images/php.png";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faArrowUp,
   faEnvelope,
   faUser,
   faLocation,
@@ -52,6 +53,13 @@ const Home = ({ title, setProgress }) => {
       setProgress(100);
     }, 500);
   }, []);
+
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   useEffect(() => {
     Aos.init({ duration: 1500 });
   }, []);
@@ -99,6 +107,12 @@ const Home = ({ title, setProgress }) => {
 
   return (
     <>
+      <button
+        className="fixed bottom-8 right-8 bg-green-400 text-white px-4 py-2 rounded-full shadow-md transition duration-300 hover:bg-green-500 focus:outline-none"
+        onClick={handleScrollToTop}
+      >
+        <FontAwesomeIcon icon={faArrowUp} />
+      </button>
       {/* Hero Section */}
       <section className="md:flex items-center min-h-[40vh]">
         <div className="flex-1 pl-5">
