@@ -15,7 +15,7 @@ export const AllRoutes = () => {
   return (
     <div className="dark:bg-slate-800 overflow-hidden">
       <LoadingBar
-        color="#f97316"
+        color="#35d16e"
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
       />

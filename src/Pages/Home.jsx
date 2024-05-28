@@ -20,16 +20,8 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Slider from "../Components/Slider";
 import Divss from "../Components/Divss";
-import kkr from "../assets/KKR.png";
-import dc from "../assets/DC.png";
-import srh from "../assets/SRH.png";
-import mi from "../assets/MI.png";
-import csk from "../assets/CSK.png";
-import gt from "../assets/GT.png";
-import rr from "../assets/RR.png";
-import lsg from "../assets/LSG.png";
-import rcb from "../assets/RCB.png";
-import pbks from "../assets/PBKS.png";
+import nep from "../assets/nepal.png";
+import ned from "../assets/netherlands.png";
 import { useState } from "react";
 
 const Home = ({ title, setProgress }) => {
@@ -91,14 +83,14 @@ const Home = ({ title, setProgress }) => {
       {/* Hero Section */}
       <section className="md:flex items-center min-h-[40vh]">
         <div className="flex-1 pl-5">
-          <h1 className="text-orange-400 text-3xl text-center md:text-left md:ml-[100px] ">
+          <h1 className="text-[#35d16e] text-3xl text-center md:text-left md:ml-[100px] ">
             Hi,
           </h1>
           <div className="flex flex-col md:ml-[100px]">
             <div className="mt-2 text-center md:text-left">
               <TypeAnimation
                 sequence={["I'm Web Dev", 1000, "I'm Frontend Dev", 1000]}
-                className="text-orange-500 font-bold text-[30px] md:text-5xl"
+                className="text-[#35d16e] font-bold text-[30px] md:text-5xl"
                 wrapper="span"
                 speed={50}
                 style={{ display: "inline-block" }}
@@ -128,7 +120,7 @@ const Home = ({ title, setProgress }) => {
       <section className="min-h-[60vh] relative">
         <h2
           data-aos="fade-down"
-          className="font-bold text-2xl md:text-4xl text-orange-400 text-center pt-2"
+          className="font-bold text-2xl md:text-4xl text-[#35d16e] text-center pt-2"
         >
           About Me
         </h2>
@@ -150,14 +142,14 @@ const Home = ({ title, setProgress }) => {
               Hi, I'm a professional front-end developer with over two years of
               experience. Specializing in creating visually appealing and
               responsive websites using the latest web technologies like{" "}
-              <span className="text-orange-400 font-bold">HTML</span>,
-              <span className="text-orange-400 font-bold"> CSS</span>,
-              <span className="text-orange-400 font-bold"> JS</span>,
-              <span className="text-orange-400 font-bold"> React</span>,
-              <span className="text-orange-400 font-bold"> Tailwind</span>,
-              <span className="text-orange-400 font-bold"> Next.js</span>,
-              <span className="text-orange-400 font-bold"> Git</span>.
-              <span className="text-orange-400 font-bold"> Github</span>.
+              <span className="text-[#35d16e] font-bold">HTML</span>,
+              <span className="text-[#35d16e] font-bold"> CSS</span>,
+              <span className="text-[#35d16e] font-bold"> JS</span>,
+              <span className="text-[#35d16e] font-bold"> React</span>,
+              <span className="text-[#35d16e] font-bold"> Tailwind</span>,
+              <span className="text-[#35d16e] font-bold"> Next.js</span>,
+              <span className="text-[#35d16e] font-bold"> Git</span>.
+              <span className="text-[#35d16e] font-bold"> Github</span>.
               Proficient in various front-end development tools. Committed to
               delivering high-quality projects on time Let's bring your project
               to life together Prices are negotiable and totally depend on type
@@ -176,16 +168,16 @@ const Home = ({ title, setProgress }) => {
       </section>
       {/* Live Section */}
       <section className="dark:bg-slate-800">
-        <h2 className="font-bold text-2xl md:text-4xl text-orange-400 text-center pt-2">
+        <h2 className="font-bold text-2xl md:text-4xl text-[#35d16e] text-center pt-2">
           Matches
         </h2>
 
         <Divss
-          photo1={srh}
-          team1="SRH"
-          photo2={kkr}
-          team2="KKR"
-          status={handleMatchStatus("May 26, 2024")}
+          photo1={nep}
+          team1="Nepal"
+          photo2={ned}
+          team2="Netherlands"
+          status={handleMatchStatus("Jun 4, 2024")}
         />
       </section>
 
@@ -193,7 +185,7 @@ const Home = ({ title, setProgress }) => {
       <section className="min-h-[70vh]">
         <h1
           data-aos="fade-down"
-          className="text-orange-400 md:text-4xl text-3xl font-bold text-center mb-8"
+          className="text-[#35d16e] md:text-4xl text-3xl font-bold text-center mb-8"
         >
           Skills
         </h1>
@@ -223,13 +215,13 @@ const Home = ({ title, setProgress }) => {
       {/* Projects Section */}
       <section className="min-h-[40vh]">
         <h1
-          className="text-orange-400 md:text-4xl text-3xl font-bold text-center mb-8"
+          className="text-[#35d16e] md:text-4xl text-3xl font-bold text-center mb-8"
           data-aos="fade-left"
         >
           Projects
         </h1>
         <div data-aos="fade-down">
-          <h1 className="text-2xl md:text-3xl text-orange-400 text-center font-bold mb-5 ">
+          <h1 className="text-2xl md:text-3xl text-[#35d16e] text-center font-bold mb-5 ">
             1. Sajilo Yatra - A Vehicle Rental Platform
           </h1>
         </div>
@@ -246,7 +238,7 @@ const Home = ({ title, setProgress }) => {
       <section>
         <h1
           data-aos="zoom-in"
-          className="text-orange-400 font-bold text-3xl md:text-4xl text-center mb-5"
+          className="text-[#35d16e] font-bold text-3xl md:text-4xl text-center mb-5"
         >
           Contact Me
         </h1>
@@ -257,16 +249,16 @@ const Home = ({ title, setProgress }) => {
             <h2 className="text-2xl font-bold mb-5 text-gray-600 dark:text-white">
               Contact Information
             </h2>
-            <p className="mb-4 text-md md:text-xl text-orange-600 dark:text-white">
+            <p className="mb-4 text-md md:text-xl text-[#35d16e] dark:text-[#35d16e]">
               <FontAwesomeIcon icon={faUser} className="mr-2" />
               Nishant Siwakoti
             </p>
-            <p className="mb-4 text-md md:text-xl text-orange-600 dark:text-white">
+            <p className="mb-4 text-md md:text-xl text-[#35d16e] dark:text-[#35d16e]">
               <FontAwesomeIcon icon={faLocation} className="mr-2" />
               Kathmandu, Nepal
             </p>
 
-            <p className="mb-4 text-md md:text-xl text-orange-600 dark:text-white">
+            <p className="mb-4 text-md md:text-xl text-[#35d16e] dark:text-[#35d16e]">
               <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
               nishant5@gmail.com
             </p>
@@ -279,7 +271,7 @@ const Home = ({ title, setProgress }) => {
             <form
               action="https://formspree.io/f/mdobdqev"
               method="POST"
-              className="bg-orange-300 shadow-md rounded px-8 pt-6 pb-8 mb-4"
+              className="bg-green-400 shadow-md rounded px-8 pt-6 pb-8 mb-4"
             >
               <div className="mb-4">
                 <label

@@ -28,7 +28,7 @@ const Contact = ({ title, setProgress }) => {
     <section>
       <h1
         data-aos="zoom-in"
-        className="text-orange-400 font-bold text-3xl md:text-4xl text-center mb-5"
+        className="text-[#35d16e] font-bold text-3xl md:text-4xl text-center mb-5"
       >
         Contact Me
       </h1>
@@ -39,29 +39,29 @@ const Contact = ({ title, setProgress }) => {
           <h2 className="text-2xl font-bold mb-5 text-gray-600 dark:text-white">
             Contact Information
           </h2>
-          <p className="mb-4 text-md md:text-xl text-orange-600 dark:text-white">
+          <p className="mb-4 text-md md:text-xl text-[#35d16e] dark:text-[#35d16e]">
             <FontAwesomeIcon icon={faUser} className="mr-2" />
             Nishant Siwakoti
           </p>
-          <p className="mb-4 text-md md:text-xl text-orange-600 dark:text-white">
+          <p className="mb-4 text-md md:text-xl text-[#35d16e] dark:text-[#35d16e]">
             <FontAwesomeIcon icon={faLocation} className="mr-2" />
             Kathmandu, Nepal
           </p>
 
-          <p className="mb-4 text-md md:text-xl text-orange-600 dark:text-white">
+          <p className="mb-4 text-md md:text-xl text-[#35d16e] dark:text-[#35d16e]">
             <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
             nishant5@gmail.com
           </p>
         </div>
         {/* Contact Form */}
         <div className="w-full md:w-1/2 md:pl-4" data-aos="fade-left">
-          <h1 className="text-2xl mb-4 dark:text-white text-center md:text-left font-bold text-gray-600">
+          <h1 className="text-2xl mb-4 dark:text-[#35d16e] text-center md:text-left font-bold text-gray-600">
             Get in Touch
           </h1>
           <form
             action="https://formspree.io/f/mdobdqev"
             method="POST"
-            className="bg-orange-300 shadow-md rounded px-8 pt-6 pb-8 mb-4"
+            className="bg-green-400 shadow-md rounded px-8 pt-6 pb-8 mb-4"
           >
             <div className="mb-4">
               <label

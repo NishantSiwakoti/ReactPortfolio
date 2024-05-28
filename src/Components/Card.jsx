@@ -3,7 +3,7 @@ const Card = (props) => {
   return (
     <>
       <div className="card-container">
-        <div className="bg-orange-400 max-w-48 rounded-t-lg max-h-56 rounded-b-md shadow-2xl p-2 m-5 transition duration-300 transform hover:scale-125">
+        <div className="bg-[#35d16e] max-w-48 rounded-t-lg max-h-56 rounded-b-md shadow-2xl p-2 m-5 transition duration-300 transform hover:scale-125">
           <img
             src={props.img}
             alt="Nishant Siwakoti"

@@ -19,10 +19,10 @@ const Projects = ({ title, setProgress }) => {
   return (
     <section>
       <div data-aos="fade-down">
-        <h1 className="text-2xl md:text-3xl text-orange-400 text-center font-bold mb-5 ">
+        <h1 className="text-2xl md:text-3xl text-[#35d16e] text-center font-bold mb-5 ">
           Projects
         </h1>
-        <h1 className="text-2xl md:text-2xl text-orange-400 text-center font-bold mb-5 ">
+        <h1 className="text-2xl md:text-2xl text-[#35d16e] text-center font-bold mb-5 ">
           1. Sajilo Yatra- A Vehicle Rental System
         </h1>
         <Slider type="projects" />

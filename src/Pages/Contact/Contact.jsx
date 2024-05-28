@@ -28,7 +28,7 @@ const Contact = ({ title, setProgress }) => {
     <section>
       <h1
         data-aos="zoom-in"
-        className="text-orange-400 font-bold text-3xl md:text-4xl text-center mb-5"
+        className="text-white font-bold text-3xl md:text-4xl text-center mb-5"
       >
         Contact Me
       </h1>

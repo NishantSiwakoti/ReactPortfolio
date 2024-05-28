@@ -28,7 +28,7 @@ const Skills = ({ title, setProgress }) => {
   });
   return (
     <section className="">
-      <h1 className="text-center font-bold text-orange-400 text-4xl p-5">
+      <h1 className="text-center font-bold text-[#35d16e] text-4xl p-5">
         Skills
       </h1>
       <div className="flex justify-center items-center flex-wrap">

@@ -1,16 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Hls from "hls.js";
-import kkr from "../assets/KKR.png";
-import rcb from "../assets/RCB.png";
-import mi from "../assets/MI.png";
-import csk from "../assets/CSK.png";
-import gt from "../assets/GT.png";
-import rr from "../assets/RR.png";
-import pbks from "../assets/PBKS.png";
-import srh from "../assets/SRH.png";
-import lsg from "../assets/LSG.png";
-import dc from "../assets/DC.png";
-import LiveDiv from "../Components/LiveDiv";
 
 const Live = ({ setProgress, title }) => {
   useEffect(() => {

@@ -31,7 +31,7 @@ const Divss = (props) => {
           }
         `}
       </style>
-      <div className="bg-orange-400 p-6 m-5 rounded-lg shadow-2xl w-full max-w-xl">
+      <div className="bg-[#35d16e] p-6 m-5 rounded-lg shadow-2xl w-full max-w-xl">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center space-x-2">
             <img
@@ -62,7 +62,7 @@ const Divss = (props) => {
                     isEnded
                       ? "bg-gray-500"
                       : isTomorrowOrFuture
-                      ? "bg-green-500"
+                      ? "bg-[#0A6847]"
                       : "bg-yellow-500"
                   } text-white rounded-md cursor-not-allowed text-sm md:text-base`}
                   disabled

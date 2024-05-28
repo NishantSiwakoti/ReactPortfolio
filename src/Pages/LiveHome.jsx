@@ -1,16 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Divss from "../Components/Divss";
-import kkr from "../assets/KKR.png";
-import rcb from "../assets/RCB.png";
-import mi from "../assets/MI.png";
-import csk from "../assets/CSK.png";
-import gt from "../assets/GT.png";
-import rr from "../assets/RR.png";
-import pbks from "../assets/PBKS.png";
-import srh from "../assets/SRH.png";
-import lsg from "../assets/LSG.png";
-import dc from "../assets/DC.png";
 
 const LiveHome = ({ setProgress, title }) => {
   const [remainingTime, setRemainingTime] = useState(null);
@@ -82,7 +71,7 @@ const LiveHome = ({ setProgress, title }) => {
 
   return (
     <section className="min-h-screen">
-      <h2 className="font-bold text-2xl md:text-4xl text-orange-400 text-center pt-2">
+      <h2 className="font-bold text-2xl md:text-4xl text-[#35d16e] text-center pt-2">
         WorldCup Live Coming Soon.......
       </h2>
       <h1></h1>

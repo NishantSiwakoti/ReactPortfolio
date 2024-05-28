@@ -8,7 +8,7 @@ const Footer = () => {
           © 2024{" "}
           <NavLink
             to="https://www.nishantshiwakoti.com.np/"
-            className="hover:underline text-orange-400"
+            className="hover:underline text-[#35d16e]"
           >
             Nishant Siwakoti
           </NavLink>

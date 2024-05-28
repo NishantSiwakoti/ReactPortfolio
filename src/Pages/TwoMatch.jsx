@@ -1,17 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Divss from "../Components/Divss";
-import kkr from "../assets/KKR.png";
-import rcb from "../assets/RCB.png";
-import mi from "../assets/MI.png";
-import csk from "../assets/CSK.png";
-import gt from "../assets/GT.png";
-import rr from "../assets/RR.png";
-import pbks from "../assets/PBKS.png";
-import srh from "../assets/SRH.png";
-import lsg from "../assets/LSG.png";
-import dc from "../assets/DC.png";
-import Div from "../Components/Div";
 
 const TwoMatch = ({ setProgress, title }) => {
   const [endedMatches, setEndedMatches] = useState([]);

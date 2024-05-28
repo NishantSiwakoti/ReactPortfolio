@@ -57,7 +57,7 @@ const Slider = ({ type }) => {
       {type === "projects" && (
         <div>
           <div>
-            <h1 className="text-2xl md:text-2xl text-orange-400 text-center mt-5 font-bold mb-5">
+            <h1 className="text-2xl md:text-2xl text-[#35d16e] text-center mt-5 font-bold mb-5">
               2. MovieMadHouse
             </h1>
           </div>
