@@ -23,43 +23,59 @@ import nam from "../assets/images/countries/nam.png";
 import pn from "../assets/images/countries/pn.png";
 
 const LiveHome = ({ setProgress, title }) => {
+  const [endedMatches, setEndedMatches] = useState([]);
+
   useEffect(() => {
     setProgress(40);
     setTimeout(() => {
       setProgress(100);
     }, 500);
   }, []);
+
   useEffect(() => {
     Aos.init({ duration: 1500 });
   }, []);
+
   useEffect(() => {
     document.title = `${title}`;
   });
+
   const formatDate = (dateStr) => {
     const matchDate = new Date(dateStr);
     const today = new Date();
-    const yesterday = new Date(today);
-    yesterday.setDate(today.getDate() - 1);
-    const tomorrow = new Date(today);
-    tomorrow.setDate(today.getDate() + 1);
+    const currentTime = today.getHours() * 60 + today.getMinutes();
+    const startLiveTimeMorning = 6 * 60 + 15;
+    const endLiveTimeMorning = 12 * 60;
+    const startLiveTimeEvening = 20 * 60 + 15;
+    const endLiveTimeEvening = 32 * 60;
 
     if (matchDate.toDateString() === today.toDateString()) {
-      const currentTime = today.getHours() * 60 + today.getMinutes();
-      const startLiveTime = 18 * 60;
-      const endLiveTime = 24 * 60;
-
-      if (currentTime >= startLiveTime && currentTime < endLiveTime) {
-        return "Live";
-      } else if (currentTime >= endLiveTime || today.getHours() < 7) {
-        return "Ended";
-      } else {
+      if (
+        currentTime >= startLiveTimeMorning &&
+        currentTime < endLiveTimeMorning
+      ) {
+        // Check if within 5 hours range
+        if (currentTime - startLiveTimeMorning <= 5 * 60) {
+          return "Live";
+        } else {
+          return "Ended";
+        }
+      } else if (
+        currentTime >= startLiveTimeEvening &&
+        currentTime < endLiveTimeEvening
+      ) {
+        // Check if within 5 hours range
+        if (currentTime - startLiveTimeEvening <= 5 * 60) {
+          return "Live";
+        } else {
+          return "Ended";
+        }
+      } else if (currentTime < startLiveTimeMorning) {
         return "Today";
+      } else {
+        return "Ended";
       }
-    } else if (matchDate.toDateString() === tomorrow.toDateString()) {
-      return "Tomorrow";
     } else if (matchDate < today) {
-      return "Ended";
-    } else if (matchDate.toDateString() === yesterday.toDateString()) {
       return "Ended";
     } else {
       return dateStr;
