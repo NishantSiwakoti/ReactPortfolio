@@ -95,7 +95,7 @@ const LiveHome = ({ setProgress, title }) => {
       <h2 className="font-bold text-2xl md:text-4xl text-[#35d16e] text-center pt-2">
         World Cup Matches
       </h2>
-      <Divss
+      {/* <Divss
         photo1={usa}
         team1="USA"
         photo2={can}
@@ -126,7 +126,7 @@ const LiveHome = ({ setProgress, title }) => {
         team2="South Africa"
         status={handleMatchStatus("Jun 3, 2024")}
         time="8:15 PM"
-      />
+      /> */}
     </section>
   );
 };
