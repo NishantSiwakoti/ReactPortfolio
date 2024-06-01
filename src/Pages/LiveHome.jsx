@@ -97,9 +97,9 @@ const LiveHome = ({ setProgress, title }) => {
       </h2>
       <Divss
         photo1={ind}
-        team1="USA"
+        team1="India"
         photo2={ban}
-        team2="Canada"
+        team2="Bangladesh"
         status={handleMatchStatus("Jun 1, 2024")}
         time="6:15 AM"
         url="https://cdn.xsportbox.com/embed77/?event=stack.html&link=1&domain=&force=https%3A%2F%2Fposcitechs.shop%2Flive%2Fstream-346.php&ask=1717255800&lgt=7&noplayer=0"
