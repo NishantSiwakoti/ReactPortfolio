@@ -96,12 +96,22 @@ const LiveHome = ({ setProgress, title }) => {
         World Cup Matches
       </h2>
       <Divss
+        photo1={ind}
+        team1="USA"
+        photo2={ban}
+        team2="Canada"
+        status={handleMatchStatus("Jun 1, 2024")}
+        time="6:15 AM"
+        url="https://cdn.xsportbox.com/embed77/?event=stack.html&link=1&domain=&force=https%3A%2F%2Fposcitechs.shop%2Flive%2Fstream-346.php&ask=1717255800&lgt=7&noplayer=0"
+      />
+      {/* <Divss
         photo1={usa}
         team1="USA"
         photo2={can}
         team2="Canada"
         status={handleMatchStatus("Jun 2, 2024")}
         time="6:15 AM"
+        url="https://example.com/live"
       />
       <Divss
         photo1={wi}
@@ -110,6 +120,7 @@ const LiveHome = ({ setProgress, title }) => {
         team2="PNG"
         status={handleMatchStatus("Jun 2, 2024")}
         time="8:15 PM"
+        url="https://example.com/live"
       />
       <Divss
         photo1={nam}
@@ -118,6 +129,7 @@ const LiveHome = ({ setProgress, title }) => {
         team2="Oman"
         status={handleMatchStatus("Jun 3, 2024")}
         time="6:15 AM"
+        url="https://example.com/live"
       />
       <Divss
         photo1={sri}
@@ -126,7 +138,8 @@ const LiveHome = ({ setProgress, title }) => {
         team2="South Africa"
         status={handleMatchStatus("Jun 3, 2024")}
         time="8:15 PM"
-      />
+        url="https://example.com/live"
+      /> */}
     </section>
   );
 };

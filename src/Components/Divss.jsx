@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import moment from "moment"; // Make sure to install moment.js
 
 const Divss = (props) => {
@@ -13,9 +12,18 @@ const Divss = (props) => {
 
   const isLiveNow = now.isSame(matchTime, "minute") && isToday; // Check if the match is live now
 
+  const handleClick = () => {
+    if (props.url) {
+      window.location.href = props.url;
+    }
+  };
+
   return (
     <div className="bg-white dark:bg-slate-800 flex items-center justify-center">
-      <div className="bg-[#35d16e] p-6 m-5 rounded-lg shadow-2xl w-full max-w-xl">
+      <div
+        className="bg-[#35d16e] p-6 m-5 rounded-lg shadow-2xl w-full max-w-xl cursor-pointer"
+        onClick={handleClick}
+      >
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center space-x-2 md:w-1/3">
             <img
@@ -35,11 +43,9 @@ const Divss = (props) => {
             </div>
             <div className="text-white">{props.time}</div>
             {isClickable || isLiveNow ? (
-              <NavLink to="/livestream">
-                <button className="mt-2 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-700 text-sm md:text-base">
-                  Live
-                </button>
-              </NavLink>
+              <button className="mt-2 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-700 text-sm md:text-base">
+                Live
+              </button>
             ) : (
               <div>
                 <button
