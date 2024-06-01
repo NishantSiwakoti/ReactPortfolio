@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from "react";
 import Hls from "hls.js";
-import nep from "../assets/images/countries/nep.png";
-import ned from "../assets/images/countries/ned.png";
+import logo from "../assets/images/logoo.png";
 
 const Live = ({ setProgress, title }) => {
+  const [currentTime, setCurrentTime] = useState(new Date());
+  const [streams, setStreams] = useState([]);
+  const [currentStreamUrl, setCurrentStreamUrl] = useState("");
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoElement = React.createRef();
+
   useEffect(() => {
     setProgress(40);
     setTimeout(() => {
       setProgress(100);
     }, 500);
   }, []);
+
   useEffect(() => {
     document.title = `${title}`;
   });
-
-  const [streams, setStreams] = useState([]);
-  const [currentStreamUrl, setCurrentStreamUrl] = useState("");
-  const [isPlaying, setIsPlaying] = useState(false);
-  const videoElement = React.createRef();
 
   useEffect(() => {
     const fetchStreams = async () => {
@@ -41,6 +42,14 @@ const Live = ({ setProgress, title }) => {
       loadAndPlayStream(currentStreamUrl);
     }
   }, [currentStreamUrl]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const loadAndPlayStream = (url) => {
     if (Hls.isSupported()) {
@@ -93,18 +102,22 @@ const Live = ({ setProgress, title }) => {
   return (
     <>
       <div className="">
+        {/* Current Time and Date */}
+        <div className="text-white text-center mt-4 mb-2">
+          <p>{currentTime.toLocaleString()}</p>
+        </div>
+
         <div className="m-2  flex justify-center">
           <div className="bg-[#0A6847] p-6 rounded-lg shadow-xl w-full max-w-md text-center">
             <div className="m-2  flex justify-center">
               <div className="flex items-center justify-center space-x-4">
-                <img src={nep} alt="Logo" className="h-12 w-12 rounded-full" />
+                <img src={logo} alt="Logo" className="h-12 w-12 rounded-full" />
                 <div>
-                  <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white"></p>
                   <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
-                    Nepal VS Netherlands
+                    VS
                   </p>
                 </div>
-                <img src={ned} alt="Logo" className="h-12 w-12 rounded-full" />
+                <img src={logo} alt="Logo" className="h-12 w-12 rounded-full" />
               </div>
             </div>
           </div>
