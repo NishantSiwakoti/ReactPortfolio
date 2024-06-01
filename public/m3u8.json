@@ -2,31 +2,8 @@
   "streams": [
     { 
       "language":"World Cup",
-      "url":"https://sportsleading.online/live/stream_e1.m3u8"
+      "url":"https://103.lfjust.xyz:8088/stream/lizata1/playlist.m3u8?vidictid=198756924804&id=43662&pk=f2e2c1ca15402913647f9a3a65fcca5b08cf90a769e3a73ca25eb4f71d70d4b1"
 
-    },
-    
-    {
-      "language": "Hindi 720",
-      "url": "https://bunyhlsipla.bunycdn.com/live/480pa.m3u8"
-    },
-    {
-      "language": "English",
-      "url": "https://jancdn-b.bunycdn.com/live/720pa.m3u8"
-    },
-    {
-      "language": "Hindi",
-      "url": "https://jancdn-b.bunycdn.com/live/480pa.m3u8"
-    },
-    
-    {
-      "language": "Hindi 360",
-      "url": "https://jancdn-b.bunycdn.com/live/360pa.m3u8"
-    },
-    
-    {
-      "language": "Fast NO LAG",
-      "url": "https://1gr5dgmttgha1hcjugezdcca.ourdvsss.com/sports.lvyclv.com/live/m33252847/playlist.m3u8?wsSession=0600d9f20f63575d1d9cffc6-171551515470294&wsIPSercert=7d140df5013b3b6eb5125fda3b67a320&wsiphost=local&wsBindIP=1"
     }
   ]
 }

@@ -95,6 +95,14 @@ const LiveHome = ({ setProgress, title }) => {
       <h2 className="font-bold text-2xl md:text-4xl text-[#35d16e] text-center pt-2">
         World Cup Matches
       </h2>
+      <Divss
+        photo1={ind}
+        team1="India"
+        photo2={ban}
+        team2="Bangladesh"
+        status={handleMatchStatus("Jun 1, 2024")}
+        time="8:15 PM"
+      />
       {/* <Divss
         photo1={usa}
         team1="USA"
