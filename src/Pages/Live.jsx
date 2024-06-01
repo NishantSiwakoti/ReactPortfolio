@@ -103,9 +103,6 @@ const Live = ({ setProgress, title }) => {
     <>
       <div className="">
         {/* Current Time and Date */}
-        <div className="text-white text-center mt-4 mb-2">
-          <p>{currentTime.toLocaleString()}</p>
-        </div>
 
         <div className="m-2  flex justify-center">
           <div className="bg-[#0A6847] p-6 rounded-lg shadow-xl w-full max-w-md text-center">
@@ -137,6 +134,9 @@ const Live = ({ setProgress, title }) => {
                   </option>
                 ))}
               </select>
+            </div>
+            <div className="text-white text-center mt-4 mb-2">
+              <p>{currentTime.toLocaleString()}</p>
             </div>
             <div className="flex justify-center mb-4">
               <button
