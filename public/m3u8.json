@@ -1,8 +1,18 @@
 {
   "streams": [
     { 
-      "language":"World Cup",
+      "language":"English HD",
       "url":"https://103.lfjust.xyz:8088/stream/lizata1/playlist.m3u8?vidictid=198756924804&id=43662&pk=f2e2c1ca15402913647f9a3a65fcca5b08cf90a769e3a73ca25eb4f71d70d4b1"
+
+    },
+    { 
+      "language":"English",
+      "url":"https://nes102.jobdone.top:8088/live/webcricn04/playlist.m3u8?id=114607&pk=f20110e99aa06d1bcf8c08173fbe5abedba3b1cad7d6ceba35d4b597722586610b81ae523555291b8057f6301efb79313145d80c70a7dbd4b1207477e7ac8934"
+
+    },
+    { 
+      "language":"English Fast",
+      "url":"https://buc01.jobdone.top:8088/live/webcricwillow/playlist.m3u8?id=120375&pk=f20110e99aa06d1bcf8c08173fbe5abedba3b1cad7d6ceba35d4b597722586610b81ae523555291b8057f6301efb79313145d80c70a7dbd4b1207477e7ac8934"
 
     }
   ]
