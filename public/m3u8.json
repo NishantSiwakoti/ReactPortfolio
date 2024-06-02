@@ -1,15 +1,16 @@
 {
   "streams": [
     { 
-      "language":"Sky Sports 1080P",
-      "url":"https://eu02.flowstreams.pw/247-skymain/index.m3u8"
-
-    },
-    { 
-      "language":"CricBuzz 720P",
+      "language":"720P",
       "url":"https://karostream.tulix.tv/WillowTvHighBitrate/index.m3u8"
 
     },
+    { 
+      "language":"1080P",
+      "url":"https://eu02.flowstreams.pw/247-skymain/index.m3u8"
+
+    },
+    
     { 
       "language":"Hindi 480P",
       "url":"https://buc02.jobdone.top:8088/live/webcrichindi/playlist.m3u8?id=119771&pk=91dcd48088b9f100e29caea0e580dc1759c91717f336c63bc3df1fdb7e4396177c14c29320dac71e82d55fffce765c88a98f84e6123d43b7f7e17319240c1cf1"
