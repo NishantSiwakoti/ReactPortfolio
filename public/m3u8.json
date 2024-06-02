@@ -1,18 +1,23 @@
 {
   "streams": [
     { 
-      "language":"Sky Sports",
+      "language":"Sky Sports 1080P",
       "url":"https://eu02.flowstreams.pw/247-skymain/index.m3u8"
 
     },
     { 
-      "language":"CricBuzz",
+      "language":"CricBuzz 720P",
       "url":"https://karostream.tulix.tv/WillowTvHighBitrate/index.m3u8"
 
     },
     { 
-      "language":"English Fast",
-      "url":"https://buc01.jobdone.top:8088/live/webcricwillow/playlist.m3u8?id=120375&pk=f20110e99aa06d1bcf8c08173fbe5abedba3b1cad7d6ceba35d4b597722586610b81ae523555291b8057f6301efb79313145d80c70a7dbd4b1207477e7ac8934"
+      "language":"Hindi 480P",
+      "url":"https://buc02.jobdone.top:8088/live/webcrichindi/playlist.m3u8?id=119771&pk=91dcd48088b9f100e29caea0e580dc1759c91717f336c63bc3df1fdb7e4396177c14c29320dac71e82d55fffce765c88a98f84e6123d43b7f7e17319240c1cf1"
+
+    },
+    { 
+      "language":"No Lag",
+      "url":"https://buc02.jobdone.top:8088/live/webcricn04/playlist.m3u8?id=114607&pk=91dcd48088b9f100e29caea0e580dc1759c91717f336c63bc3df1fdb7e4396177c14c29320dac71e82d55fffce765c88a98f84e6123d43b7f7e17319240c1cf1"
 
     }
   ]
