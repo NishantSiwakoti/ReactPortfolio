@@ -46,6 +46,7 @@ const getDateLabel = (providedDate, startTime) => {
 
 const Div = (props) => {
   const [isMatchOver, setIsMatchOver] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const dateLabel = getDateLabel(props.date, props.startTime);
 
   useEffect(() => {
@@ -64,6 +65,14 @@ const Div = (props) => {
 
     return () => clearTimeout(timer); // Clean up the timer on component unmount
   }, [props.date, props.startTime]);
+
+  useEffect(() => {
+    const loadingTimer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000); // 1 second loading time
+
+    return () => clearTimeout(loadingTimer); // Clean up the timer on component unmount
+  }, []);
 
   const isLive = dateLabel === "Live Now";
 
@@ -110,7 +119,11 @@ const Div = (props) => {
             <div className="text-white mb-2">{props.time}</div>
 
             <div className="text-white">
-              {isLive ? (
+              {isLoading ? (
+                <button style={buttonStyle} disabled>
+                  Loading...
+                </button>
+              ) : isLive ? (
                 <NavLink to="/livestream">
                   <button
                     className={`bg-green-800 cursor-pointer`}

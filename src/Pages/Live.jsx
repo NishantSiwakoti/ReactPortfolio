@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Hls from "hls.js";
 import logo from "../assets/images/logoo.png";
+import overlayImage from "../assets/images/logo.png"; // Import your overlay image
 
 const Live = ({ setProgress, title }) => {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -118,7 +119,7 @@ const Live = ({ setProgress, title }) => {
           </div>
         </div>
         <div className="flex justify-center">
-          <div className="w-full mb-10 max-w-3xl p-4 bg-[#0A6847] rounded-lg shadow-lg">
+          <div className="w-full mb-10 max-w-3xl p-4 bg-[#0A6847] rounded-lg shadow-lg relative">
             <div className="flex justify-center mb-4">
               <select
                 id="language-select"
@@ -163,6 +164,12 @@ const Live = ({ setProgress, title }) => {
               controls
               autoPlay
             ></video>
+            {/* <img
+              src={overlayImage}
+              alt="Overlay"
+              className="absolute top-0 right-0 w-32 mt-32 mr-9 rounded-md"
+              style={{ opacity: 2 }} // Adjust opacity as needed
+            /> */}
           </div>
         </div>
         <div className="flex justify-center">

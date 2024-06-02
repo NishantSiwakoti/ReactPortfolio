@@ -174,9 +174,49 @@ const LiveHome = ({ setProgress, title }) => {
         photo2={ned}
         team2="Netherland"
         date="2024-06-04"
-        startTime={8} // Live stream starts at 6 am
+        startTime={20} // Live stream starts at 6 am
         time="8:00 PM"
         match="Match 7"
+      />
+      <Div
+        photo1={ind}
+        team1="India"
+        photo2={ire}
+        team2="Ireland"
+        date="2024-06-05"
+        startTime={19} // Live stream starts at 6 am
+        time="8:15 PM"
+        match="Match 8"
+      />
+      <Div
+        photo1={png}
+        team1="Papua New Guinea"
+        photo2={ug}
+        team2="Uganda"
+        date="2024-06-06"
+        startTime={5} // Live stream starts at 6 am
+        time="5:15 AM"
+        match="Match 9"
+      />
+      <Div
+        photo1={aus}
+        team1="Australia"
+        photo2={oman}
+        team2="Oman"
+        date="2024-06-06"
+        startTime={6} // Live stream starts at 6 am
+        time="6:15 AM"
+        match="Match 10"
+      />
+      <Div
+        photo1={usa}
+        team1="USA"
+        photo2={pak}
+        team2="Pakistan"
+        date="2024-06-06"
+        startTime={20} // Live stream starts at 6 am
+        time="9:15 PM"
+        match="Match 11"
       />
     </section>
   );
