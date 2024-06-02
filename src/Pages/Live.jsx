@@ -102,8 +102,6 @@ const Live = ({ setProgress, title }) => {
   return (
     <>
       <div className="">
-        {/* Current Time and Date */}
-
         <div className="m-2  flex justify-center">
           <div className="bg-[#0A6847] p-6 rounded-lg shadow-xl w-full max-w-md text-center">
             <div className="m-2  flex justify-center">
