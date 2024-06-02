@@ -1,13 +1,13 @@
 {
   "streams": [
     { 
-      "language":"English HD",
+      "language":"Sky Sports",
       "url":"https://eu02.flowstreams.pw/247-skymain/index.m3u8"
 
     },
     { 
-      "language":"English",
-      "url":"https://nes102.jobdone.top:8088/live/webcricn04/playlist.m3u8?id=114607&pk=f20110e99aa06d1bcf8c08173fbe5abedba3b1cad7d6ceba35d4b597722586610b81ae523555291b8057f6301efb79313145d80c70a7dbd4b1207477e7ac8934"
+      "language":"CricBuzz",
+      "url":"https://karostream.tulix.tv/WillowTvHighBitrate/index.m3u8"
 
     },
     { 

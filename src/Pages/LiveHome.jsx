@@ -105,36 +105,12 @@ const LiveHome = ({ setProgress, title }) => {
         time="6:15 AM"
       />
       {/* <Divss
-        photo1={usa}
-        team1="USA"
-        photo2={can}
-        team2="Canada"
-        status={handleMatchStatus("Jun 2, 2024")}
-        time="6:15 AM"
-      />
-      <Divss
         photo1={wi}
         team1="West Indies"
-        photo2={pn}
+        photo2={png}
         team2="PNG"
         status={handleMatchStatus("Jun 2, 2024")}
-        time="8:15 PM"
-      />
-      <Divss
-        photo1={nam}
-        team1="Namibia"
-        photo2={oman}
-        team2="Oman"
-        status={handleMatchStatus("Jun 3, 2024")}
-        time="6:15 AM"
-      />
-      <Divss
-        photo1={sri}
-        team1="Sri Lanka"
-        photo2={sa}
-        team2="South Africa"
-        status={handleMatchStatus("Jun 3, 2024")}
-        time="8:15 PM"
+        time="8:15 AM"
       /> */}
     </section>
   );
