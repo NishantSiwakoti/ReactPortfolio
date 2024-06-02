@@ -8,7 +8,7 @@ const Divss = (props) => {
   const isTomorrowOrFuture = !isClickable && !isEnded;
   const isToday = props.status === "Today";
 
-  const matchTime = moment(props.time, "HH:mm A"); // Assuming time is in "hh:mm A" format
+  const matchTime = moment(`${props.date} ${props.time}`, "YYYY-MM-DD HH:mm A"); // Combine date and time
   const now = moment();
 
   const isLiveNow = now.isSame(matchTime, "minute") && isToday; // Check if the match is live now

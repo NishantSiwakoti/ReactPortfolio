@@ -1,117 +1,49 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import moment from "moment";
+import Divss from "../Components/Divss";
+import wi from "../assets/images/countries/wi.png";
+import nep from "../assets/images/countries/nep.png";
+import ned from "../assets/images/countries/ned.png";
+import usa from "../assets/images/countries/usa.png";
+import png from "../assets/images/countries/pn.png";
+import ind from "../assets/images/countries/ind.png";
+import pak from "../assets/images/countries/pak.png";
+import ban from "../assets/images/countries/ban.png";
+import sri from "../assets/images/countries/sri.png";
+import ire from "../assets/images/countries/ire.png";
+import oman from "../assets/images/countries/oman.png";
+import sa from "../assets/images/countries/sa.png";
+import aus from "../assets/images/countries/aus.png";
+import nz from "../assets/images/countries/nz.png";
+import ug from "../assets/images/countries/ug.png";
+import eng from "../assets/images/countries/eng.png";
+import afg from "../assets/images/countries/afg.png";
+import can from "../assets/images/countries/can.png";
+import nam from "../assets/images/countries/nam.png";
+import pn from "../assets/images/countries/pn.png";
 
-const TwoMatch = ({ setProgress, title }) => {
-  const [endedMatches, setEndedMatches] = useState([]);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    document.title = `${title}`;
-  });
-
-  useEffect(() => {
-    setProgress(40);
-    setTimeout(() => {
-      setProgress(100);
-    }, 500);
-  }, [setProgress]);
-
-  const formatDate = (dateStr) => {
-    const matchDate = new Date(dateStr);
-    const today = new Date();
-    const yesterday = new Date(today);
-    yesterday.setDate(today.getDate() - 1);
-    const tomorrow = new Date(today);
-    tomorrow.setDate(today.getDate() + 1);
-
-    const startLiveTime = 18 * 60;
-    const endLiveTime = 26 * 60;
-    const currentTime = today.getHours() * 60 + today.getMinutes();
-
-    if (matchDate.toDateString() === today.toDateString()) {
-      if (currentTime >= startLiveTime && currentTime < endLiveTime) {
-        return "Live";
-      } else if (currentTime >= endLiveTime) {
-        return "Ended";
-      } else {
-        return "Today";
-      }
-    } else if (matchDate.toDateString() === tomorrow.toDateString()) {
-      return "Tomorrow";
-    } else if (matchDate < today) {
-      return "Ended";
-    } else if (matchDate.toDateString() === yesterday.toDateString()) {
-      return "Ended";
-    } else {
-      return dateStr;
-    }
-  };
-
-  const handleMatchStatus = (dateStr) => {
-    const status = formatDate(dateStr);
-    if (status === "Ended" && endedMatches.length < 2) {
-      setEndedMatches([...endedMatches, dateStr]);
-    }
-    return status;
-  };
-
-  const handleLiveClick = (match) => {
-    navigate("/live", { state: { match } });
-  };
-
+const TwoMatch = () => {
   return (
     <>
-      <h2 className="font-bold text-2xl md:text-4xl text-orange-400 text-center pt-2">
-        IPL Live Streaming Free
-      </h2>
-      <Divss
-        photo1={rcb}
-        team1="RCB"
-        photo2={csk}
-        team2="CSK"
-        status={handleMatchStatus("May 18, 2024")}
-        startTime="6:00 pm"
-        onClick={() =>
-          handleLiveClick({
-            team1: "RCB",
-            photo1: rcb,
-            team2: "CSK",
-            photo2: csk,
-          })
-        }
-      />
-      <Div
-        photo1={srh}
-        team1="SRH"
-        photo2={pbks}
-        team2="PBKS"
-        status={handleMatchStatus("May 19, 2024")}
-        startTime="6:00 pm"
-        onClick={() =>
-          handleLiveClick({
-            team1: "SRH",
-            photo1: srh,
-            team2: "PBKS",
-            photo2: pbks,
-          })
-        }
-      />
-      <Div
-        photo1={rr}
-        team1="RR"
-        photo2={kkr}
-        team2="KKR"
-        status={handleMatchStatus("May 19, 2024")}
-        startTime="6:00 pm"
-        onClick={() =>
-          handleLiveClick({
-            team1: "RR",
-            photo1: rr,
-            team2: "KKR",
-            photo2: kkr,
-          })
-        }
-      />
+      <section>
+        <Div
+          logo1={wi}
+          team1="WI"
+          logo2={pn}
+          team2="PNG"
+          date="2024/06/02"
+          startTime="6:00 AM"
+        />
+        <Div
+          logo1={nep}
+          team1="Nepal"
+          logo2={ned}
+          team2="Netherlands"
+          match="Match 2"
+          date="2024/06/03"
+          startTime="8:00 PM"
+        />
+      </section>
     </>
   );
 };

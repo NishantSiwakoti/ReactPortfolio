@@ -9,7 +9,6 @@ import { useState } from "react";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import LiveHome from "../Pages/LiveHome";
 import Live from "../Pages/Live";
-import TwoMatch from "../Pages/TwoMatch";
 export const AllRoutes = () => {
   const [progress, setProgress] = useState(0);
 
