@@ -174,8 +174,8 @@ const LiveHome = ({ setProgress, title }) => {
         photo2={ned}
         team2="Netherland"
         date="2024-06-04"
-        startTime={5} // Live stream starts at 6 am
-        time="5:00 AM"
+        startTime={8} // Live stream starts at 6 am
+        time="8:00 PM"
         match="Match 7"
       />
     </section>
