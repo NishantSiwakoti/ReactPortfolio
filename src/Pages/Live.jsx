@@ -1,25 +1,27 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Hls from "hls.js";
 import logo from "../assets/images/logoo.png";
 import overlayImage from "../assets/images/logo.png"; // Import your overlay image
 
 const Live = ({ setProgress, title }) => {
-  const [currentTime, setCurrentTime] = useState(new Date());
+  const [currentTime, setCurrentTime] = useState(
+    new Date().toLocaleTimeString()
+  );
   const [streams, setStreams] = useState([]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState("");
   const [isPlaying, setIsPlaying] = useState(false);
-  const videoElement = React.createRef();
+  const videoElement = useRef(null);
 
   useEffect(() => {
     setProgress(40);
     setTimeout(() => {
       setProgress(100);
     }, 500);
-  }, []);
+  }, [setProgress]);
 
   useEffect(() => {
     document.title = `${title}`;
-  });
+  }, [title]);
 
   useEffect(() => {
     const fetchStreams = async () => {
@@ -46,7 +48,7 @@ const Live = ({ setProgress, title }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTime(new Date());
+      setCurrentTime(new Date().toLocaleTimeString());
     }, 1000);
 
     return () => clearInterval(interval);
@@ -96,16 +98,18 @@ const Live = ({ setProgress, title }) => {
     window.location.href = `vlc://${currentStreamUrl}`;
   };
 
-  const handleLanguageChange = (e) => {
-    setCurrentStreamUrl(e.target.value);
+  const handleLanguageChange = (url) => {
+    setCurrentStreamUrl(url);
   };
 
   return (
     <>
       <div className="">
-        <div className="m-2  flex justify-center">
+        <div className="m-2 flex justify-center">
           <div className="bg-[#0A6847] p-6 rounded-lg shadow-xl w-full max-w-md text-center">
-            <div className="m-2  flex justify-center">
+            <p className="text-orange-500 font-bold text-xl">WorldCup Live</p>
+
+            <div className="m-2 flex justify-center">
               <div className="flex items-center justify-center space-x-4">
                 <img src={logo} alt="Logo" className="h-12 w-12 rounded-full" />
                 <div>
@@ -120,23 +124,32 @@ const Live = ({ setProgress, title }) => {
         </div>
         <div className="flex justify-center">
           <div className="w-full mb-10 max-w-3xl p-4 bg-[#0A6847] rounded-lg shadow-lg relative">
-            <div className="flex justify-center mb-4">
-              <select
-                id="language-select"
-                className="p-2 text-black rounded"
-                onChange={handleLanguageChange}
-                value={currentStreamUrl}
-              >
-                {streams.map((stream) => (
-                  <option key={stream.language} value={stream.url}>
-                    {stream.language}
-                  </option>
-                ))}
-              </select>
-            </div>
             <div className="text-white text-center mt-4 mb-2">
-              <p>{currentTime.toLocaleString()}</p>
+              <p>{currentTime}</p>
             </div>
+            <div className="flex justify-center mb-4 flex-wrap">
+              {streams.map((stream) => (
+                <a
+                  key={stream.language}
+                  className={`p-2 mx-2 m-2 rounded text-white cursor-pointer ${
+                    stream.url === currentStreamUrl
+                      ? "bg-green-600"
+                      : "bg-orange-600"
+                  }`}
+                  onClick={() => handleLanguageChange(stream.url)}
+                >
+                  {stream.language}
+                </a>
+              ))}
+            </div>
+            <div className="flex justify-center">
+              <marquee className="w-full max-w-2xl p-2 text-white bg-green-600 rounded-lg shadow-lg">
+                You can watch all World Cup matches here for free, please wait
+                3-4 seconds for better quality. Don't forget to recommend it to
+                your friends!
+              </marquee>
+            </div>
+
             <div className="flex justify-center mb-4">
               <button
                 className="p-2 mx-2 bg-blue-600 rounded hidden"
@@ -172,16 +185,17 @@ const Live = ({ setProgress, title }) => {
             /> */}
           </div>
         </div>
+
         <div className="flex justify-center">
           <div className="w-full max-w-3xl p-4 m-5">
             <p className="text-black dark:text-white font-bold text-base text-center p-2">
               Digital Millennium Copyright Act(DMCA)
             </p>
             <p className="text-black dark:text-white text-sm font-normal italic">
-              This website does not host any media content on its own site.This
+              This website does not host any media content on its own site. This
               website does not create or host or share any video. All video
-              streams are embed here from external websites that are available
-              freely online.
+              streams are embedded here from external websites that are
+              available freely online.
             </p>
           </div>
         </div>

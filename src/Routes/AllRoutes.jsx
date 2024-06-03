@@ -9,6 +9,7 @@ import { useState } from "react";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import LiveHome from "../Pages/LiveHome";
 import Live from "../Pages/Live";
+import LiveMatches from "../Pages/LiveMatches";
 export const AllRoutes = () => {
   const [progress, setProgress] = useState(0);
 
@@ -42,6 +43,12 @@ export const AllRoutes = () => {
         />
         <Route
           path="live"
+          element={
+            <LiveMatches title="Live Matches" setProgress={setProgress} />
+          }
+        />
+        <Route
+          path="livematches"
           element={<LiveHome title="Live Matches" setProgress={setProgress} />}
         />
         <Route

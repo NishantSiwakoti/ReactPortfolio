@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [hidden, setHidden] = useState(true);
   const [darkMode, setDarkMode] = useState(
     JSON.parse(localStorage.getItem("darkmode")) || false
   );
+  const location = useLocation();
 
   useEffect(() => {
     localStorage.setItem("darkmode", JSON.stringify(darkMode));
@@ -20,6 +21,8 @@ const Header = () => {
     "block py-2 px-3 text-white bg-[#3ed676] rounded md:bg-transparent md:text-[#29c964] md:p-0 dark:text-white md:dark:text-[#29c964]";
   const inActiveClass =
     "block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#29c964] md:p-0 dark:text-white md:dark:hover:text-[#29c964] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent";
+
+  const isLiveActive = location.pathname.startsWith("/live");
 
   return (
     <header className="sticky top-0 z-50">
@@ -117,9 +120,7 @@ const Header = () => {
               <li>
                 <NavLink
                   to="/live"
-                  className={({ isActive }) =>
-                    isActive ? activeClass : inActiveClass
-                  }
+                  className={isLiveActive ? activeClass : inActiveClass}
                 >
                   Live
                 </NavLink>
