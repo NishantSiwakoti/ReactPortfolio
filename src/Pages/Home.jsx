@@ -43,6 +43,7 @@ import nam from "../assets/images/countries/nam.png";
 import pn from "../assets/images/countries/pn.png";
 import { useState } from "react";
 import LiveHome from "./LiveHome";
+import LiveMatches from "./LiveMatches";
 
 const Home = ({ title, setProgress }) => {
   const [endedMatches, setEndedMatches] = useState([]);
@@ -201,13 +202,13 @@ const Home = ({ title, setProgress }) => {
       </section>
       {/* Live Section */}
       <section className="dark:bg-slate-800">
-        <LiveHome setProgress={setProgress} title={title} />
+        <LiveMatches setProgress={setProgress} title={title} />
 
-        <div className="flex justify-center" data-aos="fade-left">
-          <NavLink to="/live">
+        {/* <div className="flex justify-center" data-aos="fade-left">
+          <NavLink to="/livematches">
             <Button name="More Matches" />
           </NavLink>
-        </div>
+        </div> */}
       </section>
 
       {/* Skills Section */}
