@@ -143,9 +143,9 @@ const Live = ({ setProgress, title }) => {
               ))}
             </div>
             <div className="flex justify-center">
-              <marquee className="w-full max-w-2xl p-2 text-white bg-green-600 rounded-lg shadow-lg">
-                You can watch all World Cup matches here for free, please wait
-                3-4 seconds for better quality. Don't forget to recommend it to
+              <marquee className="w-full max-w-2xl p-2 text-[#254336] bg-[#e8dfca] rounded-lg shadow-lg">
+                Please wait 3-4 seconds for better quality. You can watch all
+                World Cup matches here for free. Don't forget to recommend it to
                 your friends!
               </marquee>
             </div>
