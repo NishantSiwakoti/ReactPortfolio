@@ -5,31 +5,32 @@
       "url":"https://eu02.flowstreams.pw/247-skymain/index.m3u8"
 
     },
+  
     { 
-      "language":"Mobile",
+      "language":" 720P",
+      "url":"https://karostream.tulix.tv/WillowTvHighBitrate/index.m3u8"
+
+    },
+    { 
+      "language":"Laptop 1 ",
       "url":"https://buc01.jobdone.top:8088/live/webcricn04/playlist.m3u8?id=114607&pk=8f13d631e0ea91bd4a17bc41c82a45709a7787d0cffcbe2779f8ddf573c592b0271786d8e76db8c0b981aad30e1368d49a5b0c16474c2c6315a08cbb7a38229d"
 
     },
     { 
-      "language":"Willow",
+      "language":"Laptop 2",
       "url":"https://but1.jobdone.top:8088/live/webcricwillow/playlist.m3u8?id=120375&pk=8f13d631e0ea91bd4a17bc41c82a45709a7787d0cffcbe2779f8ddf573c592b0271786d8e76db8c0b981aad30e1368d49a5b0c16474c2c6315a08cbb7a38229d"
 
     },
     { 
-      "language":"Phone",
+      "language":"Laptop 3",
       "url":"https://buc02.jobdone.top:8088/live/webcrichindi/playlist.m3u8?id=119771&pk=8f13d631e0ea91bd4a17bc41c82a45709a7787d0cffcbe2779f8ddf573c592b0271786d8e76db8c0b981aad30e1368d49a5b0c16474c2c6315a08cbb7a38229d"
     },
     { 
       "language":"Hindi 480P",
       "url":"https://but1.jobdone.top:8088/live/webcrichindi/playlist.m3u8?id=119771&pk=8f13d631e0ea91bd4a17bc41c82a45709a7787d0cffcbe2779f8ddf573c592b0271786d8e76db8c0b981aad30e1368d49a5b0c16474c2c6315a08cbb7a38229d"
-    },
-    { 
-      "language":"Laptop 720P",
-      "url":"https://karostream.tulix.tv/WillowTvHighBitrate/index.m3u8"
-
-    }
     
     
+  }
     
   ]
 }
