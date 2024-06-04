@@ -218,6 +218,19 @@ const LiveHome = ({ setProgress, title }) => {
         time="9:15 PM"
         match="Match 11"
       />
+      <div className="flex justify-center">
+        <div className="w-full max-w-3xl p-4 m-5">
+          <p className="text-black dark:text-white font-bold text-base text-center p-2">
+            Digital Millennium Copyright Act(DMCA)
+          </p>
+          <p className="text-black dark:text-white text-sm font-normal italic">
+            This website does not host any media content on its own site. This
+            website does not create or host or share any video. All video
+            streams are embedded here from external websites that are available
+            freely online.
+          </p>
+        </div>
+      </div>
     </section>
   );
 };
