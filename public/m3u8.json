@@ -1,6 +1,11 @@
 {
   "streams": [
     { 
+      "language":"Mobile/PC ",
+      "url":"https://karostream.tulix.tv/WillowTvHighBitrate/index.m3u8"
+
+    },
+    { 
       "language":"1080P",
       "url":"https://eu02.flowstreams.pw/247-skymain/index.m3u8"
 
@@ -8,11 +13,7 @@
   
     
     
-    { 
-      "language":"Mobile/PC ",
-      "url":"https://karostream.tulix.tv/WillowTvHighBitrate/index.m3u8"
-
-    },
+    
     { 
       "language":"Mobile/PC 2 ",
       "url":"https://karostream.tulix.tv/WillowTvHighBitrate/index.m3u8"
