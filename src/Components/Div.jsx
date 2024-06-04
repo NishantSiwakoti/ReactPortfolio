@@ -139,7 +139,7 @@ const Div = (props) => {
             <img
               src={props.photo1}
               alt="Team 1 Logo"
-              className="h-12 w-12 md:h-16 md:w-16 rounded-full"
+              className="h-20 w-20 md:h-24 md:w-24"
             />
             <span className="text-lg md:text-xl font-semibold text-white truncate">
               {props.team1}
@@ -191,7 +191,7 @@ const Div = (props) => {
             <img
               src={props.photo2}
               alt="Team 2 Logo"
-              className="h-12 w-12 md:h-16 md:w-16 rounded-full"
+              className="h-20 w-20 md:h-24 md:w-24"
             />
           </div>
         </div>
