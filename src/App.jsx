@@ -11,6 +11,7 @@ function App() {
       <AllRoutes />
       <Footer />
       <Analytics />
+      <SpeedInsights />
     </>
   );
 }
