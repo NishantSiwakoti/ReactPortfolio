@@ -165,7 +165,7 @@ const LiveHome = ({ setProgress, title }) => {
         team2="Scotland"
         date="2024-06-04"
         startTime={19} // Live stream starts at 6 am
-        time="7:00 PM"
+        time="8:15 PM"
         match="Match 6"
       />
       <Div
@@ -175,7 +175,7 @@ const LiveHome = ({ setProgress, title }) => {
         team2="Netherland"
         date="2024-06-04"
         startTime={20} // Live stream starts at 6 am
-        time="8:00 PM"
+        time="9:15 PM"
         match="Match 7"
       />
       <Div

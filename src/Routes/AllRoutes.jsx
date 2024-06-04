@@ -11,6 +11,7 @@ import LiveHome from "../Pages/LiveHome";
 import Live from "../Pages/Live";
 import LiveMatches from "../Pages/LiveMatches";
 import Notfound from "../Pages/Notfound";
+import Hello from "../Pages/Hello";
 export const AllRoutes = () => {
   const [progress, setProgress] = useState(0);
 
@@ -57,6 +58,7 @@ export const AllRoutes = () => {
           element={<Live title="LiveStreaming" setProgress={setProgress} />}
         />
         <Route path="*" element={<Notfound />} />
+        <Route path="helloworld" element={<Hello />} />
       </Routes>
     </div>
   );
