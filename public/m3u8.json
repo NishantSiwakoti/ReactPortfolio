@@ -7,11 +7,7 @@
     },
   
     
-    { 
-      "language":"Mobile/PC ",
-      "url":"https://buc01.jobdone.top:8088/live/webcricn04/playlist.m3u8?id=114607&pk=513d6cd36365a0b0bc9da59183c4f926d0228966008e17e48fcd984b5646d387f23f5141da56ec01f2dc0450802a07ac758fdc3c7996ee35f67e203653694b66"
-
-    },
+    
     { 
       "language":"Mobile/PC ",
       "url":"https://but1.jobdone.top:8088/live/webcrichindi/playlist.m3u8?id=119771&pk=eb28de980d10030146e2b88abefeb8cb872c7ae9e19a0634f02b56b9712ec95ff23f5141da56ec01f2dc0450802a07ac758fdc3c7996ee35f67e203653694b66"
@@ -20,19 +16,7 @@
     { 
       "language":"Mobile/PC ",
       "url":"https://but1.jobdone.top:8088/live/webcricn02/playlist.m3u8?id=115656&pk=eb28de980d10030146e2b88abefeb8cb872c7ae9e19a0634f02b56b9712ec95ff23f5141da56ec01f2dc0450802a07ac758fdc3c7996ee35f67e203653694b66"
-    },
-    { 
-      "language":" 720P",
-      "url":"https://karostream.tulix.tv/WillowTvHighBitrate/index.m3u8"
-
-    },
-    
-    { 
-      "language":"Hindi 480P",
-      "url":"https://but1.jobdone.top:8088/live/webcrichindi/playlist.m3u8?id=119771&pk=8f13d631e0ea91bd4a17bc41c82a45709a7787d0cffcbe2779f8ddf573c592b0271786d8e76db8c0b981aad30e1368d49a5b0c16474c2c6315a08cbb7a38229d"
-    
-    
-  }
+    }  
     
   ]
 }

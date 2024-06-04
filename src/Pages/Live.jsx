@@ -133,8 +133,8 @@ const Live = ({ setProgress, title }) => {
                   key={stream.language}
                   className={`p-2 mx-2 m-2 rounded text-white cursor-pointer ${
                     stream.url === currentStreamUrl
-                      ? "bg-green-600"
-                      : "bg-orange-600"
+                      ? "bg-orange-600"
+                      : "bg-green-600"
                   }`}
                   onClick={() => handleLanguageChange(stream.url)}
                 >
