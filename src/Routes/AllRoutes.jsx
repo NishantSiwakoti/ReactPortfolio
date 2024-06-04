@@ -10,6 +10,7 @@ import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import LiveHome from "../Pages/LiveHome";
 import Live from "../Pages/Live";
 import LiveMatches from "../Pages/LiveMatches";
+import Notfound from "../Pages/Notfound";
 export const AllRoutes = () => {
   const [progress, setProgress] = useState(0);
 
@@ -27,7 +28,7 @@ export const AllRoutes = () => {
         />
         <Route
           path="about"
-          element={<About title="About " setProgress={setProgress} />}
+          element={<About title="About" setProgress={setProgress} />}
         />
         <Route
           path="skills"
@@ -55,6 +56,7 @@ export const AllRoutes = () => {
           path="livestream"
           element={<Live title="LiveStreaming" setProgress={setProgress} />}
         />
+        <Route path="*" element={<Notfound />} />
       </Routes>
     </div>
   );
