@@ -85,7 +85,7 @@ const Div = (props) => {
 
   // Apply color based on dateLabel
   if (dateLabel === "Live Now") {
-    buttonStyle.backgroundColor = "#FF0000"; // Red
+    buttonStyle.backgroundColor = "#D10000"; // Red
   } else if (dateLabel === "Ended" || isMatchOver) {
     buttonStyle.backgroundColor = "#808080"; // Gray
   } else {
