@@ -20,6 +20,8 @@ const getDateLabel = (providedDate, startTime) => {
       return "Live Now";
     } else if (today >= endTime) {
       return "Ended";
+    } else if (currentHour < startTime) {
+      return startTime * 60 * 60 * 1000; // Return start time in milliseconds for the countdown timer
     } else {
       return "Today";
     }
@@ -47,6 +49,7 @@ const getDateLabel = (providedDate, startTime) => {
 const Div = (props) => {
   const [isMatchOver, setIsMatchOver] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [countdown, setCountdown] = useState(null);
   const dateLabel = getDateLabel(props.date, props.startTime);
 
   useEffect(() => {
@@ -73,6 +76,38 @@ const Div = (props) => {
 
     return () => clearTimeout(loadingTimer); // Clean up the timer on component unmount
   }, []);
+
+  useEffect(() => {
+    if (typeof dateLabel === "number") {
+      const updateCountdown = () => {
+        const now = new Date();
+        const startTime = new Date(props.date);
+        startTime.setHours(props.startTime);
+        const timeDiff = startTime - now;
+
+        if (timeDiff <= 0) {
+          setCountdown(null);
+        } else {
+          const hours = String(
+            Math.floor(timeDiff / (1000 * 60 * 60))
+          ).padStart(2, "0");
+          const minutes = String(
+            Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60))
+          ).padStart(2, "0");
+          const seconds = String(
+            Math.floor((timeDiff % (1000 * 60)) / 1000)
+          ).padStart(2, "0");
+
+          setCountdown(`${hours}:${minutes}:${seconds}`);
+        }
+      };
+
+      const interval = setInterval(updateCountdown, 1000);
+      updateCountdown(); // Initial call
+
+      return () => clearInterval(interval); // Clean up the interval on component unmount
+    }
+  }, [dateLabel, props.date, props.startTime]);
 
   const isLive = dateLabel === "Live Now";
 
@@ -122,6 +157,10 @@ const Div = (props) => {
               {isLoading ? (
                 <button style={buttonStyle} disabled>
                   Loading...
+                </button>
+              ) : countdown ? (
+                <button style={buttonStyle} disabled>
+                  {countdown}
                 </button>
               ) : isLive ? (
                 <NavLink to="/livestream">
