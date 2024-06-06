@@ -116,7 +116,7 @@ const Live = ({ setProgress, title }) => {
     <>
       <div className="">
         <div className="m-2 flex justify-center">
-          <div className="bg-[#0A6847] p-6 rounded-lg shadow-xl w-full max-w-md text-center">
+          {/* <div className="bg-[#0A6847] p-6 rounded-lg shadow-xl w-full max-w-md text-center">
             <p className="text-orange-500 font-bold text-xl">WorldCup Live</p>
 
             <div className="m-2 flex justify-center">
@@ -130,7 +130,7 @@ const Live = ({ setProgress, title }) => {
                 <img src={logo} alt="Logo" className="h-12 w-12 rounded-full" />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="flex justify-center">
           <div className="w-full mb-10 max-w-3xl p-4 bg-[#0A6847] rounded-lg shadow-lg relative">
@@ -184,13 +184,13 @@ const Live = ({ setProgress, title }) => {
                 </a>
               ))}
             </div>
-            <div className="flex justify-center">
+            {/* <div className="flex justify-center">
               <marquee className="w-full max-w-2xl p-2 text-[#254336] bg-[#e8dfca] rounded-lg shadow-lg">
                 Please wait 3-4 seconds for better quality. You can watch all
                 World Cup matches here for free. Don't forget to recommend it to
                 your friends!
               </marquee>
-            </div>
+            </div> */}
 
             <div className="flex justify-center mb-4">
               <button
