@@ -36,7 +36,7 @@ const Final = ({ setProgress, title }) => {
 
   const matches = [
     {
-      startTime: "21:15",
+      startTime: "20:15",
       endTime: "3:00",
       startDate: "June 6, 2024",
       endDate: "June 7, 2024",
@@ -47,7 +47,7 @@ const Final = ({ setProgress, title }) => {
       match: "Match 11",
     },
     {
-      startTime: "00:45",
+      startTime: "11:45",
       endTime: "5:00",
       startDate: "June 7, 2024",
       endDate: "June 7, 2024",
@@ -58,7 +58,7 @@ const Final = ({ setProgress, title }) => {
       match: "Match 12",
     },
     {
-      startTime: "20:15",
+      startTime: "7:15",
       endTime: "1:00",
       startDate: "June 7, 2024",
       endDate: "June 8, 2024",
@@ -69,7 +69,7 @@ const Final = ({ setProgress, title }) => {
       match: "Match 13",
     },
     {
-      startTime: "5:15",
+      startTime: "4:15",
       endTime: "11:00",
       startDate: "June 8, 2024",
       endDate: "June 8, 2024",
@@ -80,7 +80,7 @@ const Final = ({ setProgress, title }) => {
       match: "Match 14",
     },
     {
-      startTime: "6:15",
+      startTime: "5:15",
       endTime: "12:00",
       startDate: "June 8, 2024",
       endDate: "June 8, 2024",
@@ -91,7 +91,7 @@ const Final = ({ setProgress, title }) => {
       match: "Match 15",
     },
     {
-      startTime: "20:15",
+      startTime: "19:15",
       endTime: "1:00",
       startDate: "June 8, 2024",
       endDate: "June 8, 2024",
@@ -102,7 +102,7 @@ const Final = ({ setProgress, title }) => {
       match: "Match 16",
     },
     {
-      startTime: "10:45",
+      startTime: "21:45",
       endTime: "4:00",
       startDate: "June 8, 2024",
       endDate: "June 9, 2024",
@@ -113,7 +113,7 @@ const Final = ({ setProgress, title }) => {
       match: "Match 17",
     },
     {
-      startTime: "6:15",
+      startTime: "5:15",
       endTime: "11:00",
       startDate: "June 9, 2024",
       endDate: "June 9, 2024",
@@ -124,7 +124,7 @@ const Final = ({ setProgress, title }) => {
       match: "Match 18",
     },
     {
-      startTime: "20:15",
+      startTime: "19:15",
       endTime: "2:00",
       startDate: "June 9, 2024",
       endDate: "June 10, 2024",
@@ -135,7 +135,7 @@ const Final = ({ setProgress, title }) => {
       match: "Match 19",
     },
     {
-      startTime: "22:15",
+      startTime: "21:15",
       endTime: "3:00",
       startDate: "June 9, 2024",
       endDate: "June 10, 2024",
