@@ -6,8 +6,8 @@ const getDateLabel = (providedDate, startTime, endDate, endTime) => {
   const provided = new Date(providedDate);
 
   // Calculate end time
-  const endDateTime = new Date(providedDate);
-  endDateTime.setHours(startTime + 5, 0, 0, 0); // Set end time to 5 hours after start time
+  const endDateTime = new Date(endDate);
+  endDateTime.setHours(endTime, 0, 0, 0); // Set end time
 
   // Check if the provided date is today
   if (
@@ -60,22 +60,18 @@ const Div = (props) => {
   useEffect(() => {
     const startTime = new Date(props.date);
     startTime.setHours(props.startTime); // Set start time of the match
-    const endTime = new Date(props.date);
-    endTime.setHours(props.startTime + 5); // Set end time of the match (5 hours after start)
+    const endTime = new Date(props.endDate);
+    endTime.setHours(props.endTime); // Set end time of the match
 
-    const endTimer = setTimeout(() => {
-      setIsMatchOver(true); // Set match over flag to true after end time
+    const timer = setTimeout(() => {
+      // Check if current time is after end time
+      if (new Date() > endTime) {
+        setIsMatchOver(true); // Set match over flag to true
+      }
     }, endTime - new Date());
 
-    const removeTimer = setTimeout(() => {
-      setIsMatchOver(true); // Set match over flag to true after end time + 1 hour
-    }, endTime - new Date() + 3600000);
-
-    return () => {
-      clearTimeout(endTimer);
-      clearTimeout(removeTimer);
-    }; // Clean up the timers on component unmount
-  }, [props.date, props.startTime]);
+    return () => clearTimeout(timer); // Clean up the timer on component unmount
+  }, [props.date, props.startTime, props.endDate, props.endTime]);
 
   useEffect(() => {
     const loadingTimer = setTimeout(() => {
@@ -127,7 +123,7 @@ const Div = (props) => {
   };
 
   // Apply color based on dateLabel
-  if (isLive) {
+  if (dateLabel === "Live Now") {
     buttonStyle.backgroundColor = "#D10000"; // Red
   } else if (dateLabel === "Ended" || isMatchOver) {
     buttonStyle.backgroundColor = "#808080"; // Gray
@@ -136,7 +132,7 @@ const Div = (props) => {
   }
 
   if (isMatchOver) {
-    return null; // Render nothing if match is over and 1 hour has passed
+    return null; // Render nothing if match is over
   }
 
   return (
