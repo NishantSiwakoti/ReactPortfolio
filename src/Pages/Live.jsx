@@ -8,8 +8,14 @@ const Live = ({ setProgress, title }) => {
     new Date().toLocaleTimeString()
   );
   const [streams, setStreams] = useState([]);
-  const [currentStreamUrl, setCurrentStreamUrl] = useState("");
+  const [currentStreamUrl, setCurrentStreamUrl] = useState(
+    "https://emdftinya.tinyuri.org/embed/english.php"
+  );
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isNoLag, setIsNoLag] = useState(true); // State to handle "No Lag" option, set initially to true for English No Lag
+  const [currentNoLagUrl, setCurrentNoLagUrl] = useState(
+    "https://emdftinya.tinyuri.org/embed/english.php"
+  );
   const videoElement = useRef(null);
 
   useEffect(() => {
@@ -29,9 +35,6 @@ const Live = ({ setProgress, title }) => {
         const response = await fetch("m3u8.json");
         const data = await response.json();
         setStreams(data.streams);
-        if (data.streams.length > 0) {
-          setCurrentStreamUrl(data.streams[0].url);
-        }
       } catch (error) {
         console.error("Error fetching stream data:", error);
       }
@@ -41,10 +44,10 @@ const Live = ({ setProgress, title }) => {
   }, []);
 
   useEffect(() => {
-    if (currentStreamUrl) {
+    if (currentStreamUrl && !isNoLag) {
       loadAndPlayStream(currentStreamUrl);
     }
-  }, [currentStreamUrl]);
+  }, [currentStreamUrl, isNoLag]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -99,6 +102,13 @@ const Live = ({ setProgress, title }) => {
   };
 
   const handleLanguageChange = (url) => {
+    setIsNoLag(false); // Reset "No Lag" option
+    setCurrentStreamUrl(url);
+  };
+
+  const handleNoLagOption = (url) => {
+    setIsNoLag(true);
+    setCurrentNoLagUrl(url);
     setCurrentStreamUrl(url);
   };
 
@@ -128,11 +138,43 @@ const Live = ({ setProgress, title }) => {
               <p>{currentTime}</p>
             </div>
             <div className="flex justify-center mb-4 flex-wrap">
+              <a
+                className={`p-2 mx-2 m-2 rounded text-white cursor-pointer ${
+                  isNoLag &&
+                  currentNoLagUrl ===
+                    "https://emdftinya.tinyuri.org/embed/english.php"
+                    ? "bg-orange-600"
+                    : "bg-green-600"
+                }`}
+                onClick={() =>
+                  handleNoLagOption(
+                    "https://emdftinya.tinyuri.org/embed/english.php"
+                  )
+                }
+              >
+                English No Lag
+              </a>
+              <a
+                className={`p-2 mx-2 m-2 rounded text-white cursor-pointer ${
+                  isNoLag &&
+                  currentNoLagUrl ===
+                    "https://emdftinya.tinyuri.org/embed/hindi.php"
+                    ? "bg-orange-600"
+                    : "bg-green-600"
+                }`}
+                onClick={() =>
+                  handleNoLagOption(
+                    "https://emdftinya.tinyuri.org/embed/hindi.php"
+                  )
+                }
+              >
+                Hindi No Lag
+              </a>
               {streams.map((stream) => (
                 <a
                   key={stream.language}
                   className={`p-2 mx-2 m-2 rounded text-white cursor-pointer ${
-                    stream.url === currentStreamUrl
+                    stream.url === currentStreamUrl && !isNoLag
                       ? "bg-orange-600"
                       : "bg-green-600"
                   }`}
@@ -170,13 +212,23 @@ const Live = ({ setProgress, title }) => {
                 Open With VLC
               </button>
             </div>
-            <video
-              id="stream-video"
-              className="w-full rounded-lg shadow-lg"
-              ref={videoElement}
-              controls
-              autoPlay
-            ></video>
+            {isNoLag ? (
+              <iframe
+                src={currentStreamUrl}
+                title="No Lag Stream"
+                className="w-full h-96 rounded-lg shadow-lg"
+                frameBorder="0"
+                allowFullScreen
+              ></iframe>
+            ) : (
+              <video
+                id="stream-video"
+                className="w-full rounded-lg shadow-lg"
+                ref={videoElement}
+                controls
+                autoPlay
+              ></video>
+            )}
             {/* <img
               src={overlayImage}
               alt="Overlay"
