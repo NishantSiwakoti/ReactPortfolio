@@ -9,12 +9,12 @@ const Live = ({ setProgress, title }) => {
   );
   const [streams, setStreams] = useState([]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
-    "https://emdftinya.tinyuri.org/embed/english.php"
+    "https://emdftinya.tinyuri.org/embed/hindi.php"
   );
   const [isPlaying, setIsPlaying] = useState(false);
   const [isNoLag, setIsNoLag] = useState(true); // State to handle "No Lag" option, set initially to true for English No Lag
   const [currentNoLagUrl, setCurrentNoLagUrl] = useState(
-    "https://emdftinya.tinyuri.org/embed/english.php"
+    "https://emdftinya.tinyuri.org/embed/hindi.php"
   );
   const videoElement = useRef(null);
 
@@ -142,33 +142,33 @@ const Live = ({ setProgress, title }) => {
                 className={`p-2 mx-2 m-2 rounded text-white cursor-pointer ${
                   isNoLag &&
                   currentNoLagUrl ===
-                    "https://emdftinya.tinyuri.org/embed/english.php"
+                    "https://emdftinya.tinyuri.org/embed/hindi.php"
                     ? "bg-orange-600"
                     : "bg-green-600"
                 }`}
                 onClick={() =>
                   handleNoLagOption(
-                    "https://emdftinya.tinyuri.org/embed/english.php"
+                    "https://emdftinya.tinyuri.org/embed/hindi.php"
                   )
                 }
               >
-                English No Lag
+                NoLag
               </a>
               <a
                 className={`p-2 mx-2 m-2 rounded text-white cursor-pointer ${
                   isNoLag &&
                   currentNoLagUrl ===
-                    "https://emdftinya.tinyuri.org/embed/hindi.php"
+                    "https://emdftinya.tinyuri.org/embed/english.php"
                     ? "bg-orange-600"
                     : "bg-green-600"
                 }`}
                 onClick={() =>
                   handleNoLagOption(
-                    "https://emdftinya.tinyuri.org/embed/hindi.php"
+                    "https://emdftinya.tinyuri.org/embed/english.php"
                   )
                 }
               >
-                Hindi No Lag
+                No Lag
               </a>
               {streams.map((stream) => (
                 <a
