@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
-const getDateLabel = (providedDate, startTime) => {
+const getDateLabel = (providedDate, startTime, endDate, endTime) => {
   const today = new Date();
   const provided = new Date(providedDate);
 
   // Calculate end time
-  const endTime = new Date(provided);
-  endTime.setHours(startTime + 5); // Assuming each match lasts for 5 hours
+  const endDateTime = new Date(endDate);
+  endDateTime.setHours(endTime, 0, 0, 0); // Set end time
 
   // Check if the provided date is today
   if (
@@ -16,9 +16,9 @@ const getDateLabel = (providedDate, startTime) => {
     provided.getFullYear() === today.getFullYear()
   ) {
     const currentHour = today.getHours();
-    if (currentHour >= startTime && today < endTime) {
+    if (currentHour >= startTime && today < endDateTime) {
       return "Live Now";
-    } else if (today >= endTime) {
+    } else if (today >= endDateTime) {
       return "Ended";
     } else if (currentHour < startTime) {
       return startTime * 60 * 60 * 1000; // Return start time in milliseconds for the countdown timer
@@ -50,14 +50,18 @@ const Div = (props) => {
   const [isMatchOver, setIsMatchOver] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [countdown, setCountdown] = useState(null);
-  const dateLabel = getDateLabel(props.date, props.startTime);
+  const dateLabel = getDateLabel(
+    props.date,
+    props.startTime,
+    props.endDate,
+    props.endTime
+  );
 
   useEffect(() => {
     const startTime = new Date(props.date);
     startTime.setHours(props.startTime); // Set start time of the match
-    const endTime = new Date(
-      startTime.getTime() + 8 * 60 * 60 * 1000 + 10 * 60 * 1000
-    ); // Calculate end time
+    const endTime = new Date(props.endDate);
+    endTime.setHours(props.endTime); // Set end time of the match
 
     const timer = setTimeout(() => {
       // Check if current time is after end time
@@ -67,7 +71,7 @@ const Div = (props) => {
     }, endTime - new Date());
 
     return () => clearTimeout(timer); // Clean up the timer on component unmount
-  }, [props.date, props.startTime]);
+  }, [props.date, props.startTime, props.endDate, props.endTime]);
 
   useEffect(() => {
     const loadingTimer = setTimeout(() => {

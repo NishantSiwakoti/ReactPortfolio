@@ -41,14 +41,15 @@ const LiveHome = ({ setProgress, title }) => {
     document.title = `${title}`;
   }, [title]);
 
-  const formatDate = (dateStr, startTime) => {
-    const matchDate = new Date(dateStr);
+  const formatDate = (startDateStr, endDateStr, startTime, endTime) => {
+    const startDate = new Date(startDateStr);
+    const endDate = new Date(endDateStr);
     const today = new Date();
     const currentTime = today.getHours() * 60 + today.getMinutes();
     const matchStartTime = startTime * 60; // convert start time to minutes
-    const matchEndTime = matchStartTime + 5 * 60; // 5 hours from start time
+    const matchEndTime = endTime * 60; // convert end time to minutes
 
-    if (matchDate.toDateString() === today.toDateString()) {
+    if (startDate.toDateString() === today.toDateString()) {
       if (currentTime < matchStartTime) {
         const countdownTime = matchStartTime - currentTime;
         return `Countdown: ${Math.floor(countdownTime / 60)}h ${
@@ -59,8 +60,8 @@ const LiveHome = ({ setProgress, title }) => {
       } else {
         return "Ended";
       }
-    } else if (matchDate > today) {
-      const diffDays = Math.ceil((matchDate - today) / (1000 * 60 * 60 * 24));
+    } else if (startDate > today) {
+      const diffDays = Math.ceil((startDate - today) / (1000 * 60 * 60 * 24));
       if (diffDays === 1) {
         if (currentTime < matchStartTime) {
           const countdownTime = matchStartTime + (24 * 60 - currentTime);
@@ -70,15 +71,26 @@ const LiveHome = ({ setProgress, title }) => {
         }
       }
       return "Tomorrow";
+    } else if (endDate >= today) {
+      if (
+        endDate.toDateString() === today.toDateString() &&
+        currentTime >= matchEndTime
+      ) {
+        return "Ended";
+      }
+      return "Live";
     } else {
       return "Ended";
     }
   };
 
-  const handleMatchStatus = (dateStr, startTime) => {
-    const status = formatDate(dateStr, startTime);
-    if (status === "Ended" && !endedMatches.includes(dateStr)) {
-      setEndedMatches((prevEndedMatches) => [...prevEndedMatches, dateStr]);
+  const handleMatchStatus = (startDateStr, endDateStr, startTime, endTime) => {
+    const status = formatDate(startDateStr, endDateStr, startTime, endTime);
+    if (status === "Ended" && !endedMatches.includes(startDateStr)) {
+      setEndedMatches((prevEndedMatches) => [
+        ...prevEndedMatches,
+        startDateStr,
+      ]);
     }
     return status;
   };
@@ -87,112 +99,182 @@ const LiveHome = ({ setProgress, title }) => {
     {
       photo1: usa,
       team1: "USA",
-      photo2: can,
-      team2: "Canada",
-      date: "2024/06/02",
-      startTime: 6,
-      time: "6:00 AM",
-      match: "Match 1",
-    },
-    {
-      photo1: wi,
-      team1: "West Indies",
-      photo2: png,
-      team2: "PNG",
-      date: "2024-06-02",
-      startTime: 19,
-      time: "7:00 PM",
-      match: "Match 2",
+      photo2: pak,
+      team2: "Pakistan",
+      startDate: "2024-06-06",
+      endDate: "2024-06-07",
+      startTime: 20,
+      endTime: 25,
+      time: "9:15 PM",
+      match: "Match 11",
     },
     {
       photo1: nam,
       team1: "Namibia",
-      photo2: oman,
-      team2: "Oman",
-      date: "2024-06-03",
+      photo2: sco,
+      team2: "Scotland",
+      startDate: "2024-06-07",
+      endDate: "2024-06-07",
+      startTime: 24,
+      endTime: 29,
+      time: "12:45 AM",
+      match: "Match 12",
+    },
+    {
+      photo1: can,
+      team1: "Canada",
+      photo2: ire,
+      team2: "Ireland",
+      startDate: "2024-06-07",
+      endDate: "2024-06-07",
+      startTime: 20,
+      endTime: 25,
+      time: "8:15 PM",
+      match: "Match 13",
+    },
+    {
+      photo1: nz,
+      team1: "New Zealand",
+      photo2: afg,
+      team2: "Afghanistan",
+      startDate: "2024-06-08",
+      endDate: "2024-06-08",
       startTime: 5,
-      time: "5:00 AM",
-      match: "Match 3",
+      endTime: 10,
+      time: "5:15 AM",
+      match: "Match 14",
     },
     {
       photo1: sri,
       team1: "Sri Lanka",
+      photo2: ban,
+      team2: "Bangladesh",
+      startDate: "2024-06-08",
+      endDate: "2024-06-08",
+      startTime: 6,
+      endTime: 11,
+      time: "6:15 AM",
+      match: "Match 15",
+    },
+    {
+      photo1: ned,
+      team1: "Netherlands",
       photo2: sa,
       team2: "South Africa",
-      date: "2024-06-03",
-      startTime: 19,
-      time: "7:00 PM",
-      match: "Match 4",
-    },
-    {
-      photo1: afg,
-      team1: "Afghanistan",
-      photo2: ug,
-      team2: "Uganda",
-      date: "2024-06-04",
-      startTime: 5,
-      time: "5:00 AM",
-      match: "Match 5",
-    },
-    {
-      photo1: eng,
-      team1: "England",
-      photo2: sco,
-      team2: "Scotland",
-      date: "2024-06-04",
-      startTime: 19,
-      time: "8:15 PM",
-      match: "Match 6",
-    },
-    {
-      photo1: nep,
-      team1: "Nepal",
-      photo2: ned,
-      team2: "Netherland",
-      date: "2024-06-04",
+      startDate: "2024-06-08",
+      endDate: "2024-06-08",
       startTime: 20,
-      time: "9:15 PM",
-      match: "Match 7",
-    },
-    {
-      photo1: ind,
-      team1: "India",
-      photo2: ire,
-      team2: "Ireland",
-      date: "2024-06-05",
-      startTime: 19,
+      endTime: 25,
       time: "8:15 PM",
-      match: "Match 8",
-    },
-    {
-      photo1: png,
-      team1: "Papua New Guinea",
-      photo2: ug,
-      team2: "Uganda",
-      date: "2024-06-06",
-      startTime: 5,
-      time: "5:15 AM",
-      match: "Match 9",
+      match: "Match 16",
     },
     {
       photo1: aus,
       team1: "Australia",
-      photo2: oman,
-      team2: "Oman",
-      date: "2024-06-06",
+      photo2: eng,
+      team2: "England",
+      startDate: "2024-06-08",
+      endDate: "2024-06-08",
+      startTime: 22,
+      endTime: 27,
+      time: "10:45 PM",
+      match: "Match 17",
+    },
+    {
+      photo1: wi,
+      team1: "West Indies",
+      photo2: ug,
+      team2: "Uganda",
+      startDate: "2024-06-09",
+      endDate: "2024-06-09",
       startTime: 6,
+      endTime: 11,
       time: "6:15 AM",
-      match: "Match 10",
+      match: "Match 18",
+    },
+    {
+      photo1: ind,
+      team1: "India",
+      photo2: pak,
+      team2: "Pakistan",
+      startDate: "2024-06-09",
+      endDate: "2024-06-09",
+      startTime: 20,
+      endTime: 25,
+      time: "8:15 PM",
+      match: "Match 19",
+    },
+    {
+      photo1: oman,
+      team1: "Oman",
+      photo2: sco,
+      team2: "Scotland",
+      startDate: "2024-06-09",
+      endDate: "2024-06-09",
+      startTime: 22,
+      endTime: 27,
+      time: "10:45 PM",
+      match: "Match 20",
+    },
+    {
+      photo1: sa,
+      team1: "South Africa",
+      photo2: ban,
+      team2: "Bangladesh",
+      startDate: "2024-06-10",
+      endDate: "2024-06-10",
+      startTime: 20,
+      endTime: 25,
+      time: "8:15 PM",
+      match: "Match 21",
+    },
+    {
+      photo1: pak,
+      team1: "Pakistan",
+      photo2: can,
+      team2: "Canada",
+      startDate: "2024-06-11",
+      endDate: "2024-06-11",
+      startTime: 20,
+      endTime: 25,
+      time: "8:15 PM",
+      match: "Match 22",
+    },
+    {
+      photo1: sri,
+      team1: "Sri Lanka",
+      photo2: nep,
+      team2: "Nepal",
+      startDate: "2024-06-12",
+      endDate: "2024-06-12",
+      startTime: 5,
+      endTime: 10,
+      time: "5:15 AM",
+      match: "Match 23",
+    },
+    {
+      photo1: aus,
+      team1: "Australia",
+      photo2: nam,
+      team2: "Namibia",
+      startDate: "2024-06-12",
+      endDate: "2024-06-12",
+      startTime: 6,
+      endTime: 11,
+      time: "6:15 AM",
+      match: "Match 24",
     },
     {
       photo1: usa,
       team1: "USA",
-      photo2: pak,
-      team2: "Pakistan",
-      date: "2024-06-06",
+      photo2: ind,
+      team2: "India",
+      startDate: "2024-06-12",
+      endDate: "2024-06-12",
       startTime: 20,
-      time: "9:15 PM",
-      match: "Match 11",
+      endTime: 25,
+      time: "8:15 PM",
+      match: "Match 25",
     },
   ];
 
@@ -203,7 +285,12 @@ const LiveHome = ({ setProgress, title }) => {
       </h2>
 
       {matches.map((match, index) => {
-        const status = handleMatchStatus(match.date, match.startTime);
+        const status = handleMatchStatus(
+          match.startDate,
+          match.endDate,
+          match.startTime,
+          match.endTime
+        );
         if (status === "Ended") return null;
         return (
           <Div
@@ -212,7 +299,7 @@ const LiveHome = ({ setProgress, title }) => {
             team1={match.team1}
             photo2={match.photo2}
             team2={match.team2}
-            date={match.date}
+            date={match.startDate}
             startTime={match.startTime}
             time={match.time}
             match={match.match}
