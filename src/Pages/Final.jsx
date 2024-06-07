@@ -49,7 +49,7 @@ const Final = ({ setProgress, title }) => {
     {
       startTime: "11:45",
       endTime: "5:00",
-      startDate: "June 7, 2024",
+      startDate: "June 6, 2024",
       endDate: "June 7, 2024",
       photo1: nam,
       team1: "Namibia",
@@ -58,7 +58,7 @@ const Final = ({ setProgress, title }) => {
       match: "Match 12",
     },
     {
-      startTime: "7:15",
+      startTime: "19:15",
       endTime: "1:00",
       startDate: "June 7, 2024",
       endDate: "June 8, 2024",
