@@ -113,9 +113,8 @@ const Divss = (props) => {
                   <h1>{props.match}</h1>
                 </span>
               </div>
-              <div className="text-white mb-2 text-base">{props.startTime}</div>
+              <div className="text-white mb-2 text-base">{props.time}</div>
               <div className="text-white">
-                {/* Render button conditionally */}
                 {buttonText === "Live" ? (
                   <NavLink to="/livestream">
                     <button style={buttonStyle}>{buttonText}</button>

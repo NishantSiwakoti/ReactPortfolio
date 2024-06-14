@@ -169,36 +169,148 @@ const Final = ({ setProgress, title }) => {
       match: "Match 30",
     },
     {
-      startTime: "5:15",
+      startTime: "4:50",
+      time: "5:15",
       endTime: "11:00",
       startDate: "June 15, 2024",
       endDate: "June 15, 2024",
       photo1: nep,
       team1: "Nepal",
       photo2: sa,
-      team2: "SOuth Africa",
+      team2: "South Africa",
       match: "Match 31",
+    },
+    {
+      startTime: "6:00",
+      time: "6:15",
+      endTime: "11:00",
+      startDate: "June 15, 2024",
+      endDate: "June 15, 2024",
+      photo1: nz,
+      team1: "New Zeland",
+      photo2: ug,
+      team2: "Uganda",
+      match: "Match 32",
+    },
+    {
+      startTime: "20:00",
+      time: "20:15",
+      endTime: "1:00",
+      startDate: "June 15, 2024",
+      endDate: "June 16, 2024",
+      photo1: ind,
+      team1: "India",
+      photo2: can,
+      team2: "Canada",
+      match: "Match 33",
+    },
+    {
+      startTime: "22:00",
+      time: "22:45",
+      endTime: "3:00",
+      startDate: "June 15, 2024",
+      endDate: "June 16, 2024",
+      photo1: nam,
+      team1: "Namibia",
+      photo2: eng,
+      team2: "England",
+      match: "Match 34",
+    },
+    {
+      startTime: "6:00",
+      time: "6:15",
+      endTime: "11:00",
+      startDate: "June 16, 2024",
+      endDate: "June 16, 2024",
+      photo1: aus,
+      team1: "Australia",
+      photo2: sco,
+      team2: "Scotland",
+      match: "Match 35",
+    },
+    {
+      startTime: "20:00",
+      time: "20:15",
+      endTime: "1:00",
+      startDate: "June 16, 2024",
+      endDate: "June 17, 2024",
+      photo1: pak,
+      team1: "Pakistan",
+      photo2: ire,
+      team2: "Ireland",
+      match: "Match 36",
+    },
+    {
+      startTime: "4:50",
+      time: "5:15",
+      endTime: "11:00",
+      startDate: "June 17, 2024",
+      endDate: "June 17, 2024",
+      photo1: ban,
+      team1: "Bangaldesh",
+      photo2: nep,
+      team2: "Nepal",
+      match: "Match 37",
+    },
+    {
+      startTime: "6:00",
+      time: "6:15",
+      endTime: "11:00",
+      startDate: "June 17, 2024",
+      endDate: "June 17, 2024",
+      photo1: sri,
+      team1: "SriLanka",
+      photo2: ned,
+      team2: "Netherlands",
+      match: "Match 38",
+    },
+    {
+      startTime: "20:00",
+      time: "20:15",
+      endTime: "1:00",
+      startDate: "June 17, 2024",
+      endDate: "June 18, 2024",
+      photo1: nz,
+      team1: "New Zealand",
+      photo2: png,
+      team2: "Canada",
+      match: "Match 39",
+    },
+    {
+      startTime: "6:00",
+      time: "6:15",
+      endTime: "11:00",
+      startDate: "June 18, 2024",
+      endDate: "June 18, 2024",
+      photo1: wi,
+      team1: "West Indies",
+      photo2: afg,
+      team2: "Afghanistan",
+      match: "Match 40",
     },
   ];
 
   return (
-    <div>
-      {/* Map over matches array and render Divss component for each match */}
-      {matches.map((match, index) => (
-        <Divss
-          key={index}
-          startTime={match.startTime}
-          endTime={match.endTime}
-          startDate={match.startDate}
-          endDate={match.endDate}
-          photo1={match.photo1}
-          photo2={match.photo2}
-          match={match.match}
-          team1={match.team1}
-          team2={match.team2}
-        />
-      ))}
-    </div>
+    <section>
+      <div className="min-h-screen">
+        {/* Map over matches array and render Divss component for each match */}
+        {matches.map((match, index) => (
+          <Divss
+            key={index}
+            startTime={match.startTime}
+            endTime={match.endTime}
+            startDate={match.startDate}
+            time={match.time}
+            endDate={match.endDate}
+            photo1={match.photo1}
+            photo2={match.photo2}
+            match={match.match}
+            team1={match.team1}
+            team2={match.team2}
+          />
+        ))}
+      </div>
+    </section>
   );
 };
 

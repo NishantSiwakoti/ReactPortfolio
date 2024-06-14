@@ -1,0 +1,239 @@
+import React, { useEffect, useState, useRef } from "react";
+import Hls from "hls.js";
+
+const FootballLive = ({ setProgress, title }) => {
+  const [currentTime, setCurrentTime] = useState(
+    new Date().toLocaleTimeString()
+  );
+  const [streams, setStreams] = useState([]);
+  const [currentStreamUrl, setCurrentStreamUrl] = useState("");
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isNoLag, setIsNoLag] = useState(true);
+  const [currentNoLagUrl, setCurrentNoLagUrl] = useState("");
+  const videoElement = useRef(null);
+
+  useEffect(() => {
+    setProgress(40);
+    setTimeout(() => {
+      setProgress(100);
+    }, 500);
+  }, [setProgress]);
+
+  useEffect(() => {
+    document.title = `${title}`;
+  }, [title]);
+
+  useEffect(() => {
+    const fetchStreams = async () => {
+      try {
+        const response = await fetch("m3u8.json");
+        const data = await response.json();
+        setStreams(data.streams);
+      } catch (error) {
+        console.error("Error fetching stream data:", error);
+      }
+    };
+
+    fetchStreams();
+  }, []);
+
+  useEffect(() => {
+    if (currentStreamUrl && !isNoLag) {
+      loadAndPlayStream(currentStreamUrl);
+    }
+  }, [currentStreamUrl, isNoLag]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTime(new Date().toLocaleTimeString());
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const loadAndPlayStream = (url) => {
+    if (Hls.isSupported()) {
+      const hls = new Hls();
+      hls.loadSource(url);
+      hls.attachMedia(videoElement.current);
+      hls.on(Hls.Events.MANIFEST_PARSED, () => {
+        videoElement.current.play();
+        setIsPlaying(true);
+      });
+    } else if (
+      videoElement.current.canPlayType("application/vnd.apple.mpegurl")
+    ) {
+      videoElement.current.src = url;
+      videoElement.current.addEventListener("loadedmetadata", () => {
+        videoElement.current.play();
+        setIsPlaying(true);
+      });
+    } else {
+      alert("HLS is not supported by your browser.");
+    }
+  };
+
+  const handlePlayPause = () => {
+    if (isPlaying) {
+      videoElement.current.pause();
+      setIsPlaying(false);
+    } else {
+      videoElement.current.play();
+      setIsPlaying(true);
+    }
+  };
+
+  const handleFullScreen = () => {
+    if (videoElement.current.requestFullscreen) {
+      videoElement.current.requestFullscreen();
+    } else if (videoElement.current.webkitRequestFullscreen) {
+      videoElement.current.webkitRequestFullscreen();
+    }
+  };
+
+  const handleOpenVLC = () => {
+    window.location.href = `vlc://${currentStreamUrl}`;
+  };
+
+  const handleLanguageChange = (url) => {
+    setIsNoLag(false); // Reset "No Lag" option
+    setCurrentStreamUrl(url);
+  };
+
+  const handleNoLagOption = (url) => {
+    setIsNoLag(true);
+    setCurrentNoLagUrl(url);
+    setCurrentStreamUrl(url);
+  };
+
+  return (
+    <>
+      <div className="">
+        <div className="m-2 flex justify-center">
+          {/* <div className="bg-[#0A6847] p-6 rounded-lg shadow-xl w-full max-w-md text-center">
+            <p className="text-orange-500 font-bold text-xl">WorldCup Live</p>
+
+            <div className="m-2 flex justify-center">
+              <div className="flex items-center justify-center space-x-4">
+                <img src={logo} alt="Logo" className="h-12 w-12 rounded-full" />
+                <div>
+                  <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
+                    VS
+                  </p>
+                </div>
+                <img src={logo} alt="Logo" className="h-12 w-12 rounded-full" />
+              </div>
+            </div>
+          </div> */}
+        </div>
+        <div className="flex justify-center">
+          <div className="w-full mb-10 max-w-3xl p-4 bg-[#0A6847] rounded-lg shadow-lg relative">
+            <div className="text-white text-center mt-4 mb-2">
+              <p>{currentTime}</p>
+            </div>
+            <div className="flex justify-center mb-4 flex-wrap">
+              <a
+                className={`p-2 mx-2 m-2 rounded text-white cursor-pointer ${
+                  isNoLag &&
+                  currentNoLagUrl ===
+                    "https://emdftinya.tinyuri.org/embed/hindi.php"
+                    ? "bg-orange-600"
+                    : "bg-green-600"
+                }`}
+                onClick={() =>
+                  handleNoLagOption(
+                    "https://emdftinya.tinyuri.org/embed/hindi.php"
+                  )
+                }
+              >
+                NoLag
+              </a>
+              <a
+                className={`p-2 mx-2 m-2 rounded text-white cursor-pointer ${
+                  isNoLag &&
+                  currentNoLagUrl ===
+                    "https://emdftinya.tinyuri.org/embed/english.php"
+                    ? "bg-orange-600"
+                    : "bg-green-600"
+                }`}
+                onClick={() =>
+                  handleNoLagOption(
+                    "https://emdftinya.tinyuri.org/embed/english.php"
+                  )
+                }
+              >
+                No Lag
+              </a>
+              {streams.map((stream) => (
+                <a
+                  key={stream.language}
+                  className={`p-2 mx-2 m-2 rounded text-white cursor-pointer ${
+                    stream.url === currentStreamUrl && !isNoLag
+                      ? "bg-orange-600"
+                      : "bg-green-600"
+                  }`}
+                  onClick={() => handleLanguageChange(stream.url)}
+                >
+                  {stream.language}
+                </a>
+              ))}
+            </div>
+            {/* <div className="flex justify-center">
+              <marquee className="w-full max-w-2xl p-2 text-[#254336] bg-[#e8dfca] rounded-lg shadow-lg">
+                Please wait 3-4 seconds for better quality. You can watch all
+                World Cup matches here for free. Don't forget to recommend it to
+                your friends!
+              </marquee>
+            </div> */}
+
+            <div className="flex justify-center mb-4">
+              <button
+                className="p-2 mx-2 bg-blue-600 rounded hidden"
+                onClick={handlePlayPause}
+              >
+                {isPlaying ? "Pause" : "Play"}
+              </button>
+              <button
+                className="p-2 mx-2 bg-blue-600 rounded hidden"
+                onClick={handleFullScreen}
+              >
+                Full Screen
+              </button>
+              <button
+                className="p-2 mx-2 bg-blue-600 rounded hidden"
+                onClick={handleOpenVLC}
+              >
+                Open With VLC
+              </button>
+            </div>
+            {isNoLag ? (
+              <iframe
+                src={currentStreamUrl}
+                title="No Lag Stream"
+                className="w-full h-96 rounded-lg shadow-lg"
+                frameBorder="0"
+                allowFullScreen
+              ></iframe>
+            ) : (
+              <video
+                id="stream-video"
+                className="w-full rounded-lg shadow-lg"
+                ref={videoElement}
+                controls
+                autoPlay
+              ></video>
+            )}
+            {/* <img
+              src={overlayImage}
+              alt="Overlay"
+              className="absolute top-0 right-0 w-32 mt-32 mr-9 rounded-md"
+              style={{ opacity: 2 }} // Adjust opacity as needed
+            /> */}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default FootballLive;

@@ -13,6 +13,8 @@ import LiveMatches from "../Pages/LiveMatches";
 import Notfound from "../Pages/Notfound";
 import Hello from "../Pages/Hello";
 import Final from "../Pages/Final";
+import Football from "../Pages/Football";
+import FootballLive from "../Pages/FootballLive";
 export const AllRoutes = () => {
   const [progress, setProgress] = useState(0);
 
@@ -50,13 +52,22 @@ export const AllRoutes = () => {
             <LiveMatches title="Live Matches" setProgress={setProgress} />
           }
         />
-        {/* <Route
-          path="liveme"
-          element={<LiveHome title="Live Matches" setProgress={setProgress} />}
-        /> */}
+        <Route
+          path="euro"
+          element={
+            <Football title="Live Football Matches" setProgress={setProgress} />
+          }
+        />
+
         <Route
           path="livestream"
           element={<Live title="LiveStreaming" setProgress={setProgress} />}
+        />
+        <Route
+          path="footballive"
+          element={
+            <FootballLive title="Football Live" setProgress={setProgress} />
+          }
         />
         <Route path="*" element={<Notfound />} />
         <Route path="helloworld" element={<Hello />} />

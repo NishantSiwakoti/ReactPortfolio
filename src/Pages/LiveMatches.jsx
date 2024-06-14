@@ -63,9 +63,11 @@ const LiveMatches = (props) => {
               <span className="text-xl font-bold text-[#1A4D2E] flex flex-col">
                 Euro Cup 2024
               </span>
-              <button className="mt-2 px-4 py-2 bg-[#4F6F52] text-white rounded-md cursor-not-allowed text-sm md:text-base">
-                Coming Soon....
-              </button>
+              <NavLink to="/euro">
+                <button className="mt-2 px-11 py-2 bg-red-500 hover:bg-red-700 text-white rounded-md text-sm md:text-base">
+                  Matches
+                </button>
+              </NavLink>
             </div>
             <div className="flex items-center space-x-2 mt-4 md:mt-0 md:w-1/3 justify-end">
               <span className="text-lg md:text-xl font-semibold text-white truncate">
@@ -78,19 +80,6 @@ const LiveMatches = (props) => {
               />
             </div>
           </div>
-        </div>
-      </div>
-      <div className="flex justify-center">
-        <div className="w-full max-w-3xl p-4 m-5">
-          <p className="text-black dark:text-white font-bold text-base text-center p-2">
-            Digital Millennium Copyright Act(DMCA)
-          </p>
-          <p className="text-black dark:text-white text-sm font-normal italic">
-            This website does not host any media content on its own site. This
-            website does not create or host or share any video. All video
-            streams are embedded here from external websites that are available
-            freely online.
-          </p>
         </div>
       </div>
     </section>
