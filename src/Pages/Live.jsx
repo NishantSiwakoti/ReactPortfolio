@@ -12,22 +12,6 @@ const Live = ({ setProgress, title }) => {
       language: "No Lag",
       url: "https://emdftinya.tinyuri.org/embed/english.php",
     },
-    // {
-    //   language: "",
-    //   url: "",
-    // },
-    // {
-    //   language: "",
-    //   url: "",
-    // },
-    // {
-    //   language: "",
-    //   url: "",
-    // },
-    // {
-    //   language: "",
-    //   url: "",
-    // },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
     "https://emdftinya.tinyuri.org/embed/english.php"
