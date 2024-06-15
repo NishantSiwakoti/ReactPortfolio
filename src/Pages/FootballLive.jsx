@@ -6,8 +6,12 @@ const FootballLive = ({ setProgress, title }) => {
   );
   const [streams, setStreams] = useState([
     {
-      url: "https://dlhd.so/embed/stream-49.php",
+      url: "https://linecrystal.com/events/stream1/",
       language: "Default Stream",
+    },
+    {
+      url: "https://whitemouseapple.com/tipikbe.html",
+      language: "No Lag Stream",
     },
     {
       url: "https://1stream.eu/soccer/spain-croatia-live-stream/1415361?embed=1",
@@ -19,7 +23,7 @@ const FootballLive = ({ setProgress, title }) => {
     },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
-    "https://dlhd.so/embed/stream-49.php"
+    "https://linecrystal.com/events/stream1/"
   );
 
   useEffect(() => {
