@@ -9,28 +9,28 @@ const Live = ({ setProgress, title }) => {
   );
   const [streams, setStreams] = useState([
     {
-      language: "Star Sport 1",
-      url: "https://player003.vip/embed2.php?id=starsp&q=Star Sports 1",
+      language: "No Lag",
+      url: "https://emdftinya.tinyuri.org/embed/english.php",
     },
-    {
-      language: "Willow Cricket",
-      url: "https://player003.vip/embed2.php?id=willow&q=Willow Cricket",
-    },
-    {
-      language: "Star Sports Hindi",
-      url: "https://player003.vip/embed2.php?id=starsp3&q=Star Sports Hindi",
-    },
-    {
-      language: "Astro Cricket",
-      url: "https://player003.vip/embed2.php?id=astrocric&q=Astro Cricket",
-    },
-    {
-      language: "CricLife",
-      url: "https://player003.vip/embed2.php?id=spch34&q=CricLife 3",
-    },
+    // {
+    //   language: "",
+    //   url: "",
+    // },
+    // {
+    //   language: "",
+    //   url: "",
+    // },
+    // {
+    //   language: "",
+    //   url: "",
+    // },
+    // {
+    //   language: "",
+    //   url: "",
+    // },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
-    "https://player003.vip/embed2.php?id=starsp&q=Star Sports 1"
+    "https://emdftinya.tinyuri.org/embed/english.php"
   );
   const [isPlaying, setIsPlaying] = useState(false);
   const videoElement = useRef(null);
