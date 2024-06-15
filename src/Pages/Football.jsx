@@ -209,10 +209,11 @@ const Football = ({ setProgress, title }) => {
             Digital Millennium Copyright Act(DMCA)
           </p>
           <p className="text-black dark:text-white text-sm font-normal italic">
-            This website does not host any media content on its own site. This
-            website does not create or host or share any video. All video
-            streams are embedded here from external websites that are available
-            freely online.
+            This site only contains links and embeds to TV channels from 3rd
+            party sites Which are freely available on all Internet. We are not
+            affiliated in any way with the broadcasted channels nor responsible
+            for their content. All content is copyright of their respective
+            owners.
           </p>
         </div>
       </div>

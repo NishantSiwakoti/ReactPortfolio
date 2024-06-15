@@ -232,6 +232,20 @@ const FootballLive = ({ setProgress, title }) => {
           </div>
         </div>
       </div>
+      <div className="flex justify-center">
+        <div className="w-full max-w-3xl p-4 m-5">
+          <p className="text-black dark:text-white font-bold text-base text-center p-2">
+            Digital Millennium Copyright Act(DMCA)
+          </p>
+          <p className="text-black dark:text-white text-sm font-normal italic">
+            This site only contains links and embeds to TV channels from 3rd
+            party sites Which are freely available on all Internet. We are not
+            affiliated in any way with the broadcasted channels nor responsible
+            for their content. All content is copyright of their respective
+            owners.
+          </p>
+        </div>
+      </div>
     </>
   );
 };

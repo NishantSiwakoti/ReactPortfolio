@@ -7,15 +7,32 @@ const Live = ({ setProgress, title }) => {
   const [currentTime, setCurrentTime] = useState(
     new Date().toLocaleTimeString()
   );
-  const [streams, setStreams] = useState([]);
+  const [streams, setStreams] = useState([
+    {
+      language: "Star Sport 1",
+      url: "https://player003.vip/embed2.php?id=starsp&q=Star Sports 1",
+    },
+    {
+      language: "Willow Cricket",
+      url: "https://player003.vip/embed2.php?id=willow&q=Willow Cricket",
+    },
+    {
+      language: "Star Sports Hindi",
+      url: "https://player003.vip/embed2.php?id=starsp3&q=Star Sports Hindi",
+    },
+    {
+      language: "Astro Cricket",
+      url: "https://player003.vip/embed2.php?id=astrocric&q=Astro Cricket",
+    },
+    {
+      language: "CricLife",
+      url: "https://player003.vip/embed2.php?id=spch34&q=CricLife 3",
+    },
+  ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
-    "https://emdftinya.tinyuri.org/embed/hindi.php"
+    "https://player003.vip/embed2.php?id=starsp&q=Star Sports 1"
   );
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isNoLag, setIsNoLag] = useState(true); // State to handle "No Lag" option, set initially to true for English No Lag
-  const [currentNoLagUrl, setCurrentNoLagUrl] = useState(
-    "https://emdftinya.tinyuri.org/embed/hindi.php"
-  );
   const videoElement = useRef(null);
 
   useEffect(() => {
@@ -30,24 +47,10 @@ const Live = ({ setProgress, title }) => {
   }, [title]);
 
   useEffect(() => {
-    const fetchStreams = async () => {
-      try {
-        const response = await fetch("m3u8.json");
-        const data = await response.json();
-        setStreams(data.streams);
-      } catch (error) {
-        console.error("Error fetching stream data:", error);
-      }
-    };
-
-    fetchStreams();
-  }, []);
-
-  useEffect(() => {
-    if (currentStreamUrl && !isNoLag) {
+    if (currentStreamUrl) {
       loadAndPlayStream(currentStreamUrl);
     }
-  }, [currentStreamUrl, isNoLag]);
+  }, [currentStreamUrl]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -101,14 +104,7 @@ const Live = ({ setProgress, title }) => {
     window.location.href = `vlc://${currentStreamUrl}`;
   };
 
-  const handleLanguageChange = (url) => {
-    setIsNoLag(false); // Reset "No Lag" option
-    setCurrentStreamUrl(url);
-  };
-
-  const handleNoLagOption = (url) => {
-    setIsNoLag(true);
-    setCurrentNoLagUrl(url);
+  const handleStreamChange = (url) => {
     setCurrentStreamUrl(url);
   };
 
@@ -138,59 +134,20 @@ const Live = ({ setProgress, title }) => {
               <p>{currentTime}</p>
             </div>
             <div className="flex justify-center mb-4 flex-wrap">
-              <a
-                className={`p-2 mx-2 m-2 rounded text-white cursor-pointer ${
-                  isNoLag &&
-                  currentNoLagUrl ===
-                    "https://emdftinya.tinyuri.org/embed/hindi.php"
-                    ? "bg-orange-600"
-                    : "bg-green-600"
-                }`}
-                onClick={() =>
-                  handleNoLagOption(
-                    "https://emdftinya.tinyuri.org/embed/hindi.php"
-                  )
-                }
-              >
-                NoLag
-              </a>
-              <a
-                className={`p-2 mx-2 m-2 rounded text-white cursor-pointer ${
-                  isNoLag &&
-                  currentNoLagUrl ===
-                    "https://emdftinya.tinyuri.org/embed/english.php"
-                    ? "bg-orange-600"
-                    : "bg-green-600"
-                }`}
-                onClick={() =>
-                  handleNoLagOption(
-                    "https://emdftinya.tinyuri.org/embed/english.php"
-                  )
-                }
-              >
-                No Lag
-              </a>
               {streams.map((stream) => (
                 <a
                   key={stream.language}
                   className={`p-2 mx-2 m-2 rounded text-white cursor-pointer ${
-                    stream.url === currentStreamUrl && !isNoLag
+                    stream.url === currentStreamUrl
                       ? "bg-orange-600"
                       : "bg-green-600"
                   }`}
-                  onClick={() => handleLanguageChange(stream.url)}
+                  onClick={() => handleStreamChange(stream.url)}
                 >
                   {stream.language}
                 </a>
               ))}
             </div>
-            {/* <div className="flex justify-center">
-              <marquee className="w-full max-w-2xl p-2 text-[#254336] bg-[#e8dfca] rounded-lg shadow-lg">
-                Please wait 3-4 seconds for better quality. You can watch all
-                World Cup matches here for free. Don't forget to recommend it to
-                your friends!
-              </marquee>
-            </div> */}
 
             <div className="flex justify-center mb-4">
               <button
@@ -212,30 +169,28 @@ const Live = ({ setProgress, title }) => {
                 Open With VLC
               </button>
             </div>
-            {isNoLag ? (
-              <iframe
-                src={currentStreamUrl}
-                title="No Lag Stream"
-                className="w-full h-96 rounded-lg shadow-lg"
-                frameBorder="0"
-                allowFullScreen
-              ></iframe>
-            ) : (
-              <video
-                id="stream-video"
-                className="w-full rounded-lg shadow-lg"
-                ref={videoElement}
-                controls
-                autoPlay
-              ></video>
-            )}
-            {/* <img
-              src={overlayImage}
-              alt="Overlay"
-              className="absolute top-0 right-0 w-32 mt-32 mr-9 rounded-md"
-              style={{ opacity: 2 }} // Adjust opacity as needed
-            /> */}
+            <iframe
+              src={currentStreamUrl}
+              title="Live Stream"
+              className="w-full h-96 rounded-lg shadow-lg"
+              frameBorder="0"
+              allowFullScreen
+            ></iframe>
           </div>
+        </div>
+      </div>
+      <div className="flex justify-center">
+        <div className="w-full max-w-3xl p-4 m-5">
+          <p className="text-black dark:text-white font-bold text-base text-center p-2">
+            Digital Millennium Copyright Act(DMCA)
+          </p>
+          <p className="text-black dark:text-white text-sm font-normal italic">
+            This site only contains links and embeds to TV channels from 3rd
+            party sites Which are freely available on all Internet. We are not
+            affiliated in any way with the broadcasted channels nor responsible
+            for their content. All content is copyright of their respective
+            owners.
+          </p>
         </div>
       </div>
     </>
