@@ -17,10 +17,6 @@ const FootballLive = ({ setProgress, title }) => {
       url: "https://1stream.eu/soccer/spain-croatia-live-stream/1415361?embed=1",
       language: "Spanish Stream",
     },
-    {
-      url: "https://dlhd.so/embed/stream-350.php",
-      language: "Backup Stream",
-    },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
     "https://linecrystal.com/events/stream1/"
@@ -28,7 +24,7 @@ const FootballLive = ({ setProgress, title }) => {
 
   useEffect(() => {
     // Simulate loading additional streams from a JSON file
-    fetch("")
+    fetch("football.json")
       .then((response) => response.json())
       .then((data) => {
         setStreams((prevStreams) => [...prevStreams, ...data.streams]);
@@ -69,6 +65,11 @@ const FootballLive = ({ setProgress, title }) => {
           <div className="w-full mb-10 max-w-3xl p-4 bg-[#0A6847] rounded-lg shadow-lg relative">
             <div className="text-white text-center mt-4 mb-2">
               <p>{currentTime}</p>
+            </div>
+            <div className="bg-gray-800 py-3 rounded-lg">
+              <h1 className="text-white text-xl text-center">
+                Skip two ads to watch stream.
+              </h1>
             </div>
             <div className="flex justify-center mb-4 flex-wrap">
               {streams.map((stream, index) => (
