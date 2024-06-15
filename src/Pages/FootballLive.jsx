@@ -10,6 +10,7 @@ const FootballLive = ({ setProgress, title }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isNoLag, setIsNoLag] = useState(true);
   const [currentNoLagUrl, setCurrentNoLagUrl] = useState("");
+  const [activeStreamUrl, setActiveStreamUrl] = useState(""); // State to track active stream URL
   const videoElement = useRef(null);
 
   useEffect(() => {
@@ -26,9 +27,14 @@ const FootballLive = ({ setProgress, title }) => {
   useEffect(() => {
     const fetchStreams = async () => {
       try {
-        const response = await fetch("m3u8.json");
+        const response = await fetch("football.json");
         const data = await response.json();
         setStreams(data.streams);
+        if (data.streams.length > 0) {
+          // Set the first stream as active initially
+          setActiveStreamUrl(data.streams[0].url);
+          setCurrentStreamUrl(data.streams[0].url);
+        }
       } catch (error) {
         console.error("Error fetching stream data:", error);
       }
@@ -98,109 +104,55 @@ const FootballLive = ({ setProgress, title }) => {
   const handleLanguageChange = (url) => {
     setIsNoLag(false); // Reset "No Lag" option
     setCurrentStreamUrl(url);
+    setActiveStreamUrl(url); // Update active stream when language changes
   };
 
   const handleNoLagOption = (url) => {
     setIsNoLag(true);
     setCurrentNoLagUrl(url);
     setCurrentStreamUrl(url);
+    setActiveStreamUrl(url); // Update active stream when selecting no lag option
   };
 
   return (
     <>
       <div className="">
-        <div className="m-2 flex justify-center">
-          {/* <div className="bg-[#0A6847] p-6 rounded-lg shadow-xl w-full max-w-md text-center">
-            <p className="text-orange-500 font-bold text-xl">WorldCup Live</p>
-
-            <div className="m-2 flex justify-center">
-              <div className="flex items-center justify-center space-x-4">
-                <img src={logo} alt="Logo" className="h-12 w-12 rounded-full" />
-                <div>
-                  <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
-                    VS
-                  </p>
-                </div>
-                <img src={logo} alt="Logo" className="h-12 w-12 rounded-full" />
-              </div>
-            </div>
-          </div> */}
-        </div>
+        <div className="m-2 flex justify-center"></div>
         <div className="flex justify-center">
           <div className="w-full mb-10 max-w-3xl p-4 bg-[#0A6847] rounded-lg shadow-lg relative">
             <div className="text-white text-center mt-4 mb-2">
               <p>{currentTime}</p>
             </div>
             <div className="flex justify-center mb-4 flex-wrap">
-              <a
-                className={`p-2 mx-2 m-2 rounded text-white cursor-pointer ${
-                  isNoLag &&
-                  currentNoLagUrl ===
-                    "https://emdftinya.tinyuri.org/embed/hindi.php"
-                    ? "bg-orange-600"
-                    : "bg-green-600"
-                }`}
-                onClick={() =>
-                  handleNoLagOption(
-                    "https://emdftinya.tinyuri.org/embed/hindi.php"
-                  )
-                }
-              >
-                NoLag
-              </a>
-              <a
-                className={`p-2 mx-2 m-2 rounded text-white cursor-pointer ${
-                  isNoLag &&
-                  currentNoLagUrl ===
-                    "https://emdftinya.tinyuri.org/embed/english.php"
-                    ? "bg-orange-600"
-                    : "bg-green-600"
-                }`}
-                onClick={() =>
-                  handleNoLagOption(
-                    "https://emdftinya.tinyuri.org/embed/english.php"
-                  )
-                }
-              >
-                No Lag
-              </a>
-              {streams.map((stream) => (
-                <a
-                  key={stream.language}
-                  className={`p-2 mx-2 m-2 rounded text-white cursor-pointer ${
-                    stream.url === currentStreamUrl && !isNoLag
+              {streams.map((stream, index) => (
+                <button
+                  key={index}
+                  className={`p-2 mx-2 rounded ${
+                    activeStreamUrl === stream.url
                       ? "bg-orange-600"
-                      : "bg-green-600"
+                      : "bg-blue-600"
                   }`}
                   onClick={() => handleLanguageChange(stream.url)}
                 >
                   {stream.language}
-                </a>
+                </button>
               ))}
             </div>
-            {/* <div className="flex justify-center">
-              <marquee className="w-full max-w-2xl p-2 text-[#254336] bg-[#e8dfca] rounded-lg shadow-lg">
-                Please wait 3-4 seconds for better quality. You can watch all
-                World Cup matches here for free. Don't forget to recommend it to
-                your friends!
-              </marquee>
-            </div> */}
-
-            <div className="flex justify-center mb-4">
+            <div className="justify-center mb-4 hidden">
               <button
-                className="p-2 mx-2 bg-blue-600 rounded hidden"
+                className="p-2 mx-2 bg-blue-600 rounded"
                 onClick={handlePlayPause}
               >
                 {isPlaying ? "Pause" : "Play"}
               </button>
               <button
-                className="p-2 mx-2 bg-blue-600 rounded hidden"
+                className="p-2 mx-2 bg-blue-600 rounded"
                 onClick={handleFullScreen}
               >
                 Full Screen
               </button>
               <button
-                className="p-2 mx-2 bg-blue-600 rounded hidden"
+                className="p-2 mx-2 bg-blue-600 rounded"
                 onClick={handleOpenVLC}
               >
                 Open With VLC
@@ -223,12 +175,6 @@ const FootballLive = ({ setProgress, title }) => {
                 autoPlay
               ></video>
             )}
-            {/* <img
-              src={overlayImage}
-              alt="Overlay"
-              className="absolute top-0 right-0 w-32 mt-32 mr-9 rounded-md"
-              style={{ opacity: 2 }} // Adjust opacity as needed
-            /> */}
           </div>
         </div>
       </div>

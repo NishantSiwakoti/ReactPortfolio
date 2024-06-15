@@ -2,20 +2,11 @@
   "streams": [
   
     { 
-      "language":"Sky Sports",
-      "url":"https://live2.notebulk.xyz/uk_ssmain/index.m3u8"
+      "language":"Channel1",
+      "url":"https://hdmatch.xyz/streamssss/9061.m3u8"
 
-    },
-    { 
-      "language":"Best",
-      "url":"https://live2.notebulk.xyz/uk_sscricket/index.m3u8"
-
-    },
+    }
     
-    { 
-      "language":"Phone",
-      "url":"https://cdn.whystream.pro:8089/hls/4yoBO0lXfFAH/index.m3u8?st=10kpHxwzfs1Vy0PYG8KBew&e=1717782503"
-    }  
     
   ]
 }
