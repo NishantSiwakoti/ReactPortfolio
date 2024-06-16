@@ -17,6 +17,10 @@ const FootballLive = ({ setProgress, title }) => {
       url: "https://streambtw.com/iframe/ch1.php",
       language: "Spanish Stream",
     },
+    {
+      url: "https://dlhd.so/embed/stream-560.php",
+      language: "Best Stream",
+    },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
     "https://whitemouseapple.com/tipikbe.html"
