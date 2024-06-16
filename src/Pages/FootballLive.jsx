@@ -6,11 +6,11 @@ const FootballLive = ({ setProgress, title }) => {
   );
   const [streams, setStreams] = useState([
     {
-      url: "https://linecrystal.com/events/stream1/",
+      url: "https://whitemouseapple.com/tipikbe.html",
       language: "Default Stream",
     },
     {
-      url: "https://whitemouseapple.com/tipikbe.html",
+      url: "https://whitemouseapple.com/skysport251.html",
       language: "No Lag Stream",
     },
     {
@@ -19,7 +19,7 @@ const FootballLive = ({ setProgress, title }) => {
     },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
-    "https://linecrystal.com/events/stream1/"
+    "https://whitemouseapple.com/tipikbe.html"
   );
 
   useEffect(() => {
