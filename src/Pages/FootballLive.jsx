@@ -14,7 +14,7 @@ const FootballLive = ({ setProgress, title }) => {
       language: "No Lag Stream",
     },
     {
-      url: "https://1stream.eu/soccer/spain-croatia-live-stream/1415361?embed=1",
+      url: "https://streambtw.com/iframe/ch1.php",
       language: "Spanish Stream",
     },
   ]);
