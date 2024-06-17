@@ -7,7 +7,7 @@ import Contact from "../Pages/Contact";
 import LoadingBar from "react-top-loading-bar";
 import { useState } from "react";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
-import LiveHome from "../Pages/LiveHome";
+
 import Live from "../Pages/Live";
 import LiveMatches from "../Pages/LiveMatches";
 import Notfound from "../Pages/Notfound";

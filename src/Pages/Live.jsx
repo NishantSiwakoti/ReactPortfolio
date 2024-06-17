@@ -9,8 +9,12 @@ const Live = ({ setProgress, title }) => {
   );
   const [streams, setStreams] = useState([
     {
-      language: "No Lag",
+      language: "English",
       url: "https://emdftinya.tinyuri.org/embed/english.php",
+    },
+    {
+      language: "Hindi",
+      url: "https://emdftinya.tinyuri.org/embed/hindi.php",
     },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
