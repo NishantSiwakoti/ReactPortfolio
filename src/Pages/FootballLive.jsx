@@ -6,7 +6,7 @@ const FootballLive = ({ setProgress, title }) => {
   );
   const [streams, setStreams] = useState([
     {
-      url: "https://whitemouseapple.com/tipikbe.html",
+      url: "https://streambtw.com/iframe/ch1.php",
       language: "Default Stream",
     },
     {
@@ -14,7 +14,7 @@ const FootballLive = ({ setProgress, title }) => {
       language: "No Lag Stream",
     },
     {
-      url: "https://streambtw.com/iframe/ch1.php",
+      url: "https://whitemouseapple.com/tipikbe.html",
       language: "Spanish Stream",
     },
     {
@@ -23,7 +23,7 @@ const FootballLive = ({ setProgress, title }) => {
     },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
-    "https://whitemouseapple.com/tipikbe.html"
+    "https://streambtw.com/iframe/ch1.php"
   );
 
   useEffect(() => {
