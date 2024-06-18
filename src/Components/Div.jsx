@@ -3,16 +3,9 @@ import { NavLink } from "react-router-dom";
 
 const Div = (props) => {
   const [buttonText, setButtonText] = useState("");
-  const [buttonStyle, setButtonStyle] = useState({
-    padding: "8px 20px",
-    borderRadius: "5px",
-    color: "#fff",
-    fontSize: "16px",
-    backgroundColor: "#4F6F52", // Default green color
-  });
+  const [buttonStyle, setButtonStyle] = useState({});
   const [isDivVisible, setIsDivVisible] = useState(true);
 
-  // Function to format the date string
   const formatDateString = (date) => {
     return date.toLocaleDateString("en-US", {
       weekday: "short",
@@ -21,27 +14,18 @@ const Div = (props) => {
     });
   };
 
-  // Function to update the button state
   const updateButtonState = () => {
-    // Get current time
     const currentTime = new Date();
-
-    // Parse start and end times from props
     const startTime = new Date(props.startDate + " " + props.startTime);
     const endTime = new Date(props.endDate + " " + props.endTime);
 
-    // Adjust end time if it is on the next day
     if (endTime < startTime) {
       endTime.setDate(endTime.getDate() + 1);
     }
 
-    // Check if the current time is before the start time
     const isBeforeStart = currentTime < startTime;
-
-    // Check if the current time is after the end time
     const isAfterEnd = currentTime > endTime;
 
-    // Determine if the match is today or tomorrow
     const startDate = formatDateString(startTime);
     const currentDate = formatDateString(currentTime);
     const tomorrowDate = new Date(currentTime);
@@ -49,95 +33,81 @@ const Div = (props) => {
     const isToday = startDate === currentDate;
     const isTomorrow = startDate === formatDateString(tomorrowDate);
 
-    // Set button text based on current time
     if (isBeforeStart) {
-      if (isToday) {
-        setButtonText("Today");
-      } else if (isTomorrow) {
-        setButtonText("Tomorrow");
-      } else {
-        setButtonText(startDate); // Show the start date if not today or tomorrow
-      }
-      setButtonStyle((prevState) => ({
-        ...prevState,
-        backgroundColor: "#4F6F52",
-      }));
+      setButtonText(isToday ? "Today" : isTomorrow ? "Tomorrow" : startDate);
+      setButtonStyle({ backgroundColor: "#4F6F52" });
     } else if (isAfterEnd) {
-      // Check if one hour has passed since the end time
       const oneHourAfterEnd = new Date(endTime);
       oneHourAfterEnd.setHours(endTime.getHours() + 1);
       if (currentTime > oneHourAfterEnd) {
         setIsDivVisible(false);
       } else {
         setButtonText("Ended");
-        setButtonStyle((prevState) => ({
-          ...prevState,
-          backgroundColor: "#4f6f52",
-        }));
+        setButtonStyle({ backgroundColor: "#4F6F52" });
       }
     } else {
       setButtonText("Live");
-      setButtonStyle((prevState) => ({
-        ...prevState,
-        backgroundColor: "#FF0000",
-      }));
+      setButtonStyle({ backgroundColor: "#FF0000" });
     }
   };
 
-  // Use effect to update the button state initially and then every minute
   useEffect(() => {
     updateButtonState();
-    const interval = setInterval(updateButtonState, 60000); // Update every minute
+    const interval = setInterval(updateButtonState, 60000);
 
-    return () => clearInterval(interval); // Clear interval on component unmount
+    return () => clearInterval(interval);
   }, []);
 
   return (
     isDivVisible && (
-      <div className="bg-white dark:bg-slate-800 flex items-center justify-center">
-        <div className="bg-[#e8dfca] p-6 m-5 rounded-lg shadow-2xl w-full max-w-xl">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="flex items-center space-x-2 md:w-1/3">
+      <div className="flex items-center justify-center py-8">
+        <div className="bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 shadow-lg rounded-lg overflow-hidden w-full max-w-4xl transition-transform transform hover:scale-105">
+          <div className="flex flex-col md:flex-row items-center">
+            <div className="md:w-1/3 flex flex-col items-center p-4">
               <img
                 src={props.photo1}
                 alt="Team 1 Logo"
-                className="h-20 w-20 md:h-24 md:w-24"
+                className="h-20 w-20 md:h-28 md:w-28 object-contain mb-2"
               />
-              <span className="text-lg md:text-xl font-semibold text-[#1a4d2e] truncate">
+              <span className="text-lg md:text-xl font-semibold text-white truncate">
                 {props.team1}
               </span>
             </div>
-            <div className="text-center mt-4 md:mt-0 md:w-1/3">
+            <div className="md:w-1/3 text-center p-4">
+              <h1 className="text-xl md:text-2xl font-bold text-white">
+                {props.match}
+              </h1>
+              <div className="text-white mb-2">{props.time}</div>
               <div>
-                <span className="text-xl md:text-2xl font-bold text-[#1a4d2e]">
-                  <h1>{props.match}</h1>
-                </span>
-              </div>
-              <div className="text-[#1a4d2e] mb-2 text-base">{props.time}</div>
-              <div className="text-white">
                 {buttonText === "Live" ? (
                   <NavLink to="/footballive">
-                    <button style={buttonStyle}>{buttonText}</button>
+                    <button
+                      style={buttonStyle}
+                      className="px-6 py-2 rounded-full text-lg font-medium text-white transition-colors duration-300"
+                    >
+                      {buttonText}
+                    </button>
                   </NavLink>
                 ) : (
                   <button
                     style={{ ...buttonStyle, cursor: "default" }}
                     disabled
+                    className="px-6 py-2 rounded-full text-lg font-medium text-white"
                   >
                     {buttonText}
                   </button>
                 )}
               </div>
             </div>
-            <div className="flex items-center space-x-2 mt-4 md:mt-0 md:w-1/3 justify-end">
-              <span className="text-lg md:text-xl font-semibold text-[#1a4d2e] truncate">
-                {props.team2}
-              </span>
+            <div className="md:w-1/3 flex flex-col items-center p-4">
               <img
                 src={props.photo2}
                 alt="Team 2 Logo"
-                className="h-20 w-20 md:h-24 md:w-24"
+                className="h-20 w-20 md:h-28 md:w-28 object-contain mb-2"
               />
+              <span className="text-lg md:text-xl font-semibold text-white truncate">
+                {props.team2}
+              </span>
             </div>
           </div>
         </div>

@@ -27,7 +27,6 @@ const FootballLive = ({ setProgress, title }) => {
   );
 
   useEffect(() => {
-    // Simulate loading additional streams from a JSON file
     fetch("football.json")
       .then((response) => response.json())
       .then((data) => {
@@ -37,23 +36,19 @@ const FootballLive = ({ setProgress, title }) => {
         console.error("Error fetching football streams:", error)
       );
 
-    // Simulate progress update
     setProgress(40);
     setTimeout(() => {
       setProgress(100);
     }, 500);
 
-    // Update the current time every second
     const intervalId = setInterval(() => {
       setCurrentTime(new Date().toLocaleTimeString());
     }, 1000);
 
-    // Clean up
     return () => clearInterval(intervalId);
   }, [setProgress]);
 
   useEffect(() => {
-    // Update document title when `title` prop changes
     document.title = title;
   }, [title]);
 
@@ -63,24 +58,25 @@ const FootballLive = ({ setProgress, title }) => {
 
   return (
     <>
-      <div className="container">
-        <div className="m-2 flex justify-center"></div>
-        <div className="flex justify-center">
-          <div className="w-full mb-10 max-w-3xl p-4 bg-[#0A6847] rounded-lg shadow-lg relative">
-            <div className="text-white text-center mt-4 mb-2">
-              <p>{currentTime}</p>
+      <div className="container mx-auto p-4">
+        <div className="flex justify-center items-center mb-6">
+          <div className="w-full max-w-4xl p-6 bg-[#0A6847] rounded-lg shadow-lg relative">
+            <div className="text-white text-center my-4">
+              <p className="text-lg font-semibold">{currentTime}</p>
             </div>
-            <div className="bg-gray-800 py-3 rounded-lg">
+            <div className="bg-gray-800 py-3 rounded-lg mb-6">
               <h1 className="text-white text-xl text-center">
-                Skip two ads to watch stream.
+                Skip two ads to watch the stream.
               </h1>
             </div>
-            <div className="flex justify-center mb-4 flex-wrap">
+            <div className="flex justify-center flex-wrap mb-6">
               {streams.map((stream, index) => (
                 <button
                   key={index}
-                  className={`m-2 px-4 py-2 bg-gray-800 text-white rounded ${
-                    stream.url === currentStreamUrl ? "bg-green-500" : ""
+                  className={`m-2 px-4 py-2 text-white rounded transition duration-300 ease-in-out transform hover:scale-105 ${
+                    stream.url === currentStreamUrl
+                      ? "bg-green-500"
+                      : "bg-gray-800 hover:bg-green-500"
                   }`}
                   onClick={() => handleStreamClick(stream.url)}
                 >
@@ -88,11 +84,10 @@ const FootballLive = ({ setProgress, title }) => {
                 </button>
               ))}
             </div>
-            <div className="video-container">
+            <div className="relative overflow-hidden pb-[56.25%] h-0 mb-6">
               <iframe
                 src={currentStreamUrl}
-                width="100%"
-                height="500px"
+                className="absolute top-0 left-0 w-full h-full"
                 frameBorder="0"
                 allow="autoplay; encrypted-media"
                 sandbox="allow-scripts allow-same-origin allow-popups"
@@ -102,19 +97,19 @@ const FootballLive = ({ setProgress, title }) => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="flex justify-center">
-        <div className="w-full max-w-3xl p-4 m-5">
-          <p className="text-black dark:text-white font-bold text-base text-center p-2">
-            Digital Millennium Copyright Act(DMCA)
-          </p>
-          <p className="text-black dark:text-white text-sm font-normal italic">
-            This site only contains links and embeds to TV channels from 3rd
-            party sites which are freely available on all Internet. We are not
-            affiliated in any way with the broadcasted channels nor responsible
-            for their content. All content is copyright of their respective
-            owners.
-          </p>
+        <div className="flex justify-center">
+          <div className="w-full max-w-4xl p-4">
+            <p className="text-black dark:text-white font-bold text-base text-center p-2">
+              Digital Millennium Copyright Act (DMCA)
+            </p>
+            <p className="text-black dark:text-white text-sm font-normal italic text-center">
+              This site only contains links and embeds to TV channels from 3rd
+              party sites which are freely available on all Internet. We are not
+              affiliated in any way with the broadcasted channels nor
+              responsible for their content. All content is copyright of their
+              respective owners.
+            </p>
+          </div>
         </div>
       </div>
     </>
