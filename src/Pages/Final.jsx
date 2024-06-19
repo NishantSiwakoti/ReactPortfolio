@@ -184,6 +184,18 @@ const Final = ({ setProgress, title }) => {
   return (
     <section>
       <div className="min-h-screen">
+        <div className="flex justify-end mt-5 items-center">
+          <Link to="/livematches" className="">
+            <div className="px-3 py-2 mr-2 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white rounded-lg">
+              Cricket Live
+            </div>
+          </Link>
+          <Link to="/euro">
+            <div className="px-3 py-2 bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 text-white rounded-lg">
+              Football Live
+            </div>
+          </Link>
+        </div>
         {/* Map over matches array and render Divss component for each match */}
         {matches.map((match, index) => (
           <Divss
