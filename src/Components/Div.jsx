@@ -15,6 +15,10 @@ const Div = (props) => {
     });
   };
 
+  const padWithZero = (number) => {
+    return number.toString().padStart(2, "0");
+  };
+
   const updateButtonState = () => {
     const currentTime = new Date();
     const startTime = new Date(props.startDate + " " + props.startTime);
@@ -42,7 +46,11 @@ const Div = (props) => {
           (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
         );
         const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-        setCountdown(`${hours}:${minutes}:${seconds}`);
+        setCountdown(
+          `${padWithZero(hours)}:${padWithZero(minutes)}:${padWithZero(
+            seconds
+          )}`
+        );
         setButtonText(""); // Clear button text when countdown is shown
       } else {
         setButtonText(isTomorrow ? "Tomorrow" : startDate);
