@@ -5,6 +5,7 @@ const Div = (props) => {
   const [buttonText, setButtonText] = useState("");
   const [buttonStyle, setButtonStyle] = useState({});
   const [isDivVisible, setIsDivVisible] = useState(true);
+  const [countdown, setCountdown] = useState("");
 
   const formatDateString = (date) => {
     return date.toLocaleDateString("en-US", {
@@ -34,7 +35,18 @@ const Div = (props) => {
     const isTomorrow = startDate === formatDateString(tomorrowDate);
 
     if (isBeforeStart) {
-      setButtonText(isToday ? "Today" : isTomorrow ? "Tomorrow" : startDate);
+      if (isToday) {
+        const timeDifference = startTime - currentTime;
+        const hours = Math.floor(timeDifference / (1000 * 60 * 60));
+        const minutes = Math.floor(
+          (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+        setCountdown(`${hours}:${minutes}:${seconds}`);
+        setButtonText(""); // Clear button text when countdown is shown
+      } else {
+        setButtonText(isTomorrow ? "Tomorrow" : startDate);
+      }
       setButtonStyle({ backgroundColor: "#4F6F52" });
     } else if (isAfterEnd) {
       const oneHourAfterEnd = new Date(endTime);
@@ -53,7 +65,7 @@ const Div = (props) => {
 
   useEffect(() => {
     updateButtonState();
-    const interval = setInterval(updateButtonState, 60000);
+    const interval = setInterval(updateButtonState, 1000);
 
     return () => clearInterval(interval);
   }, []);
@@ -88,6 +100,14 @@ const Div = (props) => {
                       {buttonText}
                     </button>
                   </NavLink>
+                ) : countdown ? (
+                  <button
+                    style={{ ...buttonStyle, cursor: "default" }}
+                    disabled
+                    className="px-6 py-2 rounded-full text-lg font-medium text-white"
+                  >
+                    {countdown}
+                  </button>
                 ) : (
                   <button
                     style={{ ...buttonStyle, cursor: "default" }}

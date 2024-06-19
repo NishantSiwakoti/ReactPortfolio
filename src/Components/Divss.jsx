@@ -5,6 +5,7 @@ const Divss = (props) => {
   const [buttonText, setButtonText] = useState("");
   const [buttonStyle, setButtonStyle] = useState({});
   const [isDivVisible, setIsDivVisible] = useState(true);
+  const [countdown, setCountdown] = useState("");
 
   const formatDateString = (date) => {
     return date.toLocaleDateString("en-US", {
@@ -34,7 +35,18 @@ const Divss = (props) => {
     const isTomorrow = startDate === formatDateString(tomorrowDate);
 
     if (isBeforeStart) {
-      setButtonText(isToday ? "Today" : isTomorrow ? "Tomorrow" : startDate);
+      if (isToday) {
+        const timeDifference = startTime - currentTime;
+        const hours = Math.floor(timeDifference / (1000 * 60 * 60));
+        const minutes = Math.floor(
+          (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+        setCountdown(`${hours}:${minutes}:${seconds}`);
+        setButtonText(""); // Clear button text when countdown is shown
+      } else {
+        setButtonText(isTomorrow ? "Tomorrow" : startDate);
+      }
       setButtonStyle({ backgroundColor: "#4F6F52" });
     } else if (isAfterEnd) {
       const oneHourAfterEnd = new Date(endTime);
@@ -53,7 +65,7 @@ const Divss = (props) => {
 
   useEffect(() => {
     updateButtonState();
-    const interval = setInterval(updateButtonState, 60000);
+    const interval = setInterval(updateButtonState, 1000);
 
     return () => clearInterval(interval);
   }, []);
@@ -61,7 +73,7 @@ const Divss = (props) => {
   return (
     isDivVisible && (
       <div className="flex items-center justify-center py-8">
-        <div className="bg-gradient-to-r from-blue-200 via-blue-400 to-blue-500 shadow-lg rounded-lg overflow-hidden w-full max-w-4xl transition-transform transform hover:scale-105">
+        <div className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 shadow-lg rounded-lg overflow-hidden w-full max-w-4xl transition-transform transform hover:scale-105">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/3 flex flex-col items-center p-4">
               <img
@@ -88,6 +100,14 @@ const Divss = (props) => {
                       {buttonText}
                     </button>
                   </NavLink>
+                ) : countdown ? (
+                  <button
+                    style={{ ...buttonStyle, cursor: "default" }}
+                    disabled
+                    className="px-6 py-2 rounded-full text-lg font-medium text-white"
+                  >
+                    {countdown}
+                  </button>
                 ) : (
                   <button
                     style={{ ...buttonStyle, cursor: "default" }}
