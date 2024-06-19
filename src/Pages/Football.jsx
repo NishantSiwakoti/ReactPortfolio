@@ -40,7 +40,7 @@ const Football = ({ setProgress, title }) => {
   const matches = [
     {
       startTime: "21:00",
-      time: "09:45",
+      time: "09:45 PM",
       endTime: "00:45",
       startDate: "June 18, 2024",
       endDate: "June 19, 2024",
@@ -52,7 +52,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "00:01",
-      time: "12:45",
+      time: "12:45 AM",
       endTime: "3:45",
       startDate: "June 19, 2024",
       endDate: "June 19, 2024",
@@ -64,7 +64,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "18:01",
-      time: "06:45",
+      time: "06:45 PM",
       endTime: "21:45",
       startDate: "June 19, 2024",
       endDate: "June 19, 2024",
@@ -76,7 +76,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "21:01",
-      time: "09:45",
+      time: "09:45 PM",
       endTime: "00:45",
       startDate: "June 19, 2024",
       endDate: "June 20, 2024",
@@ -88,7 +88,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "00:01",
-      time: "12:45",
+      time: "12:45 AM",
       endTime: "3:45",
       startDate: "June 20, 2024",
       endDate: "June 20, 2024",
@@ -100,7 +100,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "18:01",
-      time: "06:45",
+      time: "06:45 PM",
       endTime: "21:45",
       startDate: "June 20, 2024",
       endDate: "June 20, 2024",
@@ -112,7 +112,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "21:01",
-      time: "09:45",
+      time: "09:45 PM",
       endTime: "00:45",
       startDate: "June 20, 2024",
       endDate: "June 21, 2024",
@@ -124,7 +124,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "00:01",
-      time: "12:45",
+      time: "12:45 AM",
       endTime: "3:45",
       startDate: "June 21, 2024",
       endDate: "June 21, 2024",
@@ -136,7 +136,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "18:01",
-      time: "06:45",
+      time: "06:45 PM",
       endTime: "21:45",
       startDate: "June 21, 2024",
       endDate: "June 21, 2024",
@@ -148,7 +148,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "21:01",
-      time: "09:45",
+      time: "09:45 PM",
       endTime: "00:45",
       startDate: "June 21, 2024",
       endDate: "June 22, 2024",
@@ -160,7 +160,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "00:01",
-      time: "12:45",
+      time: "12:45 AM",
       endTime: "3:45",
       startDate: "June 22, 2024",
       endDate: "June 22, 2024",
@@ -172,7 +172,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "18:01",
-      time: "06:45",
+      time: "06:45 PM",
       endTime: "21:45",
       startDate: "June 22, 2024",
       endDate: "June 22, 2024",
@@ -184,7 +184,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "21:01",
-      time: "09:45",
+      time: "09:45 PM",
       endTime: "00:45",
       startDate: "June 22, 2024",
       endDate: "June 23, 2024",
@@ -196,7 +196,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "00:01",
-      time: "12:45",
+      time: "12:45 AM",
       endTime: "3:45",
       startDate: "June 23, 2024",
       endDate: "June 23, 2024",
@@ -208,7 +208,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "00:01",
-      time: "12:45",
+      time: "12:45 AM",
       endTime: "3:45",
       startDate: "June 24, 2024",
       endDate: "June 24, 2024",
@@ -220,7 +220,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "00:01",
-      time: "12:45",
+      time: "12:45 AM",
       endTime: "3:45",
       startDate: "June 24, 2024",
       endDate: "June 24, 2024",
@@ -232,7 +232,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "00:01",
-      time: "12:45",
+      time: "12:45 AM",
       endTime: "3:45",
       startDate: "June 25, 2024",
       endDate: "June 25, 2024",
@@ -244,7 +244,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "00:01",
-      time: "12:45",
+      time: "12:45 AM",
       endTime: "3:45",
       startDate: "June 25, 2024",
       endDate: "June 25, 2024",
@@ -256,7 +256,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "21:01",
-      time: "09:45",
+      time: "09:45 PM ",
       endTime: "00:45",
       startDate: "June 25, 2024",
       endDate: "June 26, 2024",
@@ -268,7 +268,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "21:01",
-      time: "09:45",
+      time: "09:45 PM",
       endTime: "00:45",
       startDate: "June 25, 2024",
       endDate: "June 26, 2024",
@@ -280,7 +280,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "00:01",
-      time: "12:45",
+      time: "12:45 AM",
       endTime: "3:45",
       startDate: "June 26, 2024",
       endDate: "June 26, 2024",
@@ -292,7 +292,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "00:01",
-      time: "12:45",
+      time: "12:45 AM",
       endTime: "3:45",
       startDate: "June 26, 2024",
       endDate: "June 26, 2024",
@@ -304,7 +304,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "21:01",
-      time: "09:45",
+      time: "09:45 PM",
       endTime: "00:45",
       startDate: "June 26, 2024",
       endDate: "June 27, 2024",
@@ -316,7 +316,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "21:01",
-      time: "09:45",
+      time: "09:45 PM",
       endTime: "00:45",
       startDate: "June 26, 2024",
       endDate: "June 27, 2024",
@@ -328,7 +328,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "00:01",
-      time: "12:45",
+      time: "12:45 AM",
       endTime: "3:45",
       startDate: "June 27, 2024",
       endDate: "June 27, 2024",
@@ -340,7 +340,7 @@ const Football = ({ setProgress, title }) => {
     },
     {
       startTime: "00:01",
-      time: "12:45",
+      time: "12:45 AM",
       endTime: "3:45",
       startDate: "June 27, 2024",
       endDate: "June 27, 2024",

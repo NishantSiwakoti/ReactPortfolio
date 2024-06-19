@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import Divss from "../Components/Divss";
 import nep from "../assets/images/countries/nep.png";
 import ned from "../assets/images/countries/ned.png";
@@ -20,7 +21,6 @@ import afg from "../assets/images/countries/afg.png";
 import can from "../assets/images/countries/can.png";
 import nam from "../assets/images/countries/nam.png";
 import sco from "../assets/images/countries/sco.png";
-import { useEffect } from "react";
 
 const Final = ({ setProgress, title }) => {
   useEffect(() => {
@@ -36,8 +36,8 @@ const Final = ({ setProgress, title }) => {
 
   const matches = [
     {
-      startTime: "8:00",
-      time: "8:15",
+      startTime: "20:00",
+      time: "8:15 PM",
       endTime: "1:00",
       startDate: "June 19, 2024",
       endDate: "June 20, 2024",
@@ -49,7 +49,7 @@ const Final = ({ setProgress, title }) => {
     },
     {
       startTime: "6:00",
-      time: "6:15",
+      time: "6:15 AM",
       endTime: "10:00",
       startDate: "June 20, 2024",
       endDate: "June 20, 2024",
@@ -60,8 +60,8 @@ const Final = ({ setProgress, title }) => {
       match: "Super Eight",
     },
     {
-      startTime: "8:00",
-      time: "8:15",
+      startTime: "20:00",
+      time: "8:15 PM",
       endTime: "1:00",
       startDate: "June 20, 2024",
       endDate: "June 21, 2024",
@@ -73,7 +73,7 @@ const Final = ({ setProgress, title }) => {
     },
     {
       startTime: "6:00",
-      time: "6:15",
+      time: "6:15 AM",
       endTime: "11:00",
       startDate: "June 21, 2024",
       endDate: "June 21, 2024",
@@ -85,7 +85,7 @@ const Final = ({ setProgress, title }) => {
     },
     {
       startTime: "20:00",
-      time: "20:15",
+      time: "8:15 PM",
       endTime: "1:00",
       startDate: "June 21, 2024",
       endDate: "June 22, 2024",
@@ -97,7 +97,7 @@ const Final = ({ setProgress, title }) => {
     },
     {
       startTime: "6:00",
-      time: "6:15",
+      time: "6:15 AM",
       endTime: "11:00",
       startDate: "June 22, 2024",
       endDate: "June 22, 2024",
@@ -108,8 +108,8 @@ const Final = ({ setProgress, title }) => {
       match: "Super Eight",
     },
     {
-      startTime: "8:00",
-      time: "8:15",
+      startTime: "20:00",
+      time: "8:15 PM",
       endTime: "1:00",
       startDate: "June 22, 2024",
       endDate: "June 23, 2024",
@@ -121,7 +121,7 @@ const Final = ({ setProgress, title }) => {
     },
     {
       startTime: "6:00",
-      time: "6:15",
+      time: "6:15 AM",
       endTime: "10:00",
       startDate: "June 23, 2024",
       endDate: "June 23, 2024",
@@ -132,8 +132,8 @@ const Final = ({ setProgress, title }) => {
       match: "Super Eight",
     },
     {
-      startTime: "8:00",
-      time: "8:15",
+      startTime: "20:00",
+      time: "8:15 PM",
       endTime: "1:00",
       startDate: "June 23, 2024",
       endDate: "June 24, 2024",
@@ -145,7 +145,7 @@ const Final = ({ setProgress, title }) => {
     },
     {
       startTime: "6:00",
-      time: "6:15",
+      time: "6:15 AM",
       endTime: "10:00",
       startDate: "June 24, 2024",
       endDate: "June 24, 2024",
@@ -156,8 +156,8 @@ const Final = ({ setProgress, title }) => {
       match: "Super Eight",
     },
     {
-      startTime: "8:00",
-      time: "8:15",
+      startTime: "20:00",
+      time: "8:15 PM",
       endTime: "1:00",
       startDate: "June 24, 2024",
       endDate: "June 25, 2024",
@@ -169,7 +169,7 @@ const Final = ({ setProgress, title }) => {
     },
     {
       startTime: "6:00",
-      time: "6:15",
+      time: "6:15 AM",
       endTime: "10:00",
       startDate: "June 25, 2024",
       endDate: "June 25, 2024",
