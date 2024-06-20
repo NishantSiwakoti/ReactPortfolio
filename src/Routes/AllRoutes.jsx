@@ -83,7 +83,7 @@ export const AllRoutes = () => {
         />
         <Route
           path="copalive"
-          element={<Copalive title="Copa" setProgress={setProgress} />}
+          element={<Copalive title="Copa Live" setProgress={setProgress} />}
         />
       </Routes>
     </div>

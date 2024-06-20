@@ -77,8 +77,8 @@ const Copalive = ({ setProgress, title }) => {
               <p className="text-lg font-semibold">{currentTime}</p>
             </div>
             <div className="bg-[#FFE9D0] py-3 rounded-lg mb-6">
-              <h1 className="text-black font-medium text-xl text-center">
-                Skip two ads to watch the stream.
+              <h1 className="text-black text-lg text-center">
+                Use Brave browser or Ad Blocker to get rid of ads.
               </h1>
             </div>
             <div className="flex justify-center flex-wrap gap-4 mb-6">

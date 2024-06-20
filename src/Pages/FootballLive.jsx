@@ -11,15 +11,15 @@ const FootballLive = ({ setProgress, title }) => {
       language: "Default Stream",
     },
     {
-      url: "https://streambtw.com/iframe/ch1.php",
-      language: "No Lag Stream",
-    },
-    {
       url: "https://candler.beauty/itv1.php",
       language: "English Stream",
     },
     {
-      url: "https://dlhd.so/embed/stream-560.php",
+      url: "https://streambtw.com/iframe/ch1.php",
+      language: "NoLag Stream",
+    },
+    {
+      url: "https://dlhd.so/embed/stream-39.php",
       language: "Best Stream",
     },
   ]);
@@ -77,9 +77,9 @@ const FootballLive = ({ setProgress, title }) => {
             <div className="text-white text-center my-4">
               <p className="text-lg font-semibold">{currentTime}</p>
             </div>
-            <div className="bg-[#059212] py-3 rounded-lg mb-6">
-              <h1 className="text-white text-xl text-center">
-                Skip two ads to watch the stream.
+            <div className="bg-[#059212] py-2 rounded-lg mb-6">
+              <h1 className="text-white text-lg text-center">
+                Use Brave browser or Ad Blocker to get rid of ads.
               </h1>
             </div>
             <div className="flex justify-center flex-wrap gap-4 mb-6">
