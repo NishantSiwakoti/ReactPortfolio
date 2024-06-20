@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const FootballLive = ({ setProgress, title }) => {
+const Copalive = ({ setProgress, title }) => {
   const [currentTime, setCurrentTime] = useState(
     new Date().toLocaleTimeString()
   );
@@ -61,7 +61,7 @@ const FootballLive = ({ setProgress, title }) => {
     <>
       <div className="container mx-auto p-4">
         <div className="flex justify-center items-center mb-6">
-          <div className="w-full max-w-4xl p-6 bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-700  rounded-lg shadow-lg relative">
+          <div className="w-full max-w-4xl p-6 bg-gradient-to-r from-purple-400 via-purple-600 to-purple-800 rounded-lg shadow-lg relative">
             <div className="flex justify-end items-center ml-4">
               <Link to="/livematches" className="">
                 <div className="px-3 py-2 mr-2 bg-gradient-to-r from-green-500 via-green-600 to-green-700 text-white rounded-lg">
@@ -69,16 +69,16 @@ const FootballLive = ({ setProgress, title }) => {
                 </div>
               </Link>
               <Link to="/euro">
-                <div className="px-3 py-2 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 text-white rounded-lg">
-                  Copa Matches
+                <div className="px-3 py-2 bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 text-white rounded-lg">
+                  Euro Matches
                 </div>
               </Link>
             </div>
             <div className="text-white text-center my-4">
               <p className="text-lg font-semibold">{currentTime}</p>
             </div>
-            <div className="bg-[#059212] py-3 rounded-lg mb-6">
-              <h1 className="text-white text-xl text-center">
+            <div className="bg-[#FFE9D0] py-3 rounded-lg mb-6">
+              <h1 className="text-black font-medium text-xl text-center">
                 Skip two ads to watch the stream.
               </h1>
             </div>
@@ -129,4 +129,4 @@ const FootballLive = ({ setProgress, title }) => {
   );
 };
 
-export default FootballLive;
+export default Copalive;

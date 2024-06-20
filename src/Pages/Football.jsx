@@ -358,13 +358,13 @@ const Football = ({ setProgress, title }) => {
       <div className="min-h-screen">
         <div className="flex justify-center md:justify-end mt-5 items-center ">
           <Link to="/livematches" className="">
-            <div className="px-3 py-2 mr-2 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white rounded-lg">
-              Cricket Live
+            <div className="px-3 py-2 mr-2 bg-gradient-to-r from-green-500 via-green-600 to-green-700 text-white rounded-lg">
+              Cricket Matches
             </div>
           </Link>
-          <Link to="/euro">
-            <div className="px-3 py-2 bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 text-white rounded-lg">
-              Football Live
+          <Link to="/copa">
+            <div className="px-3 py-2 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 text-white rounded-lg">
+              Copa Matches
             </div>
           </Link>
         </div>

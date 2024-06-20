@@ -97,34 +97,17 @@ const Live = ({ setProgress, title }) => {
   return (
     <>
       <div className="">
-        <div className="m-2 flex justify-center">
-          {/* <div className="bg-[#0A6847] p-6 rounded-lg shadow-xl w-full max-w-md text-center">
-            <p className="text-orange-500 font-bold text-xl">WorldCup Live</p>
-
-            <div className="m-2 flex justify-center">
-              <div className="flex items-center justify-center space-x-4">
-                <img src={logo} alt="Logo" className="h-12 w-12 rounded-full" />
-                <div>
-                  <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
-                    VS
-                  </p>
-                </div>
-                <img src={logo} alt="Logo" className="h-12 w-12 rounded-full" />
-              </div>
-            </div>
-          </div> */}
-        </div>
         <div className="flex justify-center">
-          <div className="w-full mb-10 max-w-3xl p-4 bg-[#0A6847] rounded-lg shadow-lg relative">
+          <div className="w-full mb-10 max-w-3xl bg-gradient-to-r from-green-400 via-green-700 to-green-900  p-4  rounded-lg shadow-lg relative">
             <div className="flex justify-center md:justify-end mt-5 items-center ">
-              <Link to="/livematches" className="">
-                <div className="px-3 py-2 mr-2 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white rounded-lg">
-                  Cricket Live
+              <Link to="/copa" className="">
+                <div className="px-3 py-2 mr-2 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 text-white rounded-lg">
+                  Copa Matches
                 </div>
               </Link>
               <Link to="/euro">
                 <div className="px-3 py-2 bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 text-white rounded-lg">
-                  Football Live
+                  Euro Matches
                 </div>
               </Link>
             </div>
@@ -137,7 +120,7 @@ const Live = ({ setProgress, title }) => {
                   key={stream.language}
                   className={`p-2 mx-2 m-2 rounded text-white cursor-pointer ${
                     stream.url === currentStreamUrl
-                      ? "bg-green-600"
+                      ? "bg-orange-600"
                       : "bg-[#1f2937]"
                   }`}
                   onClick={() => handleStreamChange(stream.url)}

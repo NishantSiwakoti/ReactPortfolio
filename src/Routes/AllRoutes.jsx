@@ -15,6 +15,8 @@ import Hello from "../Pages/Hello";
 import Final from "../Pages/Final";
 import Football from "../Pages/Football";
 import FootballLive from "../Pages/FootballLive";
+import Copa from "../Pages/Copa";
+import Copalive from "../Pages/Copalive";
 export const AllRoutes = () => {
   const [progress, setProgress] = useState(0);
 
@@ -74,6 +76,14 @@ export const AllRoutes = () => {
         <Route
           path="livematches"
           element={<Final title="Live Matches" setProgress={setProgress} />}
+        />
+        <Route
+          path="copa"
+          element={<Copa title="Copa" setProgress={setProgress} />}
+        />
+        <Route
+          path="copalive"
+          element={<Copalive title="Copa" setProgress={setProgress} />}
         />
       </Routes>
     </div>
