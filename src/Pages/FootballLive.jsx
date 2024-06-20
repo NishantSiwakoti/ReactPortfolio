@@ -15,8 +15,8 @@ const FootballLive = ({ setProgress, title }) => {
       language: "No Lag Stream",
     },
     {
-      url: "https://whitemouseapple.com/tipikbe.html",
-      language: "Spanish Stream",
+      url: "https://candler.beauty/itv1.php",
+      language: "English Stream",
     },
     {
       url: "https://dlhd.so/embed/stream-560.php",
