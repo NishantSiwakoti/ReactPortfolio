@@ -184,7 +184,7 @@ const Final = ({ setProgress, title }) => {
   return (
     <section>
       <div className="min-h-screen">
-        <div className="flex justify-end mt-5 items-center">
+        <div className="flex justify-center md:justify-end mt-5 items-center ">
           <Link to="/livematches" className="">
             <div className="px-3 py-2 mr-2 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white rounded-lg">
               Cricket Live

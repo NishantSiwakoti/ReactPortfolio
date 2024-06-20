@@ -1,8 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import Hls from "hls.js";
-import logo from "../assets/images/logoo.png";
-import overlayImage from "../assets/images/logo.png"; // Import your overlay image
-
+import { Link } from "react-router-dom";
 const Live = ({ setProgress, title }) => {
   const [currentTime, setCurrentTime] = useState(
     new Date().toLocaleTimeString()
@@ -118,6 +116,18 @@ const Live = ({ setProgress, title }) => {
         </div>
         <div className="flex justify-center">
           <div className="w-full mb-10 max-w-3xl p-4 bg-[#0A6847] rounded-lg shadow-lg relative">
+            <div className="flex justify-center md:justify-end mt-5 items-center ">
+              <Link to="/livematches" className="">
+                <div className="px-3 py-2 mr-2 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white rounded-lg">
+                  Cricket Live
+                </div>
+              </Link>
+              <Link to="/euro">
+                <div className="px-3 py-2 bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 text-white rounded-lg">
+                  Football Live
+                </div>
+              </Link>
+            </div>
             <div className="text-white text-center mt-4 mb-2">
               <p>{currentTime}</p>
             </div>
@@ -127,8 +137,8 @@ const Live = ({ setProgress, title }) => {
                   key={stream.language}
                   className={`p-2 mx-2 m-2 rounded text-white cursor-pointer ${
                     stream.url === currentStreamUrl
-                      ? "bg-orange-600"
-                      : "bg-green-600"
+                      ? "bg-green-600"
+                      : "bg-[#1f2937]"
                   }`}
                   onClick={() => handleStreamChange(stream.url)}
                 >
