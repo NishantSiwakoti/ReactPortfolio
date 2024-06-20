@@ -7,11 +7,11 @@ const FootballLive = ({ setProgress, title }) => {
   );
   const [streams, setStreams] = useState([
     {
-      url: "https://streambtw.com/iframe/ch1.php",
+      url: "https://whitemouseapple.com/skysportunoit.html",
       language: "Default Stream",
     },
     {
-      url: "https://whitemouseapple.com/skysport251.html",
+      url: "https://streambtw.com/iframe/ch1.php",
       language: "No Lag Stream",
     },
     {
@@ -24,7 +24,7 @@ const FootballLive = ({ setProgress, title }) => {
     },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
-    "https://streambtw.com/iframe/ch1.php"
+    "https://whitemouseapple.com/skysportunoit.html"
   );
 
   useEffect(() => {
