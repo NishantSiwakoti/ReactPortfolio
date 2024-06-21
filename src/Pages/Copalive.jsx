@@ -7,11 +7,11 @@ const Copalive = ({ setProgress, title }) => {
   );
   const [streams, setStreams] = useState([
     {
-      url: "https://streambtw.com/iframe/ch1.php",
+      url: "https://priyansh906.github.io/CopaLink/",
       language: "Default Stream",
     },
     {
-      url: "https://priyansh906.github.io/CopaLink/",
+      url: "https://streambtw.com/iframe/ch1.php",
       language: "Englishh Stream",
     },
 
@@ -21,7 +21,7 @@ const Copalive = ({ setProgress, title }) => {
     },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
-    "https://streambtw.com/iframe/ch1.php"
+    "https://priyansh906.github.io/CopaLink/"
   );
   useEffect(() => {
     fetch("copa.json")
