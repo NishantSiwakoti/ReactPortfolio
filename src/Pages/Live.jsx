@@ -8,7 +8,7 @@ const Live = ({ setProgress, title }) => {
   const [streams, setStreams] = useState([
     {
       language: "English",
-      url: "https://emdftinya.tinyuri.org/embed/english.php",
+      url: "https://priyansh906.github.io/cricket/",
     },
     {
       language: "Hindi",
@@ -16,7 +16,7 @@ const Live = ({ setProgress, title }) => {
     },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
-    "https://emdftinya.tinyuri.org/embed/english.php"
+    "https://priyansh906.github.io/cricket/"
   );
   const [isPlaying, setIsPlaying] = useState(false);
   const videoElement = useRef(null);
