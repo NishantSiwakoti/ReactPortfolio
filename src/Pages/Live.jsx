@@ -8,7 +8,7 @@ const Live = ({ setProgress, title }) => {
   const [streams, setStreams] = useState([
     {
       language: "English",
-      url: "https://priyansh906.github.io/cricket/",
+      url: "https://streambtw.com/iframe/e1.php",
     },
     {
       language: "Hindi",
@@ -16,7 +16,7 @@ const Live = ({ setProgress, title }) => {
     },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
-    "https://priyansh906.github.io/cricket/"
+    "https://streambtw.com/iframe/e1.php"
   );
   const [isPlaying, setIsPlaying] = useState(false);
   const videoElement = useRef(null);
