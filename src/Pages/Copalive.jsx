@@ -7,27 +7,24 @@ const Copalive = ({ setProgress, title }) => {
   );
   const [streams, setStreams] = useState([
     {
-      url: "https://whitemouseapple.com/skysportunoit.html",
+      url: "https://streambtw.com/iframe/ch1.php",
       language: "Default Stream",
     },
     {
-      url: "https://streambtw.com/iframe/ch1.php",
-      language: "No Lag Stream",
+      url: "https://priyansh906.github.io/CopaLink/",
+      language: "Englishh Stream",
     },
+
     {
       url: "https://candler.beauty/itv1.php",
       language: "English Stream",
     },
-    {
-      url: "https://dlhd.so/embed/stream-560.php",
-      language: "Best Stream",
-    },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
-    "https://whitemouseapple.com/skysportunoit.html"
+    "https://streambtw.com/iframe/ch1.php"
   );
   useEffect(() => {
-    fetch("football.json")
+    fetch("copa.json")
       .then((response) => response.json())
       .then((data) => {
         setStreams((prevStreams) => [...prevStreams, ...data.streams]);
