@@ -7,7 +7,7 @@ const FootballLive = ({ setProgress, title }) => {
   );
   const [streams, setStreams] = useState([
     {
-      url: "https://whitemouseapple.com/bbconeuk.html",
+      url: "https://candler.beauty/itv1.php",
       language: "Default Stream",
     },
     {
@@ -24,7 +24,7 @@ const FootballLive = ({ setProgress, title }) => {
     },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
-    "https://whitemouseapple.com/bbconeuk.html"
+    "https://candler.beauty/itv1.php"
   );
 
   useEffect(() => {
