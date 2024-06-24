@@ -11,13 +11,12 @@ const Copalive = ({ setProgress, title }) => {
       language: "Default Stream",
     },
     {
-      url: "https://streambtw.com/iframe/ch1.php",
-      language: "Englishh Stream",
-    },
-
-    {
-      url: "https://candler.beauty/itv1.php",
+      url: "https://priyansh906.github.io/euro3/",
       language: "English Stream",
+    },
+    {
+      url: "https://priyansh906.github.io/euro2/",
+      language: "Spanish Stream",
     },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
@@ -72,11 +71,6 @@ const Copalive = ({ setProgress, title }) => {
             </div>
             <div className="text-white text-center my-4">
               <p className="text-lg font-semibold">{currentTime}</p>
-            </div>
-            <div className="bg-[#FFE9D0] py-3 rounded-lg mb-6">
-              <h1 className="text-black text-lg text-center">
-                Use Brave browser or Ad Blocker to get rid of ads.
-              </h1>
             </div>
             <div className="flex justify-center flex-wrap gap-4 mb-6">
               {streams.map((stream, index) => (

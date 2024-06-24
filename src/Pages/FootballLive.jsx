@@ -11,7 +11,11 @@ const FootballLive = ({ setProgress, title }) => {
       language: "Default Stream",
     },
     {
-      url: "https://whitemouseapple.com/la1tves.html",
+      url: "https://priyansh906.github.io/euro2/",
+      language: "Spanish Stream",
+    },
+    {
+      url: "https://priyansh906.github.io/euro3/",
       language: "English Stream",
     },
   ]);
@@ -60,7 +64,7 @@ const FootballLive = ({ setProgress, title }) => {
                   Cricket Matches
                 </div>
               </Link>
-              <Link to="/euro">
+              <Link to="/copa">
                 <div className="px-3 py-2 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 text-white rounded-lg">
                   Copa Matches
                 </div>
@@ -68,11 +72,6 @@ const FootballLive = ({ setProgress, title }) => {
             </div>
             <div className="text-white text-center my-4">
               <p className="text-lg font-semibold">{currentTime}</p>
-            </div>
-            <div className="bg-[#059212] py-2 rounded-lg mb-6">
-              <h1 className="text-white text-lg text-center">
-                Use Brave browser or Ad Blocker to get rid of ads.
-              </h1>
             </div>
             <div className="flex justify-center flex-wrap gap-4 mb-6">
               {streams.map((stream, index) => (
