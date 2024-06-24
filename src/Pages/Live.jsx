@@ -10,13 +10,9 @@ const Live = ({ setProgress, title }) => {
       language: "English Stream",
       url: "https://streambtw.com/iframe/e1.php",
     },
-    // {
-    //   language: "Hindi Stream",
-    //   url: "https://emdftinya.tinyuri.org/embed/hindi.php",
-    // },
     {
-      language: "Englishh Stream",
-      url: "https://dlhd.so/embed/stream-346.php",
+      language: "Hindi Stream",
+      url: "https://mm5-97.tinyuri.org/live/m4-720p.m3u8",
     },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
