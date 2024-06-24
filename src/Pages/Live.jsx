@@ -12,7 +12,7 @@ const Live = ({ setProgress, title }) => {
     },
     {
       language: "Hindi Stream",
-      url: "https://mm5-97.tinyuri.org/live/m4-720p.m3u8",
+      url: "https://priyansh906.github.io/ceir/",
     },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
