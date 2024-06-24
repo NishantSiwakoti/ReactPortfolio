@@ -7,24 +7,16 @@ const FootballLive = ({ setProgress, title }) => {
   );
   const [streams, setStreams] = useState([
     {
-      url: "https://candler.beauty/itv1.php",
+      url: "https://priyansh906.github.io/euro1/",
       language: "Default Stream",
     },
     {
       url: "https://whitemouseapple.com/la1tves.html",
       language: "English Stream",
     },
-    {
-      url: "https://streambtw.com/iframe/ch1.php",
-      language: "NoLag Stream",
-    },
-    {
-      url: "https://dlhd.so/embed/stream-39.php",
-      language: "Best Stream",
-    },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
-    "https://candler.beauty/itv1.php"
+    "https://priyansh906.github.io/euro1/"
   );
 
   useEffect(() => {
