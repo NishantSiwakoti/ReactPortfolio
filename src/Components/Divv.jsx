@@ -80,30 +80,30 @@ const Divv = (props) => {
 
   return (
     isDivVisible && (
-      <div className="flex items-center justify-center py-8">
-        <div className="bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 shadow-lg rounded-lg overflow-hidden w-full max-w-4xl transition-transform transform hover:scale-105">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/3 flex flex-col items-center p-4">
+      <div className="flex items-center justify-center py-6 px-4">
+        <div className="bg-gray-300 shadow-lg rounded-lg overflow-hidden w-full max-w-4xl transform hover:scale-105 transition-transform duration-300">
+          <div className="grid grid-cols-1 md:grid-cols-3 items-center">
+            <div className="flex flex-col items-center p-2 bg-gradient-to-b from-purple-400 to-purple-700">
               <img
                 src={props.photo1}
-                alt=""
-                className="h-20 w-20 md:h-28 md:w-28 rounded-3xl object-contain mb-2"
+                alt="Team 1 Logo"
+                className="h-16 w-16 md:h-20 md:w-20 object-contain mb-2 rounded"
               />
-              <span className="text-lg md:text-xl font-semibold text-white truncate">
+              <span className="text-md md:text-lg font-semibold text-white truncate">
                 {props.team1}
               </span>
             </div>
-            <div className="md:w-1/3 text-center p-4">
-              <h1 className="text-xl md:text-2xl font-bold text-white">
+            <div className="text-center p-2">
+              <h1 className="text-lg md:text-xl font-bold text-gray-800">
                 {props.match}
               </h1>
-              <div className="text-white mb-2">{props.time}</div>
+              <div className="text-gray-600 mb-1">{props.time}</div>
               <div>
                 {buttonText === "Live" ? (
-                  <NavLink to="/copalive">
+                  <NavLink to="/footballive">
                     <button
                       style={buttonStyle}
-                      className="px-6 py-2 rounded-full text-lg font-medium text-white transition-colors duration-300"
+                      className="px-4 py-1 rounded-full text-md font-medium text-white transition-colors duration-300"
                     >
                       {buttonText}
                     </button>
@@ -112,7 +112,7 @@ const Divv = (props) => {
                   <button
                     style={{ ...buttonStyle, cursor: "default" }}
                     disabled
-                    className="px-6 py-2 rounded-full text-lg font-medium text-white"
+                    className="px-4 py-1 rounded-full text-md font-medium text-white"
                   >
                     {countdown}
                   </button>
@@ -120,20 +120,20 @@ const Divv = (props) => {
                   <button
                     style={{ ...buttonStyle, cursor: "default" }}
                     disabled
-                    className="px-6 py-2 rounded-full text-lg font-medium text-white"
+                    className="px-4 py-1 rounded-full text-md font-medium text-white"
                   >
                     {buttonText}
                   </button>
                 )}
               </div>
             </div>
-            <div className="md:w-1/3 flex flex-col items-center p-4">
+            <div className="flex flex-col items-center p-2 bg-gradient-to-b from-purple-400 to-purple-700">
               <img
                 src={props.photo2}
-                alt=""
-                className="h-20 w-20 rounded-3xl md:h-28 md:w-28 object-contain mb-2"
+                alt="Team 2 Logo"
+                className="h-16 w-16 md:h-20 md:w-20 object-contain mb-2 rounded"
               />
-              <span className="text-lg md:text-xl font-semibold text-white truncate">
+              <span className="text-md md:text-lg font-semibold text-white truncate">
                 {props.team2}
               </span>
             </div>
