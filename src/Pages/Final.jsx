@@ -26,7 +26,7 @@ const Final = ({ setProgress, title }) => {
     {
       startTime: "6:00",
       time: "6:15 AM",
-      endTime: "10:00",
+      endTime: "11:00",
       startDate: "June 25, 2024",
       endDate: "June 25, 2024",
       photo1: ban,
