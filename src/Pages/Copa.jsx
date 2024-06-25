@@ -347,7 +347,6 @@ const Copa = ({ setProgress, title }) => {
             </div>
           </Link>
         </div>
-        {/* Map over matches array and render Divss component for each match */}
         {matches.map((match, index) => (
           <Divv
             key={index}

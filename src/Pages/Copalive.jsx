@@ -7,20 +7,20 @@ const Copalive = ({ setProgress, title }) => {
   );
   const [streams, setStreams] = useState([
     {
-      url: "https://priyansh906.github.io/CopaLink/",
+      url: "https://priyansh906.github.io/euro1/",
       language: "Default Stream",
     },
     {
-      url: "https://priyansh906.github.io/euro3/",
+      url: "https://priyansh906.github.io/Copalink/",
       language: "English Stream",
     },
     {
-      url: "https://priyansh906.github.io/euro2/",
+      url: "https://priyansh906.github.io/copalink22/",
       language: "Spanish Stream",
     },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
-    "https://priyansh906.github.io/CopaLink/"
+    "https://priyansh906.github.io/euro1/"
   );
   useEffect(() => {
     fetch("copa.json")
