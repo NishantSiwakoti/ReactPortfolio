@@ -14,7 +14,7 @@ import Panama from "../assets/images/copa/pa.png";
 import Bolivia from "../assets/images/copa/bo.png";
 import Brazil from "../assets/images/copa/br.png";
 import Colombia from "../assets/images/copa/co.png";
-import Paraguay from "../assets/images/copa/pa.png";
+import Paraguay from "../assets/images/copa/par.png";
 import Costa_Rica from "../assets/images/copa/cos.png";
 import Divv from "../Components/Divv";
 const Copa = ({ setProgress, title }) => {
@@ -30,90 +30,6 @@ const Copa = ({ setProgress, title }) => {
   }, [title]);
 
   const matches = [
-    {
-      startTime: "5:20",
-      time: "5:45 AM",
-      endTime: "7:45",
-      startDate: "June 21, 2024",
-      endDate: "June 21, 2024",
-      photo1: Argentina,
-      team1: "Argentina",
-      photo2: Canada,
-      team2: "Canada",
-      match: "Group Stage",
-    },
-    {
-      startTime: "5:20",
-      time: "5:45 AM",
-      endTime: "7:45",
-      startDate: "June 22, 2024",
-      endDate: "June 22, 2024",
-      photo1: Peru,
-      team1: "Peru",
-      photo2: Chile,
-      team2: "Chile",
-      match: "Group Stage",
-    },
-    {
-      startTime: "3:20",
-      time: "3:45 AM",
-      endTime: "5:45",
-      startDate: "June 23, 2024",
-      endDate: "June 23, 2024",
-      photo1: Ecuador,
-      team1: "Ecuador",
-      photo2: Venezuela,
-      team2: "Venezuela",
-      match: "Group Stage",
-    },
-    {
-      startTime: "6:20",
-      time: "6:45 AM",
-      endTime: "8:45",
-      startDate: "June 23, 2024",
-      endDate: "June 23, 2024",
-      photo1: Mexico,
-      team1: "Mexico",
-      photo2: Jamaica,
-      team2: "Jamaica",
-      match: "Group Stage",
-    },
-    {
-      startTime: "3:00",
-      time: "3:45 AM",
-      endTime: "5:45",
-      startDate: "June 24, 2024",
-      endDate: "June 24, 2024",
-      photo1: US,
-      team1: "US",
-      photo2: Bolivia,
-      team2: "Bolivia",
-      match: "Group Stage",
-    },
-    {
-      startTime: "6:00",
-      time: "6:45 AM",
-      endTime: "8:45",
-      startDate: "June 24, 2024",
-      endDate: "June 24, 2024",
-      photo1: Uruguay,
-      team1: "Uruguay",
-      photo2: Panama,
-      team2: "Panama",
-      match: "Group Stage",
-    },
-    {
-      startTime: "3:00",
-      time: "3:45 AM",
-      endTime: "5:45",
-      startDate: "June 25, 2024",
-      endDate: "June 25, 2024",
-      photo1: Colombia,
-      team1: "Colombia",
-      photo2: Paraguay,
-      team2: "Paraguay",
-      match: "Group Stage",
-    },
     {
       startTime: "6:00",
       time: "6:45 AM",

@@ -24,18 +24,6 @@ const Final = ({ setProgress, title }) => {
 
   const matches = [
     {
-      startTime: "20:00",
-      time: "8:15 PM",
-      endTime: "1:00",
-      startDate: "June 24, 2024",
-      endDate: "June 25, 2024",
-      photo1: ind,
-      team1: "India",
-      photo2: aus,
-      team2: "Australia",
-      match: "Super Eight",
-    },
-    {
       startTime: "6:00",
       time: "6:15 AM",
       endTime: "10:00",
