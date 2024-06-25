@@ -1,12 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Divss from "../Components/Divss";
-import usa from "../assets/images/countries/usa.png";
 import ind from "../assets/images/countries/ind.png";
-import ban from "../assets/images/countries/ban.png";
-import wi from "../assets/images/countries/wi.png";
 import sa from "../assets/images/countries/sa.png";
-import aus from "../assets/images/countries/aus.png";
 import eng from "../assets/images/countries/eng.png";
 import afg from "../assets/images/countries/afg.png";
 
