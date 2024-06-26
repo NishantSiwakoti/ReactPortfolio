@@ -12,11 +12,11 @@ const Copalive = ({ setProgress, title }) => {
     },
     {
       url: "https://priyansh906.github.io/Copalink/",
-      language: "English Stream",
+      language: "Spanish Stream",
     },
     {
       url: "https://priyansh906.github.io/copalink22/",
-      language: "Spanish Stream",
+      language: "English Stream",
     },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
