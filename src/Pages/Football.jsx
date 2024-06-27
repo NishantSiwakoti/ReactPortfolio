@@ -1,29 +1,27 @@
 import { useEffect } from "react";
 import Div from "../Components/Div";
-import ger from "../assets/images/football/ger.png";
+import Germany from "../assets/images/football/ger.png";
 import al from "../assets/images/football/al.png";
-import aus from "../assets/images/football/aus.png";
-import bel from "../assets/images/football/bel.png";
+import Austria from "../assets/images/football/aus.png";
+import Belgium from "../assets/images/football/bel.png";
 import cr from "../assets/images/football/cr.png";
 import cz from "../assets/images/football/cz.png";
-import den from "../assets/images/football/den.png";
-import eng from "../assets/images/football/eng.png";
-import fra from "../assets/images/football/fra.png";
-import geo from "../assets/images/football/geo.png";
+import Denmark from "../assets/images/football/den.png";
+import England from "../assets/images/football/eng.png";
+import France from "../assets/images/football/fra.png";
+import Georgia from "../assets/images/football/geo.png";
 import hun from "../assets/images/football/hun.png";
-import ita from "../assets/images/football/ita.png";
-import ned from "../assets/images/football/ned.png";
+import Italy from "../assets/images/football/ita.png";
+import Netherlands from "../assets/images/football/ned.png";
 import pol from "../assets/images/football/pol.png";
-import por from "../assets/images/football/por.png";
-import rom from "../assets/images/football/rom.png";
+import Portugal from "../assets/images/football/por.png";
+import Romania from "../assets/images/football/rom.png";
 import ser from "../assets/images/football/ser.png";
-import sloa from "../assets/images/football/sloa.png";
-import sloe from "../assets/images/football/sloe.png";
-import spa from "../assets/images/football/spa.png";
-import swi from "../assets/images/football/swi.png";
-import tur from "../assets/images/football/tur.png";
-import ukr from "../assets/images/football/ukr.png";
-import sco from "../assets/images/football/sco.png";
+import Slovakia from "../assets/images/football/sloa.png";
+import Slovenia from "../assets/images/football/sloe.png";
+import Spain from "../assets/images/football/spa.png";
+import Switzerland from "../assets/images/football/swi.png";
+import Turkiye from "../assets/images/football/tur.png";
 import { Link } from "react-router-dom";
 
 const Football = ({ setProgress, title }) => {
@@ -40,124 +38,100 @@ const Football = ({ setProgress, title }) => {
 
   const matches = [
     {
-      startTime: "00:01",
-      time: "12:45 AM",
-      endTime: "3:45",
-      startDate: "June 25, 2024",
-      endDate: "June 25, 2024",
-      photo1: al,
-      team1: "Albania",
-      photo2: spa,
-      team2: "Spain",
-      match: "Group Stage",
-    },
-    {
-      startTime: "00:01",
-      time: "12:45 AM",
-      endTime: "3:45",
-      startDate: "June 25, 2024",
-      endDate: "June 25, 2024",
-      photo1: cr,
-      team1: "Croatia",
-      photo2: ita,
+      startTime: "21:01",
+      time: "9:45 PM",
+      endTime: "11:45",
+      startDate: "June 29, 2024",
+      endDate: "June 29, 2024",
+      photo1: Switzerland,
+      team1: "Switzerland",
+      photo2: Italy,
       team2: "Italy",
-      match: "Group Stage",
-    },
-    {
-      startTime: "21:01",
-      time: "09:45 PM ",
-      endTime: "00:45",
-      startDate: "June 25, 2024",
-      endDate: "June 26, 2024",
-      photo1: pol,
-      team1: "Poland",
-      photo2: fra,
-      team2: "France",
-      match: "Group Stage",
-    },
-    {
-      startTime: "21:01",
-      time: "09:45 PM",
-      endTime: "00:45",
-      startDate: "June 25, 2024",
-      endDate: "June 26, 2024",
-      photo1: ned,
-      team1: "Netherland",
-      photo2: aus,
-      team2: "Austria",
-      match: "Group Stage",
+      match: "Round of 16",
     },
     {
       startTime: "00:01",
       time: "12:45 AM",
-      endTime: "3:45",
-      startDate: "June 26, 2024",
-      endDate: "June 26, 2024",
-      photo1: den,
-      team1: "Denmark",
-      photo2: ser,
-      team2: "Serbia",
-      match: "Group Stage",
+      endTime: "2:45",
+      startDate: "June 30, 2024",
+      endDate: "June 30, 2024",
+      photo1: Germany,
+      team1: "Germany",
+      photo2: Denmark,
+      team2: "Denmark",
+      match: "Round of 16",
     },
     {
-      startTime: "00:01",
-      time: "12:45 AM",
-      endTime: "3:45",
-      startDate: "June 26, 2024",
-      endDate: "June 26, 2024",
-      photo1: eng,
+      startTime: "21:01",
+      time: "9:45 PM",
+      endTime: "11:45",
+      startDate: "June 30, 2024",
+      endDate: "June 30, 2024",
+      photo1: England,
       team1: "England",
-      photo2: sloe,
-      team2: "Slovenia",
-      match: "Group Stage",
-    },
-    {
-      startTime: "21:01",
-      time: "09:45 PM",
-      endTime: "00:45",
-      startDate: "June 26, 2024",
-      endDate: "June 27, 2024",
-      photo1: sloa,
-      team1: "Slovakia",
-      photo2: rom,
-      team2: "Romania",
-      match: "Group Stage",
-    },
-    {
-      startTime: "21:01",
-      time: "09:45 PM",
-      endTime: "00:45",
-      startDate: "June 26, 2024",
-      endDate: "June 27, 2024",
-      photo1: ukr,
-      team1: "Ukraine",
-      photo2: bel,
-      team2: "Belgium",
-      match: "Group Stage",
+      photo2: Slovakia,
+      team2: "Slovakia",
+      match: "Round of 16",
     },
     {
       startTime: "00:01",
-      time: "12:45 AM",
-      endTime: "3:45",
-      startDate: "June 27, 2024",
-      endDate: "June 27, 2024",
-      photo1: por,
-      team1: "Portugal",
-      photo2: geo,
+      time: "12:45 PM",
+      endTime: "2:45",
+      startDate: "July 1, 2024",
+      endDate: "July 1, 2024",
+      photo1: Spain,
+      team1: "Spain",
+      photo2: Georgia,
       team2: "Georgia",
-      match: "Group Stage",
+      match: "Round of 16",
+    },
+    {
+      startTime: "21:01",
+      time: "9:45 PM",
+      endTime: "11:45",
+      startDate: "July 1, 2024",
+      endDate: "July 1, 2024",
+      photo1: France,
+      team1: "France",
+      photo2: Belgium,
+      team2: "Belgium",
+      match: "Round of 16",
     },
     {
       startTime: "00:01",
       time: "12:45 AM",
-      endTime: "3:45",
-      startDate: "June 27, 2024",
-      endDate: "June 27, 2024",
-      photo1: tur,
-      team1: "Turkiye",
-      photo2: cz,
-      team2: "Czechia",
-      match: "Group Stage",
+      endTime: "2:45",
+      startDate: "July 2, 2024",
+      endDate: "July 2, 2024",
+      photo1: Portugal,
+      team1: "Portugal",
+      photo2: Slovenia,
+      team2: "Slovenia",
+      match: "Round of 16",
+    },
+    {
+      startTime: "21:01",
+      time: "9:45 PM",
+      endTime: "11:45",
+      startDate: "July 2, 2024",
+      endDate: "July 2, 2024",
+      photo1: Romania,
+      team1: "Romania",
+      photo2: Netherlands,
+      team2: "Netherlands",
+      match: "Round of 16",
+    },
+    {
+      startTime: "00:01",
+      time: "12:45 PM",
+      endTime: "2:45",
+      startDate: "July 3, 2024",
+      endDate: "July 3, 2024",
+      photo1: Austria,
+      team1: "Austria",
+      photo2: Turkiye,
+      team2: "Turkiye",
+      match: "Round of 16",
     },
   ];
 
