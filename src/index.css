@@ -40,7 +40,7 @@ body {
 .final-text {
   animation: fadeInOut 2s infinite;
   font-size: 2rem;
-  color: rgb(158, 218, 16); /* You can change this to any color you prefer */
+  color: rgb(244, 8, 8);
   font-weight: bold;
   text-align: center;
   margin-top: 20px;
