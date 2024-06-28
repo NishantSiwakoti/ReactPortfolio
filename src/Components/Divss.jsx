@@ -127,7 +127,7 @@ const Divss = (props) => {
                 )}
               </div>
             </div>
-            <div className="flex flex-col items-center p-2 bg-gradient-to-b from-green-400 to-green-700">
+            <div className="flex flex-col items-center p-2 bg-gradient-to-b from-blue-400 to-blue-700">
               <img
                 src={props.photo2}
                 alt="Team 2 Logo"

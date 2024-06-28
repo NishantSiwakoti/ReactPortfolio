@@ -23,3 +23,8 @@ section {
 .blink {
   animation: blink 1.2s infinite;
 }
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}

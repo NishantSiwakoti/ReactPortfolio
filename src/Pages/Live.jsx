@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import Hls from "hls.js";
 import { Link } from "react-router-dom";
+
 const Live = ({ setProgress, title }) => {
   const [currentTime, setCurrentTime] = useState(
     new Date().toLocaleTimeString()
@@ -157,6 +158,9 @@ const Live = ({ setProgress, title }) => {
               frameBorder="0"
               allowFullScreen
             ></iframe>
+            <div className="text-center text-white mt-2">
+              <p>nishantshiwakoti.com.np</p>
+            </div>
           </div>
         </div>
       </div>
