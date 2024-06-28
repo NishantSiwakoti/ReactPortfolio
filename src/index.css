@@ -26,5 +26,22 @@ section {
 html,
 body {
   overflow-x: hidden;
-  overflow-y: hidden;
+}
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.final-text {
+  animation: fadeInOut 2s infinite;
+  font-size: 2rem;
+  color: rgb(158, 218, 16); /* You can change this to any color you prefer */
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
 }

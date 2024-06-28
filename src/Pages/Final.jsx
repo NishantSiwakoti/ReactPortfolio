@@ -69,6 +69,8 @@ const Final = ({ setProgress, title }) => {
             </div>
           </Link>
         </div>
+        <div className="final-text">Final! Final! Final!</div>
+
         {matches.map((match, index) => (
           <Divss
             key={index}
@@ -85,7 +87,9 @@ const Final = ({ setProgress, title }) => {
           />
         ))}
         <div className="flex justify-center mt-10">
-          <h2 className="text-2xl mb-4">Who are you supporting?</h2>
+          <h2 className="text-2xl mb-4 dark:text-white">
+            Who are you supporting?
+          </h2>
         </div>
         <div className="flex justify-center space-x-4">
           <button
@@ -117,8 +121,8 @@ const Final = ({ setProgress, title }) => {
         </div>
         {selectedTeam && (
           <div className="flex justify-center mt-5">
-            <p className="text-xl">
-              Let's go <span className="font-bold">{selectedTeam}!</span> 🎉
+            <p className="text-xl dark:text-white">
+              Let's Go <span className="font-bold">{selectedTeam}!</span> 🎉
             </p>
           </div>
         )}
