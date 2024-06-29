@@ -8,6 +8,10 @@ const Live = ({ setProgress, title }) => {
   );
   const [streams, setStreams] = useState([
     {
+      language: "ICC Stream",
+      url: "https://priyansh906.github.io/criccc/",
+    },
+    {
       language: "Hindi Stream",
       url: "https://priyansh906.github.io/ceir/",
     },
@@ -17,7 +21,7 @@ const Live = ({ setProgress, title }) => {
     },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
-    "https://priyansh906.github.io/ceir/"
+    "https://priyansh906.github.io/criccc/"
   );
   const [isPlaying, setIsPlaying] = useState(false);
   const videoElement = useRef(null);
