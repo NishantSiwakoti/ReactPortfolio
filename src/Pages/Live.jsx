@@ -1,20 +1,16 @@
 import React, { useEffect, useState, useRef } from "react";
 import Hls from "hls.js";
 import { Link } from "react-router-dom";
+import Confetti from "react-confetti";
+import useWindowSize from "react-use/lib/useWindowSize";
 
 const Live = ({ setProgress, title }) => {
   const [currentTime, setCurrentTime] = useState(
     new Date().toLocaleTimeString()
   );
   const [streams, setStreams] = useState([
-    {
-      language: "ICC Stream",
-      url: "https://priyansh906.github.io/criccc/",
-    },
-    {
-      language: "Hindi Stream",
-      url: "https://priyansh906.github.io/ceir/",
-    },
+    { language: "ICC Stream", url: "https://priyansh906.github.io/criccc/" },
+    { language: "Hindi Stream", url: "https://priyansh906.github.io/ceir/" },
     {
       language: "English Stream",
       url: "https://priyansh906.github.io/engcric/",
@@ -24,6 +20,8 @@ const Live = ({ setProgress, title }) => {
     "https://priyansh906.github.io/criccc/"
   );
   const [isPlaying, setIsPlaying] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(false);
+  const { width, height } = useWindowSize();
   const videoElement = useRef(null);
 
   useEffect(() => {
@@ -49,6 +47,12 @@ const Live = ({ setProgress, title }) => {
     }, 1000);
 
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    // Trigger confetti on page load
+    setShowConfetti(true);
+    setTimeout(() => setShowConfetti(false), 10000); // Confetti for 10 seconds on page load
   }, []);
 
   const loadAndPlayStream = (url) => {
@@ -101,9 +105,18 @@ const Live = ({ setProgress, title }) => {
 
   return (
     <>
+      {showConfetti && (
+        <Confetti
+          width={width}
+          height={height}
+          numberOfPieces={1000} // Adjust number of pieces
+          gravity={0.1} // Adjust gravity to make confetti fall faster
+          recycle={false} // Do not recycle confetti pieces
+        />
+      )}
       <div className="">
         <div className="flex justify-center">
-          <div className="w-full mb-10 max-w-3xl bg-gradient-to-r from-green-400 via-green-700 to-green-900  p-4  rounded-lg shadow-lg relative">
+          <div className="w-full mb-10 max-w-3xl bg-gradient-to-r from-green-400 via-green-700 to-green-900 p-4 rounded-lg shadow-lg relative">
             <div className="flex justify-center md:justify-end mt-5 items-center ">
               <Link to="/copa" className="">
                 <div className="px-3 py-2 mr-2 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 text-white rounded-lg">
@@ -126,7 +139,7 @@ const Live = ({ setProgress, title }) => {
                   className={`p-2 mx-2 m-2 rounded text-white cursor-pointer ${
                     stream.url === currentStreamUrl
                       ? "bg-orange-600"
-                      : "bg-[#1f2937]"
+                      : "bg-transparent border-2 border-white"
                   }`}
                   onClick={() => handleStreamChange(stream.url)}
                 >
@@ -135,21 +148,25 @@ const Live = ({ setProgress, title }) => {
               ))}
             </div>
 
-            <div className="flex justify-center mb-4">
+            <div className=" justify-center mb-4 hidden">
               <button
-                className="p-2 mx-2 bg-blue-600 rounded hidden"
+                className={`p-2 mx-2 rounded ${
+                  isPlaying
+                    ? "bg-blue-600 text-white"
+                    : "bg-transparent border-2 border-blue-600 text-blue-600"
+                }`}
                 onClick={handlePlayPause}
               >
                 {isPlaying ? "Pause" : "Play"}
               </button>
               <button
-                className="p-2 mx-2 bg-blue-600 rounded hidden"
+                className="p-2 mx-2 bg-blue-600 rounded text-white"
                 onClick={handleFullScreen}
               >
                 Full Screen
               </button>
               <button
-                className="p-2 mx-2 bg-blue-600 rounded hidden"
+                className="p-2 mx-2 bg-blue-600 rounded text-white"
                 onClick={handleOpenVLC}
               >
                 Open With VLC
