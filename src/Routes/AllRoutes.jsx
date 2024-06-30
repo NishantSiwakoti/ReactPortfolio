@@ -67,9 +67,7 @@ export const AllRoutes = () => {
         />
         <Route
           path="footballive"
-          element={
-            <FootballLive title="Football Live" setProgress={setProgress} />
-          }
+          element={<FootballLive title="Euro Live" setProgress={setProgress} />}
         />
         <Route path="*" element={<Notfound />} />
         <Route path="helloworld" element={<Hello />} />
