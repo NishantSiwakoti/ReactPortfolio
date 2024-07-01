@@ -69,7 +69,6 @@ const Final = ({ setProgress, title }) => {
             </div>
           </Link>
         </div>
-        <div className="final-text">Final! Final! Final!</div>
 
         {matches.map((match, index) => (
           <Divss
@@ -86,46 +85,6 @@ const Final = ({ setProgress, title }) => {
             team2={match.team2}
           />
         ))}
-        <div className="flex justify-center mt-10">
-          <h2 className="text-2xl mb-4 dark:text-white">
-            Who are you supporting?
-          </h2>
-        </div>
-        <div className="flex justify-center space-x-4">
-          <button
-            className={`px-6 py-3 rounded-lg text-white font-bold transition duration-300 transform hover:scale-105 ${
-              selectedTeam === "India"
-                ? "bg-blue-800"
-                : "bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700"
-            }`}
-            onClick={() => handleSupport("India")}
-          >
-            <div className="flex items-center">
-              <img src={ind} alt="India" className="w-6 h-6 mr-2" />
-              India
-            </div>
-          </button>
-          <button
-            className={`px-6 py-3 rounded-lg text-white font-bold transition duration-300 transform hover:scale-105 ${
-              selectedTeam === "South Africa"
-                ? "bg-green-800"
-                : "bg-gradient-to-r from-green-500 via-green-600 to-green-700"
-            }`}
-            onClick={() => handleSupport("South Africa")}
-          >
-            <div className="flex items-center">
-              <img src={sa} alt="South Africa" className="w-6 h-6 mr-2" />
-              South Africa
-            </div>
-          </button>
-        </div>
-        {selectedTeam && (
-          <div className="flex justify-center mt-5">
-            <p className="text-xl dark:text-white">
-              Let's Go <span className="font-bold">{selectedTeam}!</span> 🎉
-            </p>
-          </div>
-        )}
       </div>
     </section>
   );

@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 const Divss = (props) => {
   const [buttonText, setButtonText] = useState("");
   const [buttonStyle, setButtonStyle] = useState({});
-  const [isDivVisible, setIsDivVisible] = useState(true);
   const [countdown, setCountdown] = useState("");
+  const [matchResult, setMatchResult] = useState("");
 
   const formatDateString = (date) => {
     return date.toLocaleDateString("en-US", {
@@ -57,14 +57,9 @@ const Divss = (props) => {
       }
       setButtonStyle({ backgroundColor: "#4F6F52" });
     } else if (isAfterEnd) {
-      const oneHourAfterEnd = new Date(endTime);
-      oneHourAfterEnd.setHours(endTime.getHours() + 1);
-      if (currentTime > oneHourAfterEnd) {
-        setIsDivVisible(false);
-      } else {
-        setButtonText("Ended");
-        setButtonStyle({ backgroundColor: "#4F6F52" });
-      }
+      setButtonText("Ended");
+      setButtonStyle({ backgroundColor: "#4F6F52" });
+      setMatchResult("India won by 7 runs"); // Set the match result here
     } else {
       setButtonText("Live");
       setButtonStyle({ backgroundColor: "#FF0000" });
@@ -79,68 +74,72 @@ const Divss = (props) => {
   }, []);
 
   return (
-    isDivVisible && (
-      <div className="flex items-center justify-center py-4 px-2">
-        <div className="bg-gray-300 shadow-lg rounded-lg overflow-hidden w-full max-w-4xl transform hover:scale-105 transition-transform duration-300">
-          <div className="grid grid-cols-1 md:grid-cols-3 items-center">
-            <div className="flex flex-col items-center p-2 bg-gradient-to-b from-green-400 to-green-700">
-              <img
-                src={props.photo1}
-                alt="Team 1 Logo"
-                className="h-16 w-16 md:h-20 md:w-20 object-contain mb-2 rounded"
-              />
-              <span className="text-lg md:text-xl font-semibold text-white truncate">
-                {props.team1}
-              </span>
-            </div>
-            <div className="text-center p-2">
-              <h1 className="text-xl md:text-2xl font-bold text-gray-800">
-                {props.match}
-              </h1>
-              <div className="text-gray-600 mb-1">{props.time}</div>
-              <div>
-                {buttonText === "Live" ? (
-                  <NavLink to="/livestream">
-                    <button
-                      style={buttonStyle}
-                      className="px-4 py-1 rounded-full text-lg font-medium text-white transition-colors duration-300"
-                    >
-                      {buttonText}
-                    </button>
-                  </NavLink>
-                ) : countdown ? (
+    <div className="flex items-center justify-center py-4 px-2">
+      <div className="bg-gray-300 shadow-lg rounded-lg overflow-hidden w-full max-w-4xl transform hover:scale-105 transition-transform duration-300">
+        <div className="grid grid-cols-1 md:grid-cols-3 items-center">
+          <div className="flex flex-col items-center p-2 bg-gradient-to-b from-green-400 to-green-700">
+            <img
+              src={props.photo1}
+              alt="Team 1 Logo"
+              className="h-16 w-16 md:h-20 md:w-20 object-contain mb-2 rounded"
+            />
+            <span className="text-lg md:text-xl font-semibold text-white truncate">
+              {props.team1}
+            </span>
+          </div>
+          <div className="text-center p-2">
+            <h1 className="text-xl md:text-2xl font-bold text-gray-800">
+              {props.match}
+            </h1>
+            <div className="text-gray-600 mb-1">{props.time}</div>
+            <div>
+              {buttonText === "Live" ? (
+                <NavLink to="/livestream">
                   <button
-                    style={{ ...buttonStyle, cursor: "default" }}
-                    disabled
-                    className="px-4 py-1 rounded-full text-lg font-medium text-white"
-                  >
-                    {countdown}
-                  </button>
-                ) : (
-                  <button
-                    style={{ ...buttonStyle, cursor: "default" }}
-                    disabled
-                    className="px-4 py-1 rounded-full text-lg font-medium text-white"
+                    style={buttonStyle}
+                    className="px-4 py-1 rounded-full text-lg font-medium text-white transition-colors duration-300"
                   >
                     {buttonText}
                   </button>
-                )}
+                </NavLink>
+              ) : countdown ? (
+                <button
+                  style={{ ...buttonStyle, cursor: "default" }}
+                  disabled
+                  className="px-4 py-1 rounded-full text-lg font-medium text-white"
+                >
+                  {countdown}
+                </button>
+              ) : (
+                <button
+                  style={{ ...buttonStyle, cursor: "default" }}
+                  disabled
+                  className="px-4 py-1 rounded-full text-lg font-medium text-white"
+                >
+                  {buttonText}
+                </button>
+              )}
+            </div>
+            {buttonText === "Ended" && (
+              <div className="mt-2 text-lg md:text-xl font-semibold text-green-600">
+                {matchResult}
               </div>
-            </div>
-            <div className="flex flex-col items-center p-2 bg-gradient-to-b from-blue-400 to-blue-700">
-              <img
-                src={props.photo2}
-                alt="Team 2 Logo"
-                className="h-16 w-16 md:h-20 md:w-20 object-contain mb-2 rounded"
-              />
-              <span className="text-lg md:text-xl font-semibold text-white truncate">
-                {props.team2}
-              </span>
-            </div>
+            )}
+          </div>
+
+          <div className="flex flex-col items-center p-2 bg-gradient-to-b from-blue-400 to-blue-700">
+            <img
+              src={props.photo2}
+              alt="Team 2 Logo"
+              className="h-16 w-16 md:h-20 md:w-20 object-contain mb-2 rounded"
+            />
+            <span className="text-lg md:text-xl font-semibold text-white truncate">
+              {props.team2}
+            </span>
           </div>
         </div>
       </div>
-    )
+    </div>
   );
 };
 
