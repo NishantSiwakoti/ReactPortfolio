@@ -133,6 +133,18 @@ const Football = ({ setProgress, title }) => {
       team2: "Turkiye",
       match: "Round of 16",
     },
+    {
+      startTime: "21:01",
+      time: "9:45 PM",
+      endTime: "23:45",
+      startDate: "July 5, 2024",
+      endDate: "July 5, 2024",
+      photo1: Spain,
+      team1: "Spain",
+      photo2: Germany,
+      team2: "Germany",
+      match: "Quater-Final",
+    },
   ];
 
   return (
