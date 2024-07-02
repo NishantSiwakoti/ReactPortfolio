@@ -32,7 +32,7 @@ const Cricketmatches = ({ setProgress, title }) => {
       team1: "India",
       photo2: Zimbabwe,
       team2: "Zimbabwe",
-      match: "Round of 16",
+      match: "",
       leftDivColor: countryColors.India,
       rightDivColor: countryColors.Zimbabwe,
     },
