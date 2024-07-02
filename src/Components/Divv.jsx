@@ -83,7 +83,10 @@ const Divv = (props) => {
       <div className="flex items-center justify-center py-6 px-4">
         <div className="bg-gray-300 shadow-lg rounded-lg overflow-hidden w-full max-w-4xl transform hover:scale-105 transition-transform duration-300">
           <div className="grid grid-cols-1 md:grid-cols-3 items-center">
-            <div className="flex flex-col items-center p-2 bg-gradient-to-b from-purple-400 to-purple-700">
+            <div
+              className="flex flex-col items-center p-2"
+              style={{ backgroundColor: props.leftDivColor }}
+            >
               <img
                 src={props.photo1}
                 alt="Team 1 Logo"
@@ -127,7 +130,10 @@ const Divv = (props) => {
                 )}
               </div>
             </div>
-            <div className="flex flex-col items-center p-2 bg-gradient-to-b from-purple-400 to-purple-700">
+            <div
+              className="flex flex-col items-center p-2"
+              style={{ backgroundColor: props.rightDivColor }}
+            >
               <img
                 src={props.photo2}
                 alt="Team 2 Logo"
