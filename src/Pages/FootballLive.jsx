@@ -59,7 +59,7 @@ const FootballLive = ({ setProgress, title }) => {
         <div className="flex justify-center items-center mb-6">
           <div className="w-full max-w-4xl p-6 bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-700  rounded-lg shadow-lg relative">
             <div className="flex justify-end items-center ml-4">
-              <Link to="/livematches" className="">
+              <Link to="/Cricketmatches" className="">
                 <div className="px-3 py-2 mr-2 bg-gradient-to-r from-green-500 via-green-600 to-green-700 text-white rounded-lg">
                   Cricket Matches
                 </div>

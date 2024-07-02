@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import logo from "../assets/images/logoo.png";
 import euro from "../assets/images/euro.png";
 import copa from "../assets/images/copalogo.png";
+import bat from "../assets/images/bat.jpg";
+import bowl from "../assets/images/bowl.png";
 
 const LiveMatches = (props) => {
   return (
@@ -12,13 +14,13 @@ const LiveMatches = (props) => {
       </h1>
 
       <div className="space-y-8">
-        <NavLink to="/livematches">
+        <NavLink to="/Cricketmatches">
           <div className=" dark:bg-slate-800 flex items-center justify-center transition-transform transform hover:scale-105">
             <div className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 p-6 m-5 rounded-xl shadow-xl w-full max-w-4xl">
               <div className="flex flex-col md:flex-row items-center justify-between">
                 <div className="flex items-center space-x-4 md:w-1/3">
                   <img
-                    src={logo}
+                    src={bat}
                     alt=""
                     className="h-16 w-16 md:h-20 md:w-20 rounded-full shadow-md"
                   />
@@ -28,9 +30,9 @@ const LiveMatches = (props) => {
                 </div>
                 <div className="text-center mt-4 md:mt-0 flex flex-col items-center">
                   <span className="text-2xl font-bold text-white mb-2">
-                    T20 World Cup
+                    Cricket Matches
                   </span>
-                  <button className="px-6 py-3 bg-red-600 text-white rounded-full hover:bg-red-800 text-sm md:text-base shadow-md">
+                  <button className="px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg hover:bg-yellow-500 text-sm md:text-base shadow-md">
                     Matches
                   </button>
                 </div>
@@ -39,7 +41,7 @@ const LiveMatches = (props) => {
                     {props.team2}
                   </span>
                   <img
-                    src={logo}
+                    src={bowl}
                     alt=""
                     className="h-16 w-16 md:h-20 md:w-20 rounded-full shadow-md"
                   />
@@ -67,7 +69,7 @@ const LiveMatches = (props) => {
                   <span className="text-2xl font-bold text-gray-900 mb-2">
                     Euro Cup
                   </span>
-                  <button className="px-6 py-3 bg-red-600 text-white rounded-full hover:bg-red-800 text-sm md:text-base shadow-md">
+                  <button className="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-800 text-sm md:text-base shadow-md">
                     Matches
                   </button>
                 </div>
@@ -104,7 +106,7 @@ const LiveMatches = (props) => {
                   <span className="text-2xl font-bold text-gray-100 mb-2">
                     Copa America
                   </span>
-                  <button className="px-6 py-3 bg-red-600 text-white rounded-full hover:bg-red-800 text-sm md:text-base shadow-md">
+                  <button className="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-800 text-sm md:text-base shadow-md">
                     Matches
                   </button>
                 </div>

@@ -17,6 +17,7 @@ import Football from "../Pages/Football";
 import FootballLive from "../Pages/FootballLive";
 import Copa from "../Pages/Copa";
 import Copalive from "../Pages/Copalive";
+import Cricketmatches from "../Pages/Cricketmatches";
 export const AllRoutes = () => {
   const [progress, setProgress] = useState(0);
 
@@ -74,6 +75,15 @@ export const AllRoutes = () => {
         <Route
           path="livematches"
           element={<Final title="Live Matches" setProgress={setProgress} />}
+        />
+        <Route
+          path="/Cricketmatches"
+          element={
+            <Cricketmatches
+              title="Live Cricket Matches"
+              setProgress={setProgress}
+            />
+          }
         />
         <Route
           path="copa"
