@@ -18,6 +18,10 @@ const FootballLive = ({ setProgress, title }) => {
       url: "https://priyansh906.github.io/euro3/",
       language: "English Stream",
     },
+    {
+      url: "https://priyansh906.github.io/ten/",
+      language: "TEN Stream",
+    },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
     "https://priyansh906.github.io/euro2/"

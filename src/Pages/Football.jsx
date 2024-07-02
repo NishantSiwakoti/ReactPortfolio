@@ -25,16 +25,16 @@ const Football = ({ setProgress, title }) => {
   }, [title]);
 
   const countryColors = {
-    Romania: "#055c9d", // Blue from the Romanian flag
-    Netherlands: "#21468B", // Blue from the Dutch flag
-    Austria: "#ED2939", // Red from the Austrian flag
-    Turkiye: "#ff3535", // Red from the Turkish flag
-    Spain: "#C60B1E", // Red from the Spanish flag
-    Germany: "#333333", // Black from the German flag
-    Portugal: "#006600", // Green from the Portuguese flag
-    France: "#0055A4", // Blue from the French flag
-    England: "#ff3d00", // Blue from the English flag (UK Union Jack)
-    Switzerland: "#D52B1E", // Red from the Swiss flag
+    Romania: "#055c9d",
+    Netherlands: "#21468B",
+    Austria: "#ED2939",
+    Turkiye: "#ff3535",
+    Spain: "#C60B1E",
+    Germany: "#333333",
+    Portugal: "#006600",
+    France: "#0055A4",
+    England: "#ff3d00",
+    Switzerland: "#D52B1E",
   };
 
   const matches = [
