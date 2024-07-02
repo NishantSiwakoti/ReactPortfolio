@@ -23,11 +23,11 @@ const Cricketmatches = ({ setProgress, title }) => {
 
   const matches = [
     {
-      startTime: "21:01",
-      time: "9:45 PM",
-      endTime: "23:45",
-      startDate: "July 2, 2024",
-      endDate: "July 2, 2024",
+      startTime: "16:01",
+      time: "4:45 PM",
+      endTime: "21:00",
+      startDate: "July 6, 2024",
+      endDate: "July 6, 2024",
       photo1: India,
       team1: "India",
       photo2: Zimbabwe,
