@@ -42,9 +42,9 @@ const Cricketmatches = ({ setProgress, title }) => {
     <section>
       <div className="min-h-screen">
         <div className="flex justify-center md:justify-end mt-5 items-center">
-          <Link to="/livematches">
+          <Link to="/euro">
             <div className="px-3 py-2 mr-2 bg-gradient-to-r from-green-500 via-green-600 to-green-700 text-white rounded-lg">
-              Cricket Matches
+              Euro Matches
             </div>
           </Link>
           <Link to="/copa">

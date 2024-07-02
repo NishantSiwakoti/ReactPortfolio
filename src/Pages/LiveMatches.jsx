@@ -32,7 +32,7 @@ const LiveMatches = (props) => {
                   <span className="text-2xl font-bold text-white mb-2">
                     Cricket Matches
                   </span>
-                  <button className="px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg hover:bg-yellow-500 text-sm md:text-base shadow-md">
+                  <button className="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-800 text-sm md:text-base shadow-md">
                     Matches
                   </button>
                 </div>
