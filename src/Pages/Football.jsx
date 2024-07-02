@@ -33,7 +33,7 @@ const Football = ({ setProgress, title }) => {
     Germany: "#333333", // Black from the German flag
     Portugal: "#006600", // Green from the Portuguese flag
     France: "#0055A4", // Blue from the French flag
-    England: "#00247D", // Blue from the English flag (UK Union Jack)
+    England: "#ff3d00", // Blue from the English flag (UK Union Jack)
     Switzerland: "#D52B1E", // Red from the Swiss flag
   };
 
