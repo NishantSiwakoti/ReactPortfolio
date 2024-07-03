@@ -30,10 +30,10 @@ const Football = ({ setProgress, title }) => {
     Austria: "#ED2939",
     Turkiye: "#810017",
     Spain: "#C60B1E",
-    Germany: "#333333",
+    Germany: "#191919",
     Portugal: "#006600",
     France: "#0055A4",
-    England: "#ff3d00",
+    England: "#999999",
     Switzerland: "#D52B1E",
   };
 

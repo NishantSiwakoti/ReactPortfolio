@@ -33,7 +33,7 @@ const Copa = ({ setProgress, title }) => {
     Argentina: "rgba(116, 172, 223, 0.9)",
     Peru: "rgba(217, 16, 35, 0.9)",
     Chile: "rgba(0, 51, 160, 0.9)",
-    Canada: "rgba(255, 0, 0, 0.9)",
+    Canada: "#d85305",
     Mexico: "rgba(0, 104, 71, 0.9)",
     Ecuador: "rgba(255, 209, 0, 0.9)",
     Venezuela: "rgba(244, 196, 48, 0.9)",
@@ -43,7 +43,7 @@ const Copa = ({ setProgress, title }) => {
     Panama: "rgba(255, 0, 0, 0.9)",
     Bolivia: "rgba(255, 215, 0, 0.9)",
     Brazil: "rgba(0, 151, 57, 0.9)",
-    Colombia: "#debd24",
+    Colombia: "#011393",
     Paraguay: "rgba(213, 43, 30, 0.9)",
     Costa_Rica: "rgba(0, 43, 127, 0.9)",
   };
