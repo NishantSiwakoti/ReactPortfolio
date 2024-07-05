@@ -7,12 +7,12 @@ const FootballLive = ({ setProgress, title }) => {
   );
   const [streams, setStreams] = useState([
     {
-      url: "https://priyansh906.github.io/euro2/",
-      language: "Spanish Stream",
-    },
-    {
       url: "https://priyansh906.github.io/euroo/",
       language: "Default Stream",
+    },
+    {
+      url: "https://priyansh906.github.io/euro2/",
+      language: "Spanish Stream",
     },
     {
       url: "https://priyansh906.github.io/euro3/",
@@ -24,7 +24,7 @@ const FootballLive = ({ setProgress, title }) => {
     },
   ]);
   const [currentStreamUrl, setCurrentStreamUrl] = useState(
-    "https://priyansh906.github.io/euro2/"
+    "https://priyansh906.github.io/euroo/"
   );
 
   useEffect(() => {
