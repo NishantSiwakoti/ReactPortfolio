@@ -100,7 +100,7 @@ const Copalive = ({ setProgress, title }) => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <div className="w-full max-w-4xl p-4">
             <p className="text-black dark:text-white font-bold text-base text-center p-2">
               Digital Millennium Copyright Act (DMCA)
@@ -113,7 +113,7 @@ const Copalive = ({ setProgress, title }) => {
               respective owners.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

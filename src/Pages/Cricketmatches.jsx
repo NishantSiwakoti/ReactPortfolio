@@ -71,7 +71,7 @@ const Cricketmatches = ({ setProgress, title }) => {
           />
         ))}
       </div>
-      <div className="flex justify-center">
+      {/* <div className="flex justify-center">
         <div className="w-full max-w-3xl p-4 m-5">
           <p className="text-black dark:text-white font-bold text-base text-center p-2">
             Digital Millennium Copyright Act (DMCA)
@@ -84,7 +84,7 @@ const Cricketmatches = ({ setProgress, title }) => {
             owners.
           </p>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
