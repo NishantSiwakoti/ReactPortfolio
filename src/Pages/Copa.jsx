@@ -52,7 +52,7 @@ const Copa = ({ setProgress, title }) => {
     {
       startTime: "6:00",
       time: "6:45 AM",
-      endTime: "8:45",
+      endTime: "9:30",
       startDate: "July 5, 2024",
       endDate: "July 5, 2024",
       photo1: Argentina,
