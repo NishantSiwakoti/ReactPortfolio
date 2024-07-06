@@ -51,7 +51,7 @@ const Live = ({ setProgress, title }) => {
 
   useEffect(() => {
     // Trigger confetti on page load
-    setShowConfetti(true);
+    setShowConfetti(false);
     setTimeout(() => setShowConfetti(false), 10000); // Confetti for 10 seconds on page load
   }, []);
 

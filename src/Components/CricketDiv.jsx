@@ -103,7 +103,7 @@ const CricketDiv = (props) => {
               <div className="text-gray-600 mb-1">{props.time}</div>
               <div>
                 {buttonText === "Live" ? (
-                  <NavLink to="/footballive">
+                  <NavLink to="/livestream">
                     <button
                       style={buttonStyle}
                       className="px-4 py-1 rounded-full text-md font-medium text-white transition-colors duration-300"
