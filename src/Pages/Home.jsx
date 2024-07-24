@@ -1,7 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
-import photo from "../assets/images/animation.png";
 import Button from "../Components/Button/Button";
-import profile from "../assets/images/pic.png";
+import profile from "../assets/Rectangle.jpg";
 import profile1 from "../assets/images/ps.png";
 import Card from "../Components/Card";
 import react from "../assets/images/react.png";
@@ -20,14 +19,9 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Slider from "../Components/Slider";
-
-import { useState } from "react";
-
-import LiveMatches from "./LiveMatches";
+import { FaFacebook, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 
 const Home = ({ title, setProgress }) => {
-  const [endedMatches, setEndedMatches] = useState([]);
-
   useEffect(() => {
     setProgress(40);
     setTimeout(() => {
@@ -47,44 +41,6 @@ const Home = ({ title, setProgress }) => {
   useEffect(() => {
     document.title = `${title}`;
   });
-  const formatDate = (dateStr) => {
-    const matchDate = new Date(dateStr);
-    const today = new Date();
-    const yesterday = new Date(today);
-    yesterday.setDate(today.getDate() - 1);
-    const tomorrow = new Date(today);
-    tomorrow.setDate(today.getDate() + 1);
-
-    if (matchDate.toDateString() === today.toDateString()) {
-      const currentTime = today.getHours() * 60 + today.getMinutes();
-      const startLiveTime = 18 * 60;
-      const endLiveTime = 24 * 60;
-
-      if (currentTime >= startLiveTime && currentTime < endLiveTime) {
-        return "Live";
-      } else if (currentTime >= endLiveTime || today.getHours() < 7) {
-        return "Ended";
-      } else {
-        return "Today";
-      }
-    } else if (matchDate.toDateString() === tomorrow.toDateString()) {
-      return "Tomorrow";
-    } else if (matchDate < today) {
-      return "Ended";
-    } else if (matchDate.toDateString() === yesterday.toDateString()) {
-      return "Ended";
-    } else {
-      return dateStr;
-    }
-  };
-
-  const handleMatchStatus = (dateStr) => {
-    const status = formatDate(dateStr);
-    if (status === "Ended" && endedMatches.length < 2) {
-      setEndedMatches([...endedMatches, dateStr]);
-    }
-    return status;
-  };
 
   return (
     <>
@@ -110,10 +66,40 @@ const Home = ({ title, setProgress }) => {
                 style={{ display: "inline-block" }}
                 repeat={Infinity}
               />
-              <div>
+              <div className="mt-4">
                 <NavLink to="/contact">
                   <Button name="Hire Me" />
                 </NavLink>
+              </div>
+              <div className="flex justify-center md:justify-start mt-4 space-x-4">
+                <a
+                  href="https://www.facebook.com/nishant.siwakoti.1/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaFacebook className="text-[#35d16e] text-2xl hover:text-[#2dbe77]" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/nishant-siwakoti-470a06231/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedin className="text-[#35d16e] text-2xl hover:text-[#2dbe77]" />
+                </a>
+                <a
+                  href="https://github.com/NishantSiwakoti"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithub className="text-[#35d16e] text-2xl hover:text-[#2dbe77]" />
+                </a>
+                <a
+                  href="https://www.instagram.com/nishant.siwakotii/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram className="text-[#35d16e] text-2xl hover:text-[#2dbe77]" />
+                </a>
               </div>
             </div>
           </div>
@@ -121,15 +107,12 @@ const Home = ({ title, setProgress }) => {
 
         <div className="flex-1">
           <img
-            className=""
-            data-aos=""
             src={profile1}
             alt="Profile"
             style={{ maxWidth: "100%", height: "auto" }}
           />
         </div>
       </section>
-
       {/* About me Section*/}
       <section className="min-h-[60vh] relative">
         <h2
@@ -144,7 +127,7 @@ const Home = ({ title, setProgress }) => {
               src={profile}
               alt="profile"
               data-aos="fade-up"
-              className="w-full rounded-full md:ml-[50px] lg:ml-[px] max-w-[200px] md:max-w-[300px]"
+              className="w-full rounded-md md:ml-[50px] lg:ml-[px] max-w-[200px] md:max-w-[300px]"
               style={{ height: "auto" }}
             />
           </div>
@@ -173,22 +156,15 @@ const Home = ({ title, setProgress }) => {
               className="flex justify-center items-center md:ml-[100px] md:flex md:justify-start"
               data-aos="fade-left"
             >
-              <NavLink to="" target="_blank">
+              <NavLink
+                to="https://drive.google.com/file/d/1z553qs8LM79sIgteEa92abknSStABv3T/view?usp=sharing"
+                target="_blank"
+              >
                 <Button name="Download CV" />
               </NavLink>
             </div>
           </div>
         </div>
-      </section>
-      {/* Live Section */}
-      <section className="dark:bg-slate-800">
-        <LiveMatches setProgress={setProgress} title={title} />
-
-        {/* <div className="flex justify-center" data-aos="fade-left">
-          <NavLink to="/livematches">
-            <Button name="More Matches" />
-          </NavLink>
-        </div> */}
       </section>
 
       {/* Skills Section */}

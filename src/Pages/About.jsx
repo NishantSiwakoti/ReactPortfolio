@@ -1,5 +1,5 @@
 import Button from "../Components/Button/Button";
-import profile from "../assets/images/pic.png";
+import profile from "../assets/Rectangle.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -29,7 +29,7 @@ const About = ({ title, setProgress }) => {
             src={profile}
             alt="Nishant Siwakoti"
             data-aos="fade-out"
-            className="w-full rounded-full md:ml-[50px] lg:ml-[px] max-w-[200px] md:max-w-[300px]"
+            className="w-full rounded-xl md:ml-[50px] lg:ml-[px] max-w-[200px] md:max-w-[300px]"
             style={{ height: "auto" }}
           />
         </div>
@@ -52,7 +52,10 @@ const About = ({ title, setProgress }) => {
             work!
           </p>
           <div className="flex justify-center items-center md:ml-[100px] md:flex md:justify-start">
-            <NavLink to="" target="_blank">
+            <NavLink
+              to="https://drive.google.com/file/d/1z553qs8LM79sIgteEa92abknSStABv3T/view?usp=sharing"
+              target="_blank"
+            >
               <Button name="Download CV" />
             </NavLink>
           </div>

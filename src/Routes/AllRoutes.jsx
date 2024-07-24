@@ -8,16 +8,9 @@ import LoadingBar from "react-top-loading-bar";
 import { useState } from "react";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
-import Live from "../Pages/Live";
-import LiveMatches from "../Pages/LiveMatches";
 import Notfound from "../Pages/Notfound";
 import Hello from "../Pages/Hello";
-import Final from "../Pages/Final";
-import Football from "../Pages/Football";
-import FootballLive from "../Pages/FootballLive";
-import Copa from "../Pages/Copa";
-import Copalive from "../Pages/Copalive";
-import Cricketmatches from "../Pages/Cricketmatches";
+
 export const AllRoutes = () => {
   const [progress, setProgress] = useState(0);
 
@@ -49,50 +42,8 @@ export const AllRoutes = () => {
           path="contact"
           element={<Contact title="Contact" setProgress={setProgress} />}
         />
-        <Route
-          path="live"
-          element={
-            <LiveMatches title="Live Matches" setProgress={setProgress} />
-          }
-        />
-        <Route
-          path="euro"
-          element={
-            <Football title="Live Football Matches" setProgress={setProgress} />
-          }
-        />
-
-        <Route
-          path="livestream"
-          element={<Live title="LiveStreaming" setProgress={setProgress} />}
-        />
-        <Route
-          path="footballive"
-          element={<FootballLive title="Euro Live" setProgress={setProgress} />}
-        />
         <Route path="*" element={<Notfound />} />
         <Route path="helloworld" element={<Hello />} />
-        <Route
-          path="livematches"
-          element={<Final title="Live Matches" setProgress={setProgress} />}
-        />
-        <Route
-          path="/Cricketmatches"
-          element={
-            <Cricketmatches
-              title="Live Cricket Matches"
-              setProgress={setProgress}
-            />
-          }
-        />
-        <Route
-          path="copa"
-          element={<Copa title="Copa" setProgress={setProgress} />}
-        />
-        <Route
-          path="copalive"
-          element={<Copalive title="Copa Live" setProgress={setProgress} />}
-        />
       </Routes>
     </div>
   );

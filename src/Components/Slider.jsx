@@ -18,6 +18,16 @@ import mb from "../assets/images/mb.png";
 import mc from "../assets/images/mc.png";
 import md from "../assets/images/md.png";
 import me from "../assets/images/me.png";
+import se from "../assets/images/fa.png";
+import fc from "../assets/images/fc.png";
+import fe from "../assets/images/fe.png";
+import ff from "../assets/images/ff.png";
+import fg from "../assets/images/fg.png";
+import a1 from "../assets/images/a1.png";
+import a2 from "../assets/images/a2.png";
+import a3 from "../assets/images/a3.png";
+import a4 from "../assets/images/a4.png";
+import a5 from "../assets/images/a5.png";
 
 const Slider = ({ type }) => {
   return (
@@ -84,6 +94,68 @@ const Slider = ({ type }) => {
               </SwiperSlide>
               <SwiperSlide>
                 <img src={me} />
+              </SwiperSlide>
+            </Swiper>
+          </div>
+          <div>
+            <h1 className="text-2xl md:text-2xl text-[#35d16e] text-center mt-5 font-bold mb-5">
+              3. ZAPMovies
+            </h1>
+          </div>
+          <div>
+            <Swiper
+              modules={[Navigation, Pagination, Scrollbar, A11y]}
+              spaceBetween={50}
+              slidesPerView={2}
+              navigation
+              pagination={{ clickable: true }}
+              scrollbar={{ draggable: true }}
+            >
+              <SwiperSlide>
+                <img src={se} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={fc} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={fe} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={ff} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={fg} />
+              </SwiperSlide>
+            </Swiper>
+          </div>
+          <div>
+            <h1 className="text-2xl md:text-2xl text-[#35d16e] text-center mt-5 font-bold mb-5">
+              4. Portfolio Site
+            </h1>
+          </div>
+          <div>
+            <Swiper
+              modules={[Navigation, Pagination, Scrollbar, A11y]}
+              spaceBetween={50}
+              slidesPerView={2}
+              navigation
+              pagination={{ clickable: true }}
+              scrollbar={{ draggable: true }}
+            >
+              <SwiperSlide>
+                <img src={a1} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={a2} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={a3} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={a4} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={a5} />
               </SwiperSlide>
             </Swiper>
           </div>

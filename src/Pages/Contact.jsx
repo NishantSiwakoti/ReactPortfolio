@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
@@ -16,10 +15,12 @@ const Contact = ({ title, setProgress }) => {
     setTimeout(() => {
       setProgress(100);
     }, 500);
-  }, []);
+  }, [setProgress]);
+
   useEffect(() => {
     document.title = `${title}`;
-  });
+  }, [title]);
+
   useEffect(() => {
     Aos.init({ duration: 1500 });
   }, []);
@@ -47,7 +48,6 @@ const Contact = ({ title, setProgress }) => {
             <FontAwesomeIcon icon={faLocation} className="mr-2" />
             Kathmandu, Nepal
           </p>
-
           <p className="mb-4 text-md md:text-xl text-[#35d16e] dark:text-[#35d16e]">
             <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
             nishant5@gmail.com
@@ -59,7 +59,7 @@ const Contact = ({ title, setProgress }) => {
             Get in Touch
           </h1>
           <form
-            action="https://formspree.io/f/mdobdqev"
+            action="https://formspree.io/f/xnnajobo"
             method="POST"
             className="bg-green-400 shadow-md rounded px-8 pt-6 pb-8 mb-4"
           >

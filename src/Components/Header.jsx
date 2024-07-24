@@ -117,14 +117,14 @@ const Header = () => {
                   Home
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink
                   to="/live"
                   className={isLiveActive ? activeClass : inActiveClass}
                 >
                   Live
                 </NavLink>
-              </li>
+              </li> */}
               <li>
                 <NavLink
                   to="/about"
