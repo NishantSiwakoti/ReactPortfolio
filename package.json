@@ -37,6 +37,9 @@
   "dependencies": {
 
 
+    "@formspree/react": "^2.5.1",
+
+
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
 
 

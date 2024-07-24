@@ -1,5 +1,5 @@
 import Button from "../Components/Button/Button";
-import profile from "../assets/Rectangle.jpg";
+import profile from "../assets/images/Rectangle.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -29,7 +29,7 @@ const About = ({ title, setProgress }) => {
             src={profile}
             alt="Nishant Siwakoti"
             data-aos="fade-out"
-            className="w-full rounded-xl md:ml-[50px] lg:ml-[px] max-w-[200px] md:max-w-[300px]"
+            className="w-full rounded-full md:ml-[50px] lg:ml-[px] max-w-[200px] md:max-w-[300px]"
             style={{ height: "auto" }}
           />
         </div>
