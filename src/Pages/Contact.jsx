@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -50,7 +50,7 @@ const Contact = ({ title, setProgress }) => {
           </p>
           <p className="mb-4 text-md md:text-xl text-[#35d16e] dark:text-[#35d16e]">
             <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
-            nishant5@gmail.com
+            nishantsiwakoti1@gmail.com
           </p>
         </div>
         {/* Contact Form */}
