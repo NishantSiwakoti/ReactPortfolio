@@ -27,21 +27,26 @@ html,
 body {
   overflow-x: hidden;
 }
-@keyframes fadeInOut {
-  0%,
-  100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
+.slick-prev,
+.slick-next {
+  @apply absolute top-1/2 transform -translate-y-1/2 z-10 text-3xl bg-gray-100 dark:bg-gray-800 rounded-full h-10 w-10 flex items-center justify-center cursor-pointer;
 }
 
-.final-text {
-  animation: fadeInOut 2s infinite;
-  font-size: 2rem;
-  color: rgb(244, 8, 8);
-  font-weight: bold;
-  text-align: center;
-  margin-top: 20px;
+.slick-prev {
+  @apply left-0 ml-2;
+}
+
+.slick-next {
+  @apply right-0 mr-2;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  @apply bg-opacity-100;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  @apply text-black dark:text-white;
+  content: "";
 }

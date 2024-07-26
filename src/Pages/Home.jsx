@@ -13,9 +13,9 @@ import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import Slider from "../Components/Slider";
 import { FaFacebook, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import Contact from "./Contact";
+import Projects from "./Projects";
 
 const Home = ({ title, setProgress }) => {
   useEffect(() => {
@@ -195,27 +195,11 @@ const Home = ({ title, setProgress }) => {
         </div>
       </section>
       {/* Projects Section */}
-      <section className="min-h-[40vh]">
-        <h1
-          className="text-[#35d16e] md:text-4xl text-3xl font-bold text-center mb-8"
-          data-aos="fade-left"
-        >
-          Projects
-        </h1>
-        <div data-aos="fade-down">
-          <h1 className="text-2xl md:text-3xl text-[#35d16e] text-center font-bold mb-5 ">
-            1. Sajilo Yatra - A Vehicle Rental Platform
-          </h1>
-        </div>
-        <div data-aos="fade-left">
-          <Slider type="home" />
-        </div>
-        <div className="flex justify-center" data-aos="fade-left">
-          <NavLink to="/projects">
-            <Button name="More Projects" />
-          </NavLink>
-        </div>
-      </section>
+      <h1 className="text-xl md:text-4xl font-bold text-center text-[#21c45d]">
+        Projects
+      </h1>
+      <Projects />
+
       {/* Contact Section */}
       <Contact />
     </>
