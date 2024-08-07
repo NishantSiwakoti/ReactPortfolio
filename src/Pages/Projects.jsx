@@ -28,6 +28,14 @@ import fourth from "../assets/images/d.png";
 import fifth from "../assets/images/e.png";
 import sixth from "../assets/images/f.png";
 import seventh from "../assets/images/g.png";
+import v1 from "../assets/images/v1.png";
+import v2 from "../assets/images/v2.png";
+import v3 from "../assets/images/v3.png";
+import v4 from "../assets/images/v4.png";
+import v5 from "../assets/images/v5.png";
+import v6 from "../assets/images/v6.png";
+import v7 from "../assets/images/v7.png";
+import v8 from "../assets/images/v8.png";
 
 const NextArrow = ({ onClick }) => {
   return (
@@ -97,6 +105,11 @@ const Projects = ({ title, setProgress }) => {
 
   const projects = [
     {
+      name: "HamroMart",
+      link: "https://hamromart.vercel.app/",
+      images: [v1, v2, v3, v4, v5, v6, v7, v8],
+    },
+    {
       name: "ZapMovies",
       link: "https://zapmovies.vercel.app/",
       images: [first, second, third, fourth, fifth, sixth, seventh],
@@ -119,7 +132,7 @@ const Projects = ({ title, setProgress }) => {
   ];
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,

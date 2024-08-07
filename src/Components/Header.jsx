@@ -135,6 +135,16 @@ const Header = () => {
                   About
                 </NavLink>
               </li>
+              {/* <li>
+                <NavLink
+                  to="/blogs"
+                  className={({ isActive }) =>
+                    isActive ? activeClass : inActiveClass
+                  }
+                >
+                  Blogs
+                </NavLink>
+              </li> */}
               <li>
                 <NavLink
                   to="/skills"
