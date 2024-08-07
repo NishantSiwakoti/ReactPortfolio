@@ -173,7 +173,7 @@ const Projects = ({ title, setProgress }) => {
       {projects.map((project, index) => (
         <div key={index} className="mb-8">
           <div className="flex items-center justify-center mb-2">
-            <h3 className="text-xl text-[#2a6d4e] text-center font-semibold mr-4">
+            <h3 className="text-xl text-green-400 text-center font-semibold mr-4">
               {project.name}
             </h3>
             <a
@@ -187,7 +187,7 @@ const Projects = ({ title, setProgress }) => {
           </div>
           <Slider {...settings}>
             {project.images.map((image, imgIndex) => (
-              <div key={imgIndex} className="p-2">
+              <div key={imgIndex} className="p-2" data-aos="fade-up">
                 <img
                   src={image}
                   alt={`slide-${imgIndex}`}
