@@ -182,7 +182,7 @@ const Projects = ({ title, setProgress }) => {
               rel="noopener noreferrer"
               className="text-blue-500 underline"
             >
-              Live demo
+              Live Preview
             </a>
           </div>
           <Slider {...settings}>

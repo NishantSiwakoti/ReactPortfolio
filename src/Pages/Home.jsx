@@ -163,7 +163,7 @@ const Home = ({ title, setProgress }) => {
         </div>
       </section>
 
-      {/* Skills Section */}
+      {/* Skills Section
       <section className="min-h-[70vh]">
         <h1
           data-aos="fade-down"
@@ -193,15 +193,15 @@ const Home = ({ title, setProgress }) => {
             <Button name="See More" />
           </NavLink>
         </div>
-      </section>
+      </section> */}
       {/* Projects Section */}
       <h1 className="text-xl md:text-4xl font-bold text-center text-[#21c45d]">
         Projects
       </h1>
       <Projects />
 
-      {/* Contact Section */}
-      <Contact />
+      {/* Contact Section
+      <Contact /> */}
     </>
   );
 };

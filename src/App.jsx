@@ -8,7 +8,6 @@ function App() {
     <>
       <Header />
       <AllRoutes />
-      <Footer />
       <Analytics />
       <SpeedInsights />
     </>
