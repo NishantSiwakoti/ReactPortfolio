@@ -2,11 +2,7 @@ import { TypeAnimation } from "react-type-animation";
 import Button from "../Components/Button/Button";
 import profile from "../assets/images/Rectangle.png";
 import profile1 from "../assets/images/ps.png";
-import Card from "../Components/Card";
-import react from "../assets/images/react.png";
-import django from "../assets/images/django.png";
-import tailwind from "../assets/images/20.png";
-import php from "../assets/images/php.png";
+
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
@@ -14,7 +10,6 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { FaFacebook, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
-import Contact from "./Contact";
 import Projects from "./Projects";
 
 const Home = ({ title, setProgress }) => {
@@ -104,7 +99,7 @@ const Home = ({ title, setProgress }) => {
         <div className="flex-1">
           <img
             src={profile1}
-            alt="Profile"
+            alt="Nishant Profile"
             style={{ maxWidth: "100%", height: "auto" }}
           />
         </div>
@@ -121,7 +116,7 @@ const Home = ({ title, setProgress }) => {
           <div className="flex justify-center items-center mt-5">
             <img
               src={profile}
-              alt="profile"
+              alt="Nishant ProfilePic"
               data-aos="fade-up"
               className="w-full rounded-full md:ml-[50px] lg:ml-[px] max-w-[200px] md:max-w-[300px]"
               style={{ height: "auto" }}
@@ -163,37 +158,6 @@ const Home = ({ title, setProgress }) => {
         </div>
       </section>
 
-      {/* Skills Section
-      <section className="min-h-[70vh]">
-        <h1
-          data-aos="fade-down"
-          className="text-[#35d16e] md:text-4xl text-3xl font-bold text-center mb-8"
-        >
-          Skills
-        </h1>
-        <div className="flex justify-center items-center flex-wrap">
-          <div data-aos="fade-up-right">
-            <Card img={react} title="React" />
-          </div>
-          <div data-aos="fade-up-left">
-            {" "}
-            <Card img={django} title="Django" />
-          </div>
-          <div data-aos="fade-up-right">
-            {" "}
-            <Card img={tailwind} title="Tailwind CSS" />
-          </div>
-          <div data-aos="fade-up-left">
-            {" "}
-            <Card img={php} title="PHP" />
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <NavLink to="/skills">
-            <Button name="See More" />
-          </NavLink>
-        </div>
-      </section> */}
       {/* Projects Section */}
       <h1 className="text-xl md:text-4xl font-bold text-center text-[#21c45d]">
         Projects
