@@ -15,6 +15,7 @@ import AdminDashboard from "../Pages/admin/AdminDashboard";
 import Header from "../Components/Header";
 import AdminHeader from "../Components/adminComponent/AdminHeader";
 import Footer from "../Components/Footer";
+import Education from "../Pages/Education";
 
 export const AllRoutes = () => {
   const [progress, setProgress] = useState(0);
@@ -25,7 +26,7 @@ export const AllRoutes = () => {
   return (
     <AuthProvider>
       {isAdmin && <AdminHeader />}
-      <div className="dark:bg-slate-800 overflow-hidden">
+      <div className="dark:bg-slate-800 bg-gray-50 overflow-hidden">
         <LoadingBar
           color="#35d16e"
           progress={progress}
@@ -47,6 +48,10 @@ export const AllRoutes = () => {
           <Route
             path="projects"
             element={<Projects title="Projects" setProgress={setProgress} />}
+          />
+          <Route
+            path="education"
+            element={<Education title="Education" setProgress={setProgress} />}
           />
           <Route
             path="contact"

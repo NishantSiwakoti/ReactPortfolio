@@ -1,17 +1,17 @@
-import React from "react";
-import Card from "../Components/Card";
-import react from "../assets/images/react.png";
-import html from "../assets/images/h.png";
-import tailwind from "../assets/images/20.png";
-import php from "../assets/images/php.png";
-import python from "../assets/images/python.png";
-import django from "../assets/images/django.png";
-import c from "../assets/images/c.png";
-import Button from "../Components/Button/Button";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import {
+  FaReact,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaPython,
+  FaPhp,
+} from "react-icons/fa";
+import { SiTailwindcss, SiLaravel } from "react-icons/si";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import Button from "../Components/Button/Button";
 
 const Skills = ({ title, setProgress }) => {
   useEffect(() => {
@@ -19,49 +19,50 @@ const Skills = ({ title, setProgress }) => {
     setTimeout(() => {
       setProgress(100);
     }, 500);
-  }, []);
+  }, [setProgress]);
+
   useEffect(() => {
     Aos.init({ duration: 1500 });
   }, []);
+
   useEffect(() => {
     document.title = `${title}`;
-  });
+  }, [title]);
+
+  const skills = [
+    { icon: <FaReact className="text-blue-500" />, title: "React" },
+    { icon: <SiLaravel className="text-red-600" />, title: "Laravel" },
+    { icon: <FaCss3Alt className="text-blue-600" />, title: "CSS" },
+    { icon: <FaJs className="text-yellow-500" />, title: "JavaScript" },
+    {
+      icon: <SiTailwindcss className="text-teal-400" />,
+      title: "Tailwind CSS",
+    },
+    { icon: <FaHtml5 className="text-orange-600" />, title: "HTML" },
+    { icon: <FaPhp className="text-purple-600" />, title: "PHP" },
+    { icon: <FaPython className="text-blue-600" />, title: "Python" },
+  ];
+
   return (
-    <section className="">
-      <h1 className="text-center font-bold text-[#35d16e] text-4xl p-5">
+    <section className="py-4">
+      <h1 className="text-center font-bold text-4xl p-5 text-[#35d16e]">
         Skills
       </h1>
-      <div className="flex justify-center items-center flex-wrap">
-        <div data-aos="fade-right">
-          {" "}
-          <Card img={react} title="React" />
-        </div>
-        <div data-aos="fade-left">
-          {" "}
-          <Card img={html} title="HTML,CSS,JS" />
-        </div>
-        <div data-aos="fade-right">
-          {" "}
-          <Card img={tailwind} title="Tailwind CSS" />
-        </div>
-        <div data-aos="fade-left">
-          {" "}
-          <Card img={php} title="PHP" />
-        </div>
-        <div data-aos="fade-right">
-          {" "}
-          <Card img={python} title="Python" />
-        </div>
-        <div data-aos="fade-left">
-          {" "}
-          <Card img={django} title="Django" />
-        </div>
-        <div data-aos="fade-right">
-          {" "}
-          <Card img={c} title="C, C++, C#" />
-        </div>
+      <div className="flex justify-center items-center flex-wrap gap-8 p-5">
+        {skills.map((skill, index) => (
+          <div
+            key={index}
+            data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+            className="bg-white dark:bg-gray-900 shadow-md rounded-lg p-5 w-40 h-40 flex flex-col items-center justify-center transform hover:scale-105 transition-transform duration-300"
+          >
+            <div className="text-6xl mb-3">{skill.icon}</div>
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+              {skill.title}
+            </h3>
+          </div>
+        ))}
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center mt-10">
         <NavLink to="/contact">
           <Button name="Contact me" />
         </NavLink>
