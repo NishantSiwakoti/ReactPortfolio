@@ -10,6 +10,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { FaFacebook, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import Projects from "./Projects";
+import AdsComponent from "../Components/AdsComponent";
 
 const Home = ({ title, setProgress }) => {
   useEffect(() => {
