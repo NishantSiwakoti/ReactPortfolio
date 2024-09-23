@@ -39,7 +39,23 @@ const About = ({ title, setProgress }) => {
         </div>
         <div className="flex-1" data-aos="fade-out">
           <p className="dark:text-white leading-relaxed m-2 md:ml-[100px] md:mt-[50px] text-center md:text-justify lg:mr-[100px]">
-            {/* Your content here */}
+            Hi, I'm a professional full-stack developer with over two years of
+            experience. I specialize in creating visually appealing and
+            responsive websites using the latest web technologies. On the
+            front-end, I work with{" "}
+            <span className="text-[#35d16e] font-bold">ReactJs</span>,{" "}
+            <span className="text-[#35d16e] font-bold">NextJs</span>,{" "}
+            <span className="text-[#35d16e] font-bold">JavaScript</span>,{" "}
+            <span className="text-[#35d16e] font-bold">Html</span>,{" "}
+            <span className="text-[#35d16e] font-bold">Css</span>, and{" "}
+            <span className="text-[#35d16e] font-bold">Tailwind CSS</span>. On
+            the back-end, I'm proficient in{" "}
+            <span className="text-[#35d16e] font-bold">Laravel</span> and have
+            experience working with{" "}
+            <span className="text-[#35d16e] font-bold">Git</span> and{" "}
+            <span className="text-[#35d16e] font-bold">GitHub</span> for version
+            control. I am committed to delivering high-quality projects on time.
+            Prices are negotiable and depend on the type of work!
           </p>
           <div className="flex justify-center items-center md:ml-[100px] md:flex md:justify-start">
             <NavLink
@@ -51,7 +67,6 @@ const About = ({ title, setProgress }) => {
           </div>
         </div>
       </div>
-      <h1 className="text-black">Place To show Google AdSense</h1>
       <AdsComponent />
     </section>
   );

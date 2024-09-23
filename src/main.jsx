@@ -6,7 +6,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import ScrollToTop from "./Components/ScrollToTop.jsx";
 import ReactGA from "react-ga4";
 
-ReactGA.initialize("G-8D2GXT8Z9P");
+ReactGA.initialize("G-QZSZSN4EEQ");
 
 ReactGA.send({
   hitType: "pageview",
