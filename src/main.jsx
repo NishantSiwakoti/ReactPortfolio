@@ -4,6 +4,14 @@ import App from "./App.jsx";
 import "./index.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import ScrollToTop from "./Components/ScrollToTop.jsx";
+import ReactGA from "react-ga4";
+
+ReactGA.initialize("G-8D2GXT8Z9P");
+
+ReactGA.send({
+  hitType: "pageview",
+  page: window.location.pathname,
+});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
