@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-white shadow dark:bg-gray-900 p-3">
       <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          © 2024{" "}
+          © 2025{" "}
           <NavLink
             to="https://www.nishantshiwakoti.com.np/"
             className="hover:underline text-[#35d16e]"
